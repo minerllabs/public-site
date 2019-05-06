@@ -41,7 +41,7 @@ body {
 
 .banner {
     background-position: bottom;
-    background-image: url('banner_wide.png');
+    background-image: url('assets/banner_wide.png');
     background-size: cover;
     min-height: 300px;
     text-align: center;
@@ -112,4 +112,40 @@ body {
 .paper-thumbnail {
     max-width: 100px;
     box-shadow: 3px 5px #a6a6a6;
+}
+
+.title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 100px;
+}
+
+.collection{
+    margin: .5rem 0 1rem 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.collection a.collection-item {
+    display: block;
+    transition: .25s;
+    color: #26a69a;
+}
+
+.collection .collection-item {
+    background-color: #fff;
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.secondary-content {
+    float: right;
+}
+
+.video-description-big {
+    flex: 0.25;
 }
