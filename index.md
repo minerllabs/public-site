@@ -3,25 +3,133 @@ layout: default
 title: MineRL Project
 ---
 
-You've reached the homepage for MineRL, 
+### [tl;dr: Play Minecraft to benefit Science!]({{site.url}}/server)
 
-{% assign posts = site.posts | where_exp: "post", "post.hidden != true" %}
-{% assign recent_post = posts[0] %}
-{% assign old_posts = posts | slice: 1 %}
+Welcome to MineRL. We want to solve [Minecraft](http://minecraft.net) using state-of-the-art Machine Learning! To do so, we have created one of the largest imitation learning datasets with **over 60 million frames** of recorded human player data. Our dataset includes a set of tasks which highlights many of the hardest problems in modern-day Reinforcement Learning: sparse rewards and hierarchical policies. 
 
-Most recent post:
------------------
+<div class="video-player">
+    <div class="video-description">
+        <b>Navigate:</b>
+    </div>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/navigate1.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/navigate2.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/navigate3.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/navigate4.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/navigateextreme1.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/navigateextreme2.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/navigateextreme3.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/navigateextreme4.mp4" type="video/mp4">
+    </video>
+    </div>
+<div class="video-player">
+    <div class="video-description">
+        <b>Obtain:</b>
+    </div>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/obed1.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/obed2.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/obed3.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/obed4.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/odia1.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/odia2.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/odia3.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/odia4.mp4" type="video/mp4">
+    </video>
+    </div>
+<div class="video-player">
+    <div class="video-description">
+    </div>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/omeat1.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/omeat2.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/omeat3.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/omeat4.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/orion1.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/orion2.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/orion3.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/navigateextreme4.mp4" type="video/mp4">
+    </video>
+    </div>
 
-### {{recent_post.title}}
-#### {{ recent_post.date | date: "%b %-d, %Y" }}
+<div class="video-player">
+    <div class="video-description">
+        <b>Survival:</b>
+    </div>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/survival1.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/survival2.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/survival3.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/survival4.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/survival5.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/survival6.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/survival7.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay muted loop class="video">
+        <source src="assets/videos/survival8.mp4" type="video/mp4">
+    </video>
+</div>
 
-{{recent_post.content}} 
 
-{% if old_posts.size > 0 %}
----
-
-Older posts:
+Get involved
 ------------
 
-{% for post in old_posts %} {% include post-link.html title=post.title date=post.date url=post.url %} {% endfor %} 
-{% endif %}
+Our project consists of three main components:
+
+* [A free, public Minecraft server for collecting data]({{site.url}}/server)
+* [The expansive MineRL dataset]({{site.url}}/dataset)
+* A set of tools for performing research on our data using Python (Coming soon)

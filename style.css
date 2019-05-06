@@ -60,7 +60,7 @@ body {
 
 .main_content {
     max-width: 700px;
-    padding: 100px 20px 0px;
+    padding: 10px 20px 0px;
     margin: 0 auto;
     font-size: 1.05rem;
     line-height: 1.7rem;
@@ -71,7 +71,7 @@ body {
 }
 
 .main_content h3 {
-    margin: 50px 0 20px 0;
+    margin: 10px 0 20px 0;
 }
 
 .video-player {

@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "MineRL Public Server Beta Launch"
+date:   2019-05-06 00:00:01 -0600
+---
+
+We're happy to announce that our Minecraft Server is now open to the public for beta testing! That means you can officially start playing Minecraft for Science. [Here's how!]({{site.url}}/server)

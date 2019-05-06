@@ -1,10 +1,10 @@
 #! /bin/bash
 # To update the website, run this script from a
-# clone of this repo on the hosting server.
+# local machine with Jekyll installed and `minerl`
+# in .ssh/config
 
 git pull
 JEKYLL_ENV=production jekyll build
-rm -f ~/minerl.io/*
-rm -rf ~/minerl.io/*
-cp _site/* ~/minerl.io/
-cp -r _site/* ~/minerl.io/
+mv _site html
+rsync -rtvu --delete ./html minerl:./minerl.io/
+mv html _site
