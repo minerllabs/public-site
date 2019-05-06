@@ -37,36 +37,36 @@ We also support dense reward-shaped version of Navigate, in which you are given 
 <div class="video-description-big">
     <b>Navigate:</b>
 </div>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/navigate1.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/navigate2.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/navigate3.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/navigate4.mp4" type="video/mp4">
-</video>
+
+    <img src="{{site.url}}/assets/videos/navigate1.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/navigate2.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/navigate3.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/navigate4.mp4.gif" class="video">
+
 </div>
 <div class="video-player">
 <div class="video-description-big">
     <b>Navigate Extreme:</b>
 </div>
 
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/navigateextreme1.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/navigateextreme2.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/navigateextreme3.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/navigateextreme4.mp4" type="video/mp4">
-</video>
+
+    <img src="{{site.url}}/assets/videos/navigateextreme1.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/navigateextreme2.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/navigateextreme3.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/navigateextreme4.mp4.gif" class="video">
+
 </div>
 <h3>Treechop</h3>
 <p>
@@ -80,18 +80,18 @@ The agent begins in a forest biome (near many trees) and with an iron axe for cu
 <div class="video-description-big">
     <b>Treechop:</b>
 </div>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/treechop1.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/treechop2.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/treechop3.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/treechop4.mp4" type="video/mp4">
-</video>
+
+    <img src="{{site.url}}/assets/videos/treechop1.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/treechop2.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/treechop3.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/treechop4.mp4.gif" class="video">
+
 </div>
 <h3>Obtain Item</h3>
 <p>
@@ -111,69 +111,69 @@ Together, these items represent what a player would need to be able to survive a
 <div class="video-description-big">
     <b>Bed:</b>
 </div>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/obed1.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/obed2.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/obed3.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/obed4.mp4" type="video/mp4">
-</video>
+
+    <img src="{{site.url}}/assets/videos/obed1.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/obed2.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/obed3.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/obed4.mp4.gif" class="video">
+
 </div>
 <div class="video-player">
 <div class="video-description-big">
     <b>Diamond:</b>
 </div>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/odia1.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/odia2.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/odia3.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/odia4.mp4" type="video/mp4">
-</video>
+
+    <img src="{{site.url}}/assets/videos/odia1.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/odia2.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/odia3.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/odia4.mp4.gif" class="video">
+
 </div>
 <div class="video-player">
 <div class="video-description-big">
     <b>Meat:</b>
 </div>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/omeat1.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/omeat2.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/omeat3.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/omeat4.mp4" type="video/mp4">
-</video>
+
+    <img src="{{site.url}}/assets/videos/omeat1.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/omeat2.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/omeat3.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/omeat4.mp4.gif" class="video">
+
 </div>
 <div class="video-player">
 <div class="video-description-big">
     <b>Iron Pickaxe:</b>
 </div>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/orion1.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/orion2.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/orion3.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/orion4.mp4" type="video/mp4">
-</video>
+
+    <img src="{{site.url}}/assets/videos/orion1.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/orion2.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/orion3.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/orion4.mp4.gif" class="video">
+
 </div>
 <h3>Survival</h3>
 <p>
@@ -188,29 +188,29 @@ There is no known reward function, and one must be extracted from examples of hu
 <div class="video-description">
     <b>Survival:</b>
 </div>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/survival1.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/survival2.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/survival3.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/survival4.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/survival5.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/survival6.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/survival7.mp4" type="video/mp4">
-</video>
-<video playsinline autoplay muted loop class="video">
-    <source src="{{site.url}}/assets/videos/survival8.mp4" type="video/mp4">
-</video>
+
+    <img src="{{site.url}}/assets/videos/survival1.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/survival2.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/survival3.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/survival4.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/survival5.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/survival6.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/survival7.mp4.gif" class="video">
+
+
+    <img src="{{site.url}}/assets/videos/survival8.mp4.gif" class="video">
+
 
 </div>
