@@ -13,28 +13,28 @@ Welcome to MineRL. We want to solve [Minecraft](http://minecraft.net) using stat
       
     </div>
     
-        <img src="assets/videos/navigate1.mp4.gif" class="video">
+        <img src="{{site.url}}/assets/videos/navigate1.mp4.gif" class="video">
     
     
-        <img src="assets/videos/navigate2.mp4.gif" class="video">
+        <img src="{{site.url}}/assets/videos/navigate2.mp4.gif" class="video">
     
     
-        <img src="assets/videos/navigate3.mp4.gif" class="video">
+        <img src="{{site.url}}/assets/videos/navigate3.mp4.gif" class="video">
     
     
-        <img src="assets/videos/navigate4.mp4.gif" class="video">
+        <img src="{{site.url}}/assets/videos/navigate4.mp4.gif" class="video">
     
     
-        <img src="assets/videos/navigateextreme1.mp4.gif" class="video">
+        <img src="{{site.url}}/assets/videos/navigateextreme1.mp4.gif" class="video">
     
     
-        <img src="assets/videos/navigateextreme2.mp4.gif" class="video">
+        <img src="{{site.url}}/assets/videos/navigateextreme2.mp4.gif" class="video">
     
     
-        <img src="assets/videos/navigateextreme3.mp4.gif" class="video">
+        <img src="{{site.url}}/assets/videos/navigateextreme3.mp4.gif" class="video">
     
     
-        <img src="assets/videos/navigateextreme4.mp4.gif" class="video">
+        <img src="{{site.url}}/assets/videos/navigateextreme4.mp4.gif" class="video">
     
     </div>
     
