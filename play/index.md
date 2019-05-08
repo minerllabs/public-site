@@ -10,7 +10,7 @@ Welcome to MineRL. We want to solve [Minecraft](http://minecraft.net) using stat
 
 <div class="video-player">
     <div class="video-description">
-        <b>Navigate:</b>
+      
     </div>
     
         <img src="assets/videos/navigate1.mp4.gif" class="video">
