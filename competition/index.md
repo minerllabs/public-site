@@ -3,8 +3,8 @@ layout: default
 title: MineRL Competition 2019
 ---
 
-### [Sign up for the competition now!](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition)
-
+### [Follow the competition for updates <u>[here]</u>!](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition)
+### [Help build the dataset by playing Minecraft <u>[here]</u>!](http://minerl.io/play)
 Starting June 1st, we are holding a competition on sample-efficient reinforcement learning using human priors. Standard methods require months to years of game time to attain human performance in complex games such as Go and StarCraft. In our competition, participants develop a system to obtain a diamond in Minecraft using only four days of training time. To facilitate solving this hard task with few samples, we provide a dataset of human demonstrations.
 
 This competition uses a set of Gym environments based on Malmo. To improve the experience for competition participants, we have extended Malmo to support many new features, including synchronous ticking. The environments and dataset loader will be available as a pip package when the competition begins.
