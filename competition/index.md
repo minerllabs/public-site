@@ -142,7 +142,7 @@ In this competition, the goal is to obtain a diamond. The agent begins in a rand
 
 Through our generous sponsor, Microsoft, we will provide some compute grants for teams that self identify as lacking access to the necessary compute power to participate in the competition. We will also provide groups with the evaluation resources for their experiments in Round 2.
 
-The competition organizers are committed to increasing the participation of groups traditionally underrepresented in reinforcement learning and, more generally, in machine learning (including, but not limited to: women, LGBTQ individuals, underrepresented racial and ethnic minorities, and individuals with disabilities). To that end, we will offer Inclusion@NeurIPS scholarships/travel grants for some number of Round 1 participants who are traditionally underrepresented at NeurIPS to attend the conference. We also plan to provide travel grants to enable all of the top participants from Round 2 to attend our NeurIPS workshop.
+The competition organizers are committed to increasing the participation of groups traditionally underrepresented in reinforcement learning and, more generally, in machine learning. To that end, we will offer Inclusion@NeurIPS scholarships/travel grants for some number of Round 1 participants who are traditionally underrepresented at NeurIPS to attend the conference. We also plan to provide travel grants to enable all of the top participants from Round 2 to attend our NeurIPS workshop.
 
 The applications for the compute grants and Inclusion@NeurIPS travel grants can be found [here](https://minerl.typeform.com/to/v2CUCN) and [here](https://minerl.typeform.com/to/wV18AM/), respectively.
 
