@@ -38,6 +38,22 @@ body {
 .top-bar a {
     color: white;
 }
+@media screen and (min-width: 1300px) {
+.sidebarstatus {
+    float: right;
+    width: 250px;
+    margin-right: -300px;
+    /* position: absolute; */
+}
+}
+
+@media screen and (max-width: 1299px) {
+.sidebarstatus {
+    height: 0;
+    visibility: hidden;
+    /* position: absolute; */
+}
+}
 
 .banner {
     background-position: bottom;

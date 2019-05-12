@@ -6,6 +6,9 @@ title: MineRL Server
 
 ### tl;dr: Play Minecraft to benefit Science!
 
+<div class="sidebarstatus">
+    <iframe src="https://minecraft-statistic.net/en/userbars/html/server/banner_190517_36433c_141f19_ffffff_ffb65f_1c250f_ffffff_ffffff_1_1_1.html" frameborder="0" scrolling="no" width="250" height="332"></iframe>
+</div>
 Welcome to MineRL. We want to solve [Minecraft](http://minecraft.net) using state-of-the-art Machine Learning! To do so, we are creating one of the largest datasets  of recorded human player data. Our dataset includes a set of tasks which highlights many of the hardest problems in modern-day Reinforcement Learning: sparse rewards and hierarchical policies. 
 
 <div class="video-player">
@@ -46,6 +49,7 @@ We'd love to have you play Minecraft for science with us! Our server is free and
     1. If you already play with Forge for Minecraft 1.12, you can install our mod directly: [Download here]({{site.url}}/downloads/minerl.jar)
 3. Read and fill out our consent form to indicate that you understand your gameplay will be recorded anonymously: [Here](http://herobraine.stream/consent_form/). *Make sure to use your Minecraft username.*
 4. Launch Minecraft with the newly installed configuration and connect to **mc.minerl.io**
+
 
 <div id="leaderboard" align="center">
 <iframe frameborder="0" scrolling="no" height="700" width="100%" src="http://minerl.io:8000">

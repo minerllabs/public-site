@@ -3,7 +3,7 @@ layout: default
 title: MineRL Competition 2019
 ---
 
-### [Follow the competition for updates <u>[here]</u>!](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition)
+### [Sign-up to participate <u>[here]</u>!](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition)
 ### [Help build the dataset by playing Minecraft <u>[here]</u>!](http://minerl.io/play)
 Starting June 1st, we are holding a competition on sample-efficient reinforcement learning using human priors. Standard methods require months to years of game time to attain human performance in complex games such as Go and StarCraft. In our competition, participants develop a system to obtain a diamond in Minecraft using only four days of training time. To facilitate solving this hard task with few samples, we provide a dataset of human demonstrations.
 
@@ -161,7 +161,7 @@ The organizing team consists of:
 * Brandon Houghton (Carnegie Mellon University)
 * Noboru Kuno (Microsoft Research)
 * Stephanie Milani (University of Maryland, Baltimore County and Carnegie Mellon University)
-* Sharanda Mohanty (AICrowd)
+* Sharada Mohanty (AIcrowd)
 * Diego Perez Liebana (Queen Mary University of London)
 * Ruslan Salakhutdinov (Carnegie Mellon University)
 * Nicholay Topin (Carnegie Mellon University)
