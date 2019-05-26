@@ -52,5 +52,5 @@ We'd love to have you play Minecraft for science with us! Our server is free and
 
 
 <div id="leaderboard" align="center">
-<iframe frameborder="0" scrolling="no" height="700" width="100%" src="http://minerl.io:8000">
+<iframe frameborder="0" scrolling="no" height="1400" width="100%" src="http://minerl.io:8000">
 </div>
