@@ -5,7 +5,8 @@ title: MineRL Competition 2019
 
 ### [Sign-up to participate <u>[here]</u>!](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition)
 ### [Help build the dataset by playing Minecraft <u>[here]</u>!](http://minerl.io/play)
-Starting June 1st, we are holding a competition on sample-efficient reinforcement learning using human priors. Standard methods require months to years of game time to attain human performance in complex games such as Go and StarCraft. In our competition, participants develop a system to obtain a diamond in Minecraft using only four days of training time. To facilitate solving this hard task with few samples, we provide a dataset of human demonstrations.
+### Update: Competition launch moved to June 5th. Follow updates <u>[here](https://discourse.aicrowd.com/c/neurips-2019-minerl-competition)</u>!
+Starting June 5th, we are holding a competition on sample-efficient reinforcement learning using human priors. Standard methods require months to years of game time to attain human performance in complex games such as Go and StarCraft. In our competition, participants develop a system to obtain a diamond in Minecraft using only four days of training time. To facilitate solving this hard task with few samples, we provide a dataset of human demonstrations.
 
 This competition uses a set of Gym environments based on Malmo. To improve the experience for competition participants, we have extended Malmo to support many new features, including synchronous ticking. The environments and dataset loader will be available as a pip package when the competition begins.
 
@@ -66,7 +67,7 @@ This competition uses a set of Gym environments based on Malmo. To improve the e
 
 <h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
 
-The contest will run from June 1st to October 25th. All submissions will be through CrowdAI. Detailed rules and leaderboard will be available on the CrowdAI competition webpage. Additionally, we will release reference RL implementations, courtesy of Preferred Networks.
+The contest will run from June 5th to October 25th. All submissions will be through CrowdAI. Detailed rules and leaderboard will be available on the CrowdAI competition webpage. Additionally, we will release reference RL implementations, courtesy of Preferred Networks.
 
 <h4 style="width: 100%; text-align: left;"> Round 1 </h4>
 1. Participants train their agents to play Minecraft. During the round, they submit trained models for evaluation to determine leaderboard ranks.
