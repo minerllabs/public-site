@@ -1,0 +1,419 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hello World: Your First Agent &mdash; MineRL 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="docs/tutorials/first_agent.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sampling The Dataset" href="data_sampling.html" />
+    <link rel="prev" title="Installation" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MineRL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials and Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hello World: Your First Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-an-environment">Creating an environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#taking-actions">Taking actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#no-op-actions-and-a-better-policy">No-op actions and a better policy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_sampling.html">Sampling The Dataset</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MineRL Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../environments/index.html">MineRLTreechop-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#observation-space">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../environments/index.html#minerlnavigatedense-v0">MineRLNavigateDense-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id1">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id2">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id3">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../environments/index.html#minerlnavigate-v0">MineRLNavigate-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id4">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id5">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id6">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../environments/index.html#minerlnavigateextremedense-v0">MineRLNavigateExtremeDense-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id7">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id8">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id9">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../environments/index.html#minerlnavigateextreme-v0">MineRLNavigateExtreme-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id10">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id11">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id12">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../environments/index.html#minerlobtainironpickaxe-v0">MineRLObtainIronPickaxe-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id13">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id14">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id15">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../environments/index.html#minerlobtaindiamond-v0">MineRLObtainDiamond-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id16">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id17">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../environments/index.html#id18">Usage</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">minerl package API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/env.html"><code class="code docutils literal notranslate"><span class="pre">minerl.env</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/env.html#module-minerl.env.core">MineRLEnv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/env.html#module-minerl.env.malmo">InstanceManager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/data.html"><code class="code docutils literal notranslate"><span class="pre">minerl.data</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/data.html#module-minerl.data">MineRLv0</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MineRL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Hello World: Your First Agent</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/first_agent.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hello-world-your-first-agent">
+<h1>Hello World: Your First Agent<a class="headerlink" href="#hello-world-your-first-agent" title="Permalink to this headline">¶</a></h1>
+<p>With the <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> package installed on your system you can
+now make your first agent in Minecraft!</p>
+<p>To get started, let’s first import the necessary packages</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+</pre></div>
+</div>
+<div class="section" id="creating-an-environment">
+<h2>Creating an environment<a class="headerlink" href="#creating-an-environment" title="Permalink to this headline">¶</a></h2>
+<p>Now we can choose any one of the <a class="reference external" href="http://minerl.io/docs/environments/">many environments</a> included
+in the <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> package. To learn more about the environments
+<a class="reference external" href="http://minerl.io/docs/environments/">checkout the environment documentation</a>.</p>
+<p>For this tutorial we’ll  choose the <code class="code docutils literal notranslate"><span class="pre">MineRLNavigateDense-v0</span></code>
+environment. In this task, the agent is challenged with using
+a first-person perspective of a random Minecraft map and
+navigating to a target.</p>
+<p>To create the environment, simply invoke <code class="code docutils literal notranslate"><span class="pre">gym.make</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MineRLNavigateDense-v0&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The first time you run this command to complete, it will take a while as it is recompiling
+Minecraft with the MineRL simulator mod!</p>
+<p>If you’re worried and want to make sure something is
+happening behind the scenes install a logger <strong>before</strong>
+you create the envrionment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MineRLNavigateDense-v0&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="taking-actions">
+<h2>Taking actions<a class="headerlink" href="#taking-actions" title="Permalink to this headline">¶</a></h2>
+<p><strong>As a warm up let’s create a random agent.</strong> 🧠</p>
+<p>Now we can reset this environment to its first position
+and get our first observation from the agent by reseting the environment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The <code class="code docutils literal notranslate"><span class="pre">obs</span></code> variable will be a dictionary containing the following
+observations returned by the environment. In the case of the
+<code class="code docutils literal notranslate"><span class="pre">MineRLNavigate-v0</span></code> environment, three observations are returned:
+<code class="code docutils literal notranslate"><span class="pre">pov</span></code>, an RGB image of the agent’s first person perspective;
+<code class="code docutils literal notranslate"><span class="pre">compassAngle</span></code>, a float giving the angle of the agent to its
+(approximate) target; and <code class="code docutils literal notranslate"><span class="pre">inventory</span></code>, a dictionary containing
+the amount of <code class="code docutils literal notranslate"><span class="pre">'dirt'</span></code> blocks in the agent’s inventory (this
+is useful for climbing steep inclines).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;pov&#39;</span><span class="p">:</span> <span class="n">array</span><span class="p">([[[</span> <span class="mi">63</span><span class="p">,</span>  <span class="mi">63</span><span class="p">,</span>  <span class="mi">68</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">63</span><span class="p">,</span>  <span class="mi">63</span><span class="p">,</span>  <span class="mi">68</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">63</span><span class="p">,</span>  <span class="mi">63</span><span class="p">,</span>  <span class="mi">68</span><span class="p">],</span>
+        <span class="o">...</span><span class="p">,</span>
+        <span class="p">[</span> <span class="mi">92</span><span class="p">,</span>  <span class="mi">92</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">92</span><span class="p">,</span>  <span class="mi">92</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">92</span><span class="p">,</span>  <span class="mi">92</span><span class="p">,</span> <span class="mi">100</span><span class="p">]],,</span>
+
+        <span class="o">...</span><span class="p">,</span>
+
+
+        <span class="p">[[</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">176</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">177</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">178</span><span class="p">],</span>
+        <span class="o">...</span><span class="p">,</span>
+        <span class="p">[</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">116</span><span class="p">,</span> <span class="mi">172</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">171</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">170</span><span class="p">]]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">uint8</span><span class="p">),</span>
+    <span class="s1">&#39;compassAngle&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">63.48639</span><span class="p">,</span>
+    <span class="s1">&#39;inventory&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dirt&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To see the exact format of observations returned from
+and the exact action format expected by <code class="code docutils literal notranslate"><span class="pre">env.step</span></code>
+for any environment refer to <a class="reference external" href="http://minerl.io/docs/environments">the environment reference documentation</a>!</p>
+</div>
+<p>Now let’s take actions through the environment until time runs out
+or the agent dies. To do this, we will use the normal OpenAI Gym <code class="code docutils literal notranslate"><span class="pre">env.step</span></code>
+method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>After running this code you should see your agent move sporadically until the
+<code class="code docutils literal notranslate"><span class="pre">done</span></code> flag is set to true. To confirm that our agent is at least qualitatively
+acting randomly, on the right is a plot of the compass angle over the course of the experiment.</p>
+<img alt="../_images/compass_angle.png" src="../_images/compass_angle.png" />
+</div>
+<div class="section" id="no-op-actions-and-a-better-policy">
+<h2>No-op actions and a better policy<a class="headerlink" href="#no-op-actions-and-a-better-policy" title="Permalink to this headline">¶</a></h2>
+<p><strong>Now let’s make a hard-coded agent that actually runs
+towards the target.</strong> 🧠🧠🧠</p>
+<p>To do this at every step of the environment we will take the <cite>noop</cite>
+action with a few modifications; in particular, we will only move forward,
+jump, attack, and changw the agent’s direction to minimize
+the angle between the agent’s movement direction and it’s target,  <code class="code docutils literal notranslate"><span class="pre">compassAngle</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">minerl</span>
+<span class="kn">import</span> <span class="nn">gym</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MineRLNavigateDense-v0&#39;</span><span class="p">)</span>
+
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">net_reward</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">()</span>
+
+    <span class="n">action</span><span class="p">[</span><span class="s1">&#39;camera&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.03</span><span class="o">*</span><span class="n">obs</span><span class="p">[</span><span class="s2">&quot;compassAngle&quot;</span><span class="p">]]</span>
+    <span class="n">action</span><span class="p">[</span><span class="s1">&#39;back&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">action</span><span class="p">[</span><span class="s1">&#39;forward&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">action</span><span class="p">[</span><span class="s1">&#39;jump&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">action</span><span class="p">[</span><span class="s1">&#39;attack&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">obs</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span>
+        <span class="n">action</span><span class="p">)</span>
+
+    <span class="n">net_reward</span> <span class="o">+=</span> <span class="n">reward</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Total reward: &quot;</span><span class="p">,</span> <span class="n">net_reward</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>After running this agent, you should notice marekedly less sporadic
+behaviour. Plotting both the <code class="code docutils literal notranslate"><span class="pre">compassAngle</span></code> and the
+net reward over the episode confirm that this policy performs
+better than our random policy.</p>
+<img alt="../_images/compass_angle_better.png" src="../_images/compass_angle_better.png" />
+<img alt="../_images/net_reward.png" src="../_images/net_reward.png" />
+<p>Congratulations! You’ve just made your first agent using the
+<code class="code docutils literal notranslate"><span class="pre">minerl</span></code> framework!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="data_sampling.html" class="btn btn-neutral float-right" title="Sampling The Dataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, William H. Guss, Brandon Houghton, Cayden Codel, Phillip Wang, Nicholay Topin, Stephanie Milani, Manuela Veloso, Ruslan Salakhutdinov
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-136588502-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

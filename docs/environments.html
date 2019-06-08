@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MineRLTreechop-v0 &mdash; MineRL 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="docs/environments.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="minerl.env" href="api/env.html" />
+    <link rel="prev" title="Sampling The Dataset" href="tutorials/data_sampling.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MineRL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials and Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/first_agent.html">Hello World: Your First Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/first_agent.html#creating-an-environment">Creating an environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/first_agent.html#taking-actions">Taking actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/first_agent.html#default-actions-and-a-better-policy">Default actions and a better policy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/data_sampling.html">Sampling The Dataset</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MineRL Environments</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MineRLTreechop-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#observation-space">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#action-space">Action Space</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#minerlnavigate-v0">MineRLNavigate-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Action Space</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#minerlobtainironpickaxe-v0">MineRLObtainIronPickaxe-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">Action Space</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#minerlobtaindiamond-v0">MineRLObtainDiamond-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id7">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">Action Space</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">minerl package API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/env.html"><code class="code docutils literal notranslate"><span class="pre">minerl.env</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/env.html#module-minerl.env.core">MineRLEnv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/env.html#module-minerl.env.malmo">InstanceManager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/data.html"><code class="code docutils literal notranslate"><span class="pre">minerl.data</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/data.html#module-minerl.data">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/data.html#module-minerl.data">Data Pipeline</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MineRL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>MineRLTreechop-v0</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/environments.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="minerltreechop-v0">
+<h1>MineRLTreechop-v0<a class="headerlink" href="#minerltreechop-v0" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLTreechop-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLTreechop-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="observation-space">
+<h2>Observation Space<a class="headerlink" href="#observation-space" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="action-space">
+<h2>Action Space<a class="headerlink" href="#action-space" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="minerlnavigate-v0">
+<h1>MineRLNavigate-v0<a class="headerlink" href="#minerlnavigate-v0" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Usage<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigate-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLNavigate-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Observation Space<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;compassAngle&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;dirt&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Action Space<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,dirt)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="minerlobtainironpickaxe-v0">
+<h1>MineRLObtainIronPickaxe-v0<a class="headerlink" href="#minerlobtainironpickaxe-v0" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id4">
+<h2>Usage<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainIronPickaxe-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLObtainIronPickaxe-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Observation Space<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;equipped_items&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;mainhand&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;damage&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;maxDamage&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,other)&quot;</span>
+            <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;coal&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;crafting_table&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;dirt&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;furnace&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_ingot&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_ore&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;log&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;planks&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stick&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stone&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stone_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;torch&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;wooden_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>Action Space<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;craft&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,torch,stick,planks)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nearbyCraft&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,crafting_table,furnace)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nearbySmelt&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,iron_ingot,coal)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,dirt,stone,crafting_table,furnace,torch)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="minerlobtaindiamond-v0">
+<h1>MineRLObtainDiamond-v0<a class="headerlink" href="#minerlobtaindiamond-v0" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id7">
+<h2>Usage<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainDiamond-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLObtainDiamond-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Observation Space<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;equipped_items&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;mainhand&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;damage&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;maxDamage&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,other)&quot;</span>
+            <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;coal&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;crafting_table&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;dirt&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;furnace&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_ingot&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_ore&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;log&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;planks&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stick&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stone&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stone_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;torch&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;wooden_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>Action Space<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;craft&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,torch,stick,planks)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nearbyCraft&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,crafting_table,furnace)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nearbySmelt&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,iron_ingot,coal)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,dirt,stone,crafting_table,furnace,torch)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api/env.html" class="btn btn-neutral float-right" title="minerl.env" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorials/data_sampling.html" class="btn btn-neutral float-left" title="Sampling The Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, William H. Guss, Brandon Houghton, Cayden Codel, Phillip Wang, Nicholay Topin, Stephanie Milani, Manuela Veloso, Ruslan Salakhutdinov
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

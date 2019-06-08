@@ -1,0 +1,1051 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MineRLTreechop-v0 &mdash; MineRL 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="docs/environments/index.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="minerl.env" href="../api/env.html" />
+    <link rel="prev" title="Sampling The Dataset" href="../tutorials/data_sampling.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MineRL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials and Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/first_agent.html">Hello World: Your First Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#creating-an-environment">Creating an environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#taking-actions">Taking actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#no-op-actions-and-a-better-policy">No-op actions and a better policy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/data_sampling.html">Sampling The Dataset</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MineRL Environments</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MineRLTreechop-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#observation-space">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#minerlnavigatedense-v0">MineRLNavigateDense-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#minerlnavigate-v0">MineRLNavigate-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#minerlnavigateextremedense-v0">MineRLNavigateExtremeDense-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id7">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#minerlnavigateextreme-v0">MineRLNavigateExtreme-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id10">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#minerlobtainironpickaxe-v0">MineRLObtainIronPickaxe-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id13">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#minerlobtainironpickaxedense-v0">MineRLObtainIronPickaxeDense-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id18">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id19">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#minerlobtaindiamond-v0">MineRLObtainDiamond-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id21">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id23">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#minerlobtaindiamonddense-v0">MineRLObtainDiamondDense-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id24">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id25">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id26">Usage</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">minerl package API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/env.html"><code class="code docutils literal notranslate"><span class="pre">minerl.env</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/env.html#module-minerl.env.core">MineRLEnv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/env.html#module-minerl.env.malmo">InstanceManager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/data.html"><code class="code docutils literal notranslate"><span class="pre">minerl.data</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/data.html#module-minerl.data">MineRLv0</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MineRL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>MineRLTreechop-v0</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/environments/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Many environments are provided for training, however your agent will only
+be evaluated in <code class="code docutils literal notranslate"><span class="pre">MineRLObtainDiamond-v0</span></code></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>all environments offer a default no-op action via <code class="code docutils literal notranslate"><span class="pre">env.action_space.noop()</span></code>
+and a random action via <code class="code docutils literal notranslate"><span class="pre">env.action_space.sample()</span></code></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="code docutils literal notranslate"><span class="pre">&quot;camera&quot;:</span> <span class="pre">Box(2,)&quot;:</span> <span class="pre">[np.float32]</span></code> specifies in degrees [pitch, yaw] respectively</p>
+</div>
+<div class="section" id="minerltreechop-v0">
+<h1>MineRLTreechop-v0<a class="headerlink" href="#minerltreechop-v0" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/treechop1.mp4.gif"><img alt="" src="../_images/treechop1.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/treechop2.mp4.gif"><img alt="" src="../_images/treechop2.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/treechop3.mp4.gif"><img alt="" src="../_images/treechop3.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/treechop4.mp4.gif"><img alt="" src="../_images/treechop4.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<p>In treechop, the agent must collect 64 <cite>minercaft:log</cite>. This replicates a common scenario in Minecraft, as logs are necessary to craft a large amount of items in the game, and are a key resource in Minecraft.</p>
+<p>The agent begins in a forest biome (near many trees) with an iron axe for cutting trees. The agent is given +1 reward for obtaining each unit of wood, and the episode terminates once the agent obtains 64 units.</p>
+<div class="section" id="observation-space">
+<h2>Observation Space<a class="headerlink" href="#observation-space" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="action-space">
+<h2>Action Space<a class="headerlink" href="#action-space" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="c1"># Run a random agent through the environment</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLTreechop-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLTreechop-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">())</span>
+    <span class="c1"># Do something</span>
+
+<span class="c1">######################################</span>
+
+<span class="c1"># Sample some data from the dataset!</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLTreechop-v0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Iterate through a single epoch using sequences of at most 32 steps</span>
+<span class="k">for</span> <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">seq_iter</span><span class="p">(</span><span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="c1"># Do something</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="minerlnavigatedense-v0">
+<h1>MineRLNavigateDense-v0<a class="headerlink" href="#minerlnavigatedense-v0" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/navigate1.mp4.gif"><img alt="" src="../_images/navigate1.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/navigate2.mp4.gif"><img alt="" src="../_images/navigate2.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/navigate3.mp4.gif"><img alt="" src="../_images/navigate3.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/navigate4.mp4.gif"><img alt="" src="../_images/navigate4.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<p>In this task, the agent must move to a goal location denoted by a diamond block. This represents a basic primitive used in many tasks throughout Minecraft. In addition to standard observations, the agent has access to a “compass” observation, which points near the goal location, 64 meters from the start location. The goal has a small random horizontal offset from the compass location and may be slightly below surface level. On the goal location is a unique block, so the agent must find the final goal by searching based on local visual features.</p>
+<p>The agent is given a sparse reward (+100 upon reaching the goal, at which point the episode terminates). <strong>This variant of the environment is dense reward-shaped where the agent is given a reward every tick for how much closer (or negative reward for farther) the agent gets to the target.</strong></p>
+<p>In this environment, the agent spawns on a random survival map.</p>
+<div class="section" id="id1">
+<h2>Observation Space<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;compassAngle&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;dirt&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Action Space<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,dirt)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Usage<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="c1"># Run a random agent through the environment</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigateDense-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLNavigateDense-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">())</span>
+    <span class="c1"># Do something</span>
+
+<span class="c1">######################################</span>
+
+<span class="c1"># Sample some data from the dataset!</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigateDense-v0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Iterate through a single epoch using sequences of at most 32 steps</span>
+<span class="k">for</span> <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">seq_iter</span><span class="p">(</span><span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="c1"># Do something</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="minerlnavigate-v0">
+<h1>MineRLNavigate-v0<a class="headerlink" href="#minerlnavigate-v0" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/navigate1.mp4.gif"><img alt="" src="../_images/navigate1.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/navigate2.mp4.gif"><img alt="" src="../_images/navigate2.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/navigate3.mp4.gif"><img alt="" src="../_images/navigate3.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/navigate4.mp4.gif"><img alt="" src="../_images/navigate4.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<p>In this task, the agent must move to a goal location denoted by a diamond block. This represents a basic primitive used in many tasks throughout Minecraft. In addition to standard observations, the agent has access to a “compass” observation, which points near the goal location, 64 meters from the start location. The goal has a small random horizontal offset from the compass location and may be slightly below surface level. On the goal location is a unique block, so the agent must find the final goal by searching based on local visual features.</p>
+<p>The agent is given a sparse reward (+100 upon reaching the goal, at which point the episode terminates). <strong>This variant of the environment is sparse.</strong></p>
+<p>In this environment, the agent spawns on a random survival map.</p>
+<div class="section" id="id4">
+<h2>Observation Space<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;compassAngle&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;dirt&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Action Space<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,dirt)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>Usage<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="c1"># Run a random agent through the environment</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigate-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLNavigate-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">())</span>
+    <span class="c1"># Do something</span>
+
+<span class="c1">######################################</span>
+
+<span class="c1"># Sample some data from the dataset!</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigate-v0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Iterate through a single epoch using sequences of at most 32 steps</span>
+<span class="k">for</span> <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">seq_iter</span><span class="p">(</span><span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="c1"># Do something</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="minerlnavigateextremedense-v0">
+<h1>MineRLNavigateExtremeDense-v0<a class="headerlink" href="#minerlnavigateextremedense-v0" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/navigateextreme1.mp4.gif"><img alt="" src="../_images/navigateextreme1.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/navigateextreme2.mp4.gif"><img alt="" src="../_images/navigateextreme2.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/navigateextreme3.mp4.gif"><img alt="" src="../_images/navigateextreme3.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/navigateextreme4.mp4.gif"><img alt="" src="../_images/navigateextreme4.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<p>In this task, the agent must move to a goal location denoted by a diamond block. This represents a basic primitive used in many tasks throughout Minecraft. In addition to standard observations, the agent has access to a “compass” observation, which points near the goal location, 64 meters from the start location. The goal has a small random horizontal offset from the compass location and may be slightly below surface level. On the goal location is a unique block, so the agent must find the final goal by searching based on local visual features.</p>
+<p>The agent is given a sparse reward (+100 upon reaching the goal, at which point the episode terminates). <strong>This variant of the environment is dense reward-shaped where the agent is given a reward every tick for how much closer (or negative reward for farther) the agent gets to the target.</strong></p>
+<p>In this environment, the agent spawns in an extreme hills biome.</p>
+<div class="section" id="id7">
+<h2>Observation Space<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;compassAngle&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;dirt&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Action Space<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,dirt)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>Usage<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="c1"># Run a random agent through the environment</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigateExtremeDense-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLNavigateExtremeDense-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">())</span>
+    <span class="c1"># Do something</span>
+
+<span class="c1">######################################</span>
+
+<span class="c1"># Sample some data from the dataset!</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigateExtremeDense-v0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Iterate through a single epoch using sequences of at most 32 steps</span>
+<span class="k">for</span> <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">seq_iter</span><span class="p">(</span><span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="c1"># Do something</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="minerlnavigateextreme-v0">
+<h1>MineRLNavigateExtreme-v0<a class="headerlink" href="#minerlnavigateextreme-v0" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/navigateextreme1.mp4.gif"><img alt="" src="../_images/navigateextreme1.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/navigateextreme2.mp4.gif"><img alt="" src="../_images/navigateextreme2.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/navigateextreme3.mp4.gif"><img alt="" src="../_images/navigateextreme3.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/navigateextreme4.mp4.gif"><img alt="" src="../_images/navigateextreme4.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<p>In this task, the agent must move to a goal location denoted by a diamond block. This represents a basic primitive used in many tasks throughout Minecraft. In addition to standard observations, the agent has access to a “compass” observation, which points near the goal location, 64 meters from the start location. The goal has a small random horizontal offset from the compass location and may be slightly below surface level. On the goal location is a unique block, so the agent must find the final goal by searching based on local visual features.</p>
+<p>The agent is given a sparse reward (+100 upon reaching the goal, at which point the episode terminates). <strong>This variant of the environment is sparse.</strong></p>
+<p>In this environment, the agent spawns in an extreme hills biome.</p>
+<div class="section" id="id10">
+<h2>Observation Space<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;compassAngle&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;dirt&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>Action Space<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,dirt)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>Usage<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="c1"># Run a random agent through the environment</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigateExtreme-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLNavigateExtreme-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">())</span>
+    <span class="c1"># Do something</span>
+
+<span class="c1">######################################</span>
+
+<span class="c1"># Sample some data from the dataset!</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigateExtreme-v0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Iterate through a single epoch using sequences of at most 32 steps</span>
+<span class="k">for</span> <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">seq_iter</span><span class="p">(</span><span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="c1"># Do something</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="minerlobtainironpickaxe-v0">
+<h1>MineRLObtainIronPickaxe-v0<a class="headerlink" href="#minerlobtainironpickaxe-v0" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/orion1.mp41.gif"><img alt="" src="../_images/orion1.mp41.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/orion2.mp4.gif"><img alt="" src="../_images/orion2.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/orion3.mp4.gif"><img alt="" src="../_images/orion3.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/orion4.mp4.gif"><img alt="" src="../_images/orion4.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<p>In this environment the agent is required to obtain an iron pickaxe. The agent begins in a random starting location, on a random survival map, without any items, matching the normal starting conditions for human players in Minecraft.
+The agent is given access to a selected view of its inventory and GUI free
+crafting, smelting, and inventory management actions.</p>
+<p>During an episode <strong>the agent is rewarded only once per item the first time it obtains that item
+in the requisite item hierarchy for obtaining an iron pickaxe.</strong> The reward for each
+item is given here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;log&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;2&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;planks&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stick&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;crafting_table&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;8&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;wooden_pickaxe&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;furnace&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone_pickaxe&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;64&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_ore&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;128&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_ingot&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;256&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_pickaxe&quot;</span> <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="id13">
+<h2>Observation Space<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;equipped_items&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;mainhand&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;damage&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;maxDamage&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,other)&quot;</span>
+            <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;coal&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;crafting_table&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;dirt&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;furnace&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_ingot&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_ore&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;log&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;planks&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stick&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stone&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stone_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;torch&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;wooden_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>Action Space<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;craft&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,torch,stick,planks)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;equip&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nearbyCraft&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,crafting_table,furnace)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nearbySmelt&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,iron_ingot,coal)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,dirt,stone,crafting_table,furnace,torch)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>Usage<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="c1"># Run a random agent through the environment</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainIronPickaxe-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLObtainIronPickaxe-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">())</span>
+    <span class="c1"># Do something</span>
+
+<span class="c1">######################################</span>
+
+<span class="c1"># Sample some data from the dataset!</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainIronPickaxe-v0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Iterate through a single epoch using sequences of at most 32 steps</span>
+<span class="k">for</span> <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">seq_iter</span><span class="p">(</span><span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="c1"># Do something</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="minerlobtainironpickaxedense-v0">
+<h1>MineRLObtainIronPickaxeDense-v0<a class="headerlink" href="#minerlobtainironpickaxedense-v0" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/orion1.mp41.gif"><img alt="" src="../_images/orion1.mp41.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/orion2.mp4.gif"><img alt="" src="../_images/orion2.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/orion3.mp4.gif"><img alt="" src="../_images/orion3.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/orion4.mp4.gif"><img alt="" src="../_images/orion4.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<p>In this environment the agent is required to obtain an iron pickaxe. The agent begins in a random starting location, on a random survival map, without any items, matching the normal starting conditions for human players in Minecraft.
+The agent is given access to a selected view of its inventory and GUI free
+crafting, smelting, and inventory management actions.</p>
+<p>During an episode the agent is rewarded <a href="#id16"><span class="problematic" id="id17">**</span></a>every time ** it obtains an item
+in the requisite item hierarchy for obtaining an iron pickaxe. The rewards for each
+item are given here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;log&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;2&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;planks&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stick&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;crafting_table&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;8&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;wooden_pickaxe&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;furnace&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone_pickaxe&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;64&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_ore&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;128&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_ingot&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;256&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_pickaxe&quot;</span> <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="id18">
+<h2>Observation Space<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;equipped_items&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;mainhand&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;damage&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;maxDamage&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,other)&quot;</span>
+            <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;coal&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;crafting_table&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;dirt&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;furnace&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_ingot&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_ore&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;log&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;planks&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stick&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stone&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stone_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;torch&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;wooden_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id19">
+<h2>Action Space<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;craft&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,torch,stick,planks)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;equip&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nearbyCraft&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,crafting_table,furnace)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nearbySmelt&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,iron_ingot,coal)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,dirt,stone,crafting_table,furnace,torch)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h2>Usage<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="c1"># Run a random agent through the environment</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainIronPickaxeDense-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLObtainIronPickaxeDense-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">())</span>
+    <span class="c1"># Do something</span>
+
+<span class="c1">######################################</span>
+
+<span class="c1"># Sample some data from the dataset!</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainIronPickaxeDense-v0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Iterate through a single epoch using sequences of at most 32 steps</span>
+<span class="k">for</span> <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">seq_iter</span><span class="p">(</span><span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="c1"># Do something</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="minerlobtaindiamond-v0">
+<h1>MineRLObtainDiamond-v0<a class="headerlink" href="#minerlobtaindiamond-v0" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/odia1.mp4.gif"><img alt="" src="../_images/odia1.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/odia2.mp4.gif"><img alt="" src="../_images/odia2.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/odia3.mp4.gif"><img alt="" src="../_images/odia3.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/odia4.mp4.gif"><img alt="" src="../_images/odia4.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<p><strong>This is the environment of the MineRL Competition!</strong></p>
+<p>In this environment the agent is required to obtain a diamond in 18000 steps. The agent begins in a random starting location, on a random survival map, without any items, matching the normal starting conditions for human players in Minecraft.
+The agent is given access to a selected view of its inventory and GUI free
+crafting, smelting, and inventory management actions.</p>
+<p>During an episode <strong>the agent is rewarded only once per item the first time it obtains that item
+in the requisite item hierarchy for obtaining an iron pickaxe.</strong> The reward for each
+item is given here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;log&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;2&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;planks&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stick&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;crafting_table&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;8&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;wooden_pickaxe&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;furnace&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone_pickaxe&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;64&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_ore&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;128&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_ingot&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;256&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_pickaxe&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;1024&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;diamond&quot;</span> <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="id21">
+<h2>Observation Space<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;equipped_items&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;mainhand&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;damage&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;maxDamage&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,other)&quot;</span>
+            <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;coal&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;crafting_table&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;dirt&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;furnace&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_ingot&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_ore&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;log&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;planks&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stick&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stone&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stone_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;torch&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;wooden_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>Action Space<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;craft&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,torch,stick,planks)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;equip&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nearbyCraft&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,crafting_table,furnace)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nearbySmelt&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,iron_ingot,coal)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,dirt,stone,crafting_table,furnace,torch)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>Usage<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="c1"># Run a random agent through the environment</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainDiamond-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLObtainDiamond-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">())</span>
+    <span class="c1"># Do something</span>
+
+<span class="c1">######################################</span>
+
+<span class="c1"># Sample some data from the dataset!</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainDiamond-v0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Iterate through a single epoch using sequences of at most 32 steps</span>
+<span class="k">for</span> <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">seq_iter</span><span class="p">(</span><span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="c1"># Do something</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="minerlobtaindiamonddense-v0">
+<h1>MineRLObtainDiamondDense-v0<a class="headerlink" href="#minerlobtaindiamonddense-v0" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/odia1.mp4.gif"><img alt="" src="../_images/odia1.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/odia2.mp4.gif"><img alt="" src="../_images/odia2.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/odia3.mp4.gif"><img alt="" src="../_images/odia3.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/odia4.mp4.gif"><img alt="" src="../_images/odia4.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
+<p>In this environment the agent is required to obtain a diamond. The agent begins in a random starting location on a random survival map without any items, matching the normal starting conditions for human players in Minecraft.
+The agent is given access to a selected summary of its inventory and GUI free
+crafting, smelting, and inventory management actions.</p>
+<p>During an episode the agent is rewarded <strong>every</strong> time it obtains an item
+in the requisite item hierarchy to obtaining a diamond. The rewards for each
+item are given here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;log&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;2&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;planks&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stick&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;crafting_table&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;8&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;wooden_pickaxe&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;furnace&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone_pickaxe&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;64&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_ore&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;128&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_ingot&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;256&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_pickaxe&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;1024&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;diamond&quot;</span> <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="id24">
+<h2>Observation Space<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;equipped_items&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;mainhand&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;damage&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;maxDamage&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,other)&quot;</span>
+            <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;coal&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;crafting_table&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;dirt&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;furnace&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_ingot&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_ore&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;iron_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;log&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;planks&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stick&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stone&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stone_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;torch&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;wooden_pickaxe&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(1,)&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;pov&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(64, 64, 3)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id25">
+<h2>Action Space<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;attack&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;back&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera&quot;</span><span class="o">:</span> <span class="s2">&quot;Box(2,)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;craft&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,torch,stick,planks)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;equip&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;forward&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jump&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nearbyCraft&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,crafting_table,furnace)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nearbySmelt&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,iron_ingot,coal)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="s2">&quot;Enum(none,dirt,stone,crafting_table,furnace,torch)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;right&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sneak&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sprint&quot;</span><span class="o">:</span> <span class="s2">&quot;Discrete(2)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>Usage<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">minerl</span>
+
+<span class="c1"># Run a random agent through the environment</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainDiamondDense-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLObtainDiamondDense-v0 env</span>
+
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="c1"># Take a no-op through the environment.</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">noop</span><span class="p">())</span>
+    <span class="c1"># Do something</span>
+
+<span class="c1">######################################</span>
+
+<span class="c1"># Sample some data from the dataset!</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainDiamondDense-v0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Iterate through a single epoch using sequences of at most 32 steps</span>
+<span class="k">for</span> <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">seq_iter</span><span class="p">(</span><span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="c1"># Do something</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../api/env.html" class="btn btn-neutral float-right" title="minerl.env" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../tutorials/data_sampling.html" class="btn btn-neutral float-left" title="Sampling The Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, William H. Guss, Brandon Houghton, Cayden Codel, Phillip Wang, Nicholay Topin, Stephanie Milani, Manuela Veloso, Ruslan Salakhutdinov
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-136588502-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

@@ -6,5 +6,6 @@
 git pull
 JEKYLL_ENV=production jekyll build
 mv _site html
+cp -r docs html
 rsync -rtvu --delete ./html minerl:./minerl.io/
 mv html _site
