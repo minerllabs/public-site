@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "MineRL Competition Launched!"
+date:   2019-08-08 00:00:01 -0600
+---
+
+We are excited to announce the beginning of the [MineRL competition](https://www.aicrowd.com/organizers/minerl/challenges/neurips-2019-minerl-competition/)! 
+Documentation of the environment and accessing the data is available at [http://www.minerl.io/docs/](http://www.minerl.io/docs/)
+
+This is the first ever publishing of the minerl package, so we are paying special attention to feedback from the community during this exploratory period. Please note [bugs](https://github.com/minerllabs/minerl/issues) may be encountered. **As a result submissions are not yet possible**. 
+
+Through our generous partner Prefered Networks, we are working to release a set of benchmarks for the environment. A release date will be announced soon!
+
+**To get started with the environment and dataset [please check out our quick start guide here](http://minerl.io/docs/tutorials/getting_started.html)!**
+
+**Please refer to the docs first before directing any questions to the  [competition forum](https://discourse.aicrowd.com/c/neurips-2019-minerl-competition) or [discord server](https://discord.gg/BT9uegr)**
+
+**To report bugs in the environment or dataset [please use our Github issue tracker](https://github.com/minerllabs/minerl/issues)!**
+
+**To play on our Minecraft server with the other competitors [go to our play page](http://minerl.io/play)!**
