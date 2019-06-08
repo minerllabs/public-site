@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; MineRL 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="docs/environments/observations.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MineRL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials and Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/first_agent.html">Hello World: Your First Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#creating-an-environment">Creating an environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#taking-actions">Taking actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#no-op-actions-and-a-better-policy">No-op actions and a better policy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/data_sampling.html">Sampling The Dataset</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MineRL Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">General Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#environment-handlers">Environment Handlers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="handlers.html">Environment Handlers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="handlers.html#observations">Observations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="handlers.html#visual-observations-pov-third-persion">Visual Observations - <code class="code docutils literal notranslate"><span class="pre">pov</span></code>, <code class="code docutils literal notranslate"><span class="pre">third-persion</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="handlers.html#actions">Actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="handlers.html#camera-control-camera">Camera Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#minerltreechop-v0">MineRLTreechop-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#observation-space">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#minerlnavigatedense-v0">MineRLNavigateDense-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id1">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#minerlnavigate-v0">MineRLNavigate-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id6">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#minerlnavigateextremedense-v0">MineRLNavigateExtremeDense-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id7">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#minerlnavigateextreme-v0">MineRLNavigateExtreme-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id11">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id12">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#minerlobtainironpickaxe-v0">MineRLObtainIronPickaxe-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id13">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id14">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id15">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#minerlobtainironpickaxedense-v0">MineRLObtainIronPickaxeDense-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id18">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id19">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id20">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#minerlobtaindiamond-v0">MineRLObtainDiamond-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id21">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id22">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id23">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#minerlobtaindiamonddense-v0">MineRLObtainDiamondDense-v0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id24">Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id25">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id26">Usage</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">minerl package API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/env.html"><code class="code docutils literal notranslate"><span class="pre">minerl.env</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/env.html#module-minerl.env.core">MineRLEnv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/env.html#module-minerl.env.malmo">InstanceManager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/data.html"><code class="code docutils literal notranslate"><span class="pre">minerl.data</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/data.html#module-minerl.data">MineRLv0</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MineRL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/environments/observations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, William H. Guss, Brandon Houghton
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-136588502-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
