@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MineRL Competition Launched!"
-date:   2019-08-08 00:00:01 -0600
+date:   2019-06-07 00:00:01 -0600
 ---
 
 We are excited to announce the beginning of the [MineRL competition](https://www.aicrowd.com/organizers/minerl/challenges/neurips-2019-minerl-competition/)! 

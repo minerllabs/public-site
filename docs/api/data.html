@@ -277,7 +277,7 @@ as well as some basic usage examples. To see more detailed
 
 <dl class="function">
 <dt id="minerl.data.download">
-<code class="sig-prename descclassname">minerl.data.</code><code class="sig-name descname">download</code><span class="sig-paren">(</span><em class="sig-param">directory: &lt;module 'posixpath' from '/usr/lib/python3.6/posixpath.py'&gt;</em>, <em class="sig-param">resolution: str = 'low'</em>, <em class="sig-param">texture_pack: int = 0</em>, <em class="sig-param">update_environment_variables=True</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.download" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">minerl.data.</code><code class="sig-name descname">download</code><span class="sig-paren">(</span><em class="sig-param">directory: &lt;module 'posixpath' from '/usr/lib/python3.6/posixpath.py'&gt;</em>, <em class="sig-param">resolution: str = 'low'</em>, <em class="sig-param">texture_pack: int = 0</em>, <em class="sig-param">update_environment_variables=True</em>, <em class="sig-param">disable_cache=False</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.download" title="Permalink to this definition">¶</a></dt>
 <dd><p>Downloads MineRLv0 to specified directory. If directory is None, attempts to
 download to $MINERL_DATA_ROOT. Raises ValueError if both are undefined.</p>
 <dl class="field-list simple">
@@ -287,6 +287,7 @@ download to $MINERL_DATA_ROOT. Raises ValueError if both are undefined.</p>
 <li><p><strong>resolution</strong> (<em>str</em><em>, </em><em>optional</em>) – one of [ ‘low’, ‘high’ ] corresponding to video resolutions of [ 64x64, 256,128 ] respectively (note: high resolution is not currently supported). Defaults to ‘low’.</p></li>
 <li><p><strong>texture_pack</strong> (<em>int</em><em>, </em><em>optional</em>) – 0: default Minecraft texture pack, 1: flat semi-realistic texture pack. Defaults to 0.</p></li>
 <li><p><strong>update_environment_variables</strong> (<em>bool</em><em>, </em><em>optional</em>) – enables / disables exporting of MINERL_DATA_ROOT environment variable (note: for some os this is only for the current shell) Defaults to True.</p></li>
+<li><p><strong>disable_cache</strong> (<em>bool</em><em>, </em><em>optional</em>) – downloads temporary files to local directory. Defaults to False</p></li>
 </ul>
 </dd>
 </dl>
@@ -294,9 +295,19 @@ download to $MINERL_DATA_ROOT. Raises ValueError if both are undefined.</p>
 
 <dl class="class">
 <dt id="minerl.data.DataPipeline">
-<em class="property">class </em><code class="sig-prename descclassname">minerl.data.</code><code class="sig-name descname">DataPipeline</code><span class="sig-paren">(</span><em class="sig-param">data_directory: &lt;module 'posixpath' from '/usr/lib/python3.6/posixpath.py'&gt;</em>, <em class="sig-param">environment: str</em>, <em class="sig-param">num_workers: int</em>, <em class="sig-param">worker_batch_size: int</em>, <em class="sig-param">min_size_to_dequeue: int</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.DataPipeline" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">minerl.data.</code><code class="sig-name descname">DataPipeline</code><span class="sig-paren">(</span><em class="sig-param">data_directory: &lt;module 'posixpath' from '/usr/lib/python3.6/posixpath.py'&gt;</em>, <em class="sig-param">environment: str</em>, <em class="sig-param">num_workers: int</em>, <em class="sig-param">worker_batch_size: int</em>, <em class="sig-param">min_size_to_dequeue: int</em>, <em class="sig-param">random_seed=42</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.DataPipeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Creates a data pipeline object used to itterate through the MineRL-v0 dataset</p>
+<dl class="method">
+<dt id="minerl.data.DataPipeline.load_data">
+<em class="property">static </em><code class="sig-name descname">load_data</code><span class="sig-paren">(</span><em class="sig-param">file_dir: str</em>, <em class="sig-param">environment: str</em>, <em class="sig-param">skip_interval=0</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.DataPipeline.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loading mechanism for loading a trajectory from a file as a generator
+:param file_dir: file path to data directory
+:param environment: the environment name e.g. MineRLObtainDiamond-v0
+:param skip_interval: NOT IMPLEMENTED how many frames to skip between observations
+:return: iterator over files</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="minerl.data.DataPipeline.map_to_dict">
 <em class="property">static </em><code class="sig-name descname">map_to_dict</code><span class="sig-paren">(</span><em class="sig-param">handler_list: list</em>, <em class="sig-param">target_space: &lt;module 'gym.spaces.space' from '/home/wguss/.local/lib/python3.6/site-packages/gym/spaces/space.py'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.DataPipeline.map_to_dict" title="Permalink to this definition">¶</a></dt>
@@ -304,15 +315,18 @@ download to $MINERL_DATA_ROOT. Raises ValueError if both are undefined.</p>
 
 <dl class="method">
 <dt id="minerl.data.DataPipeline.seq_iter">
-<code class="sig-name descname">seq_iter</code><span class="sig-paren">(</span><em class="sig-param">num_epochs=-1</em>, <em class="sig-param">max_sequence_len=32</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.DataPipeline.seq_iter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">seq_iter</code><span class="sig-paren">(</span><em class="sig-param">num_epochs=-1</em>, <em class="sig-param">max_sequence_len=32</em>, <em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.DataPipeline.seq_iter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a generator for iterating through sequences of the dataset.
-Loads num_workers files at once as defined in minerl.data.make()</p>
+Loads num_workers files at once as defined in minerl.data.make() and return up to
+max_sequence_len consecutive samples wrapped in a dict observation space</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>num_epochs</strong> (<em>int</em><em>, </em><em>optional</em>) – number of epochs to ittereate over or -1
 to loop forever. Defaults to -1.</p></li>
 <li><p><strong>max_sequence_len</strong> (<em>int</em><em>, </em><em>optional</em>) – maximum number of consecutive samples - may be less. Defaults to 32.</p></li>
+<li><p><strong>seed</strong> (<em>int</em><em>, </em><em>optional</em>) – seed for random directory walk - note, specifying seed as well as a finite num_epochs
+will cause the ordering of examples to be the same after every call to seq_iter</p></li>
 </ul>
 </dd>
 </dl>

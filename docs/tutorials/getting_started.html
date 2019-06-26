@@ -244,7 +244,7 @@
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>Welcome to MineRL! This guide will get you started.</p>
 <p>To start using the data and set of reinforcement learning
-enviroments comrpising MineRL, you’ll need to install the
+environments comprising MineRL, you’ll need to install the
 main python package, <code class="code docutils literal notranslate"><span class="pre">minerl</span></code>.</p>
 <ol class="arabic">
 <li><p>First <strong>make sure you have JDK 1.8</strong> installed on your
@@ -252,9 +252,9 @@ system.</p>
 <ol class="loweralpha">
 <li><p><a class="reference external" href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Windows installer</a>  – On windows go this link and follow the
 instructions to install JDK 8.</p></li>
-<li><p>On mac, with homebrew installed you can use the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">tap</span> <span class="n">caskroom</span><span class="o">/</span><span class="n">versions</span>
-<span class="n">brew</span> <span class="n">cask</span> <span class="n">install</span> <span class="n">java8</span>
+<li><p>On Mac, you can install java8 using homebrew and AdoptOpenJDK (an open source mirror, used here to get around the fact that Java8 binaries are no longer available directly from Oracle):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">tap</span> <span class="n">AdoptOpenJDK</span><span class="o">/</span><span class="n">openjdk</span>
+<span class="n">brew</span> <span class="n">cask</span> <span class="n">install</span> <span class="n">adoptopenjdk8</span>
 </pre></div>
 </div>
 </li>
@@ -273,7 +273,30 @@ instructions to install JDK 8.</p></li>
 </div>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>depending on your system you may need the user flag:
+<code class="code docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">minerl</span> <span class="pre">--user</span></code> to install property</p>
+</div>
+<ol class="arabic" start="3">
+<li><p>(Optional) Download the dataset - 13.6 GB:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">minerl</span>
+<span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="s2">&quot;/your/local/path/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
 <p><strong>That’s it! Now you’re good to go :) 💯💯💯</strong></p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Currently <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> only supports environment rendering in <strong>headed environments</strong>
+(machines with monitors attached).</p>
+<p><strong>In order to run</strong> <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> <strong>environments without a head use a software renderer
+such as</strong> <code class="code docutils literal notranslate"><span class="pre">xvfb</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xvfb</span><span class="o">-</span><span class="n">run</span> <span class="n">python3</span> <span class="o">&lt;</span><span class="n">your_script</span><span class="o">.</span><span class="n">py</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 

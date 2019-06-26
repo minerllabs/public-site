@@ -262,6 +262,16 @@ navigating to a target.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MineRLNavigateDense-v0&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Currently <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> only supports environment rendering in <strong>headed environments</strong>
+(servers with monitors attached).</p>
+<p><strong>In order to run</strong> <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> <strong>environments without a head use a software renderer
+such as</strong> <code class="code docutils literal notranslate"><span class="pre">xvfb</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xvfb</span><span class="o">-</span><span class="n">run</span> <span class="n">python3</span> <span class="o">&lt;</span><span class="n">your_script</span><span class="o">.</span><span class="n">py</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The first time you run this command to complete, it will take a while as it is recompiling
