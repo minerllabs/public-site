@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MineRL Project
+title: MineRL&#58; Towards AI in Minecraft
 ---
 
 ### [tl;dr: Compete to build AI in Minecraft!]({{site.url}}/competition)

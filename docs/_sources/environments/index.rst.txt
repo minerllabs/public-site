@@ -7,7 +7,7 @@ General Information
 The :code:`minerl` package includes several environments as follows.
 This page describes each of the incldued environments, provides usage samples,
 and describes the exact action and observation space provided by each
-environment.
+environment!
 
 
 

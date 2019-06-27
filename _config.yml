@@ -9,7 +9,6 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-
 exclude:
    - Gemfile
    - Gemfile.lock
@@ -23,3 +22,9 @@ exclude:
    - test.sh
    - .gitignore
    - README.md
+
+
+titles_from_headings:
+  enabled:     true
+  strip_title: false
+  collections: false
