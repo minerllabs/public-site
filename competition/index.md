@@ -162,15 +162,20 @@ Top-ranking teams in round 2 will receive rewards from our sponsors. Details wil
 The organizing team consists of:
 
 * William H. Guss (Carnegie Mellon University)
+* Mario Ynocente Castro (Preferred Networks)
 * Cayden Codel (Carnegie Mellon University)
 * Katja Hofmann (Microsoft Research)
 * Brandon Houghton (Carnegie Mellon University)
 * Noboru Kuno (Microsoft Research)
+* Crissman Loomis (Preferred Networks)
+* Keisuke Nakata (Preferred Networks)
 * Stephanie Milani (University of Maryland, Baltimore County and Carnegie Mellon University)
 * Sharada Mohanty (AIcrowd)
 * Diego Perez Liebana (Queen Mary University of London)
 * Ruslan Salakhutdinov (Carnegie Mellon University)
+* Shinya Shiroshita (Preferred Networks)
 * Nicholay Topin (Carnegie Mellon University)
+* Avinash Ummadisingu (Preferred Networks)
 * Manuela Veloso (Carnegie Mellon University)
 * Phillip Wang (Carnegie Mellon University)
 
