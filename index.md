@@ -3,6 +3,7 @@ layout: default
 title: MineRL Project
 ---
 
+### [tl;dr: Compete to build AI in Minecraft!]({{site.url}}/competition)
 ### [tl;dr: Play Minecraft to benefit Science!]({{site.url}}/server)
 
 Welcome to MineRL. We want to solve [Minecraft](http://minecraft.net) using state-of-the-art Machine Learning! To do so, we have created one of the largest imitation learning datasets with **over 60 million frames** of recorded human player data. Our dataset includes a set of tasks which highlights many of the hardest problems in modern-day Reinforcement Learning: sparse rewards and hierarchical policies. 
@@ -132,4 +133,4 @@ Our project consists of three main components:
 
 * [A free, public Minecraft server for collecting data]({{site.url}}/play)
 * [The expansive MineRL dataset]({{site.url}}/dataset)
-* A set of tools for performing research on our data using Python (Coming soon)
+* [A set of tools for performing research on our data using Python]({{site.url}}/docs)

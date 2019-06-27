@@ -362,9 +362,9 @@ building documentation for these handlers, and <strong>you can click those highl
 <div class="section" id="id1">
 <h2>Observation Space<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">compassAngle</span>&quot;: &quot;Box(1,)&quot;,
+    &quot;<span class="xref std std-ref">compassAngle</span>&quot;: &quot;Box()&quot;,
     &quot;<span class="xref std std-ref">inventory</span>&quot;: {
-            &quot;dirt&quot;: &quot;Box(1,)&quot;
+            &quot;dirt&quot;: &quot;Box()&quot;
     },
     &quot;<a class="reference internal" href="handlers.html#pov"><span class="std std-ref">pov</span></a>&quot;: &quot;Box(64, 64, 3)&quot;
 })</pre>
@@ -424,9 +424,9 @@ building documentation for these handlers, and <strong>you can click those highl
 <div class="section" id="id4">
 <h2>Observation Space<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">compassAngle</span>&quot;: &quot;Box(1,)&quot;,
+    &quot;<span class="xref std std-ref">compassAngle</span>&quot;: &quot;Box()&quot;,
     &quot;<span class="xref std std-ref">inventory</span>&quot;: {
-            &quot;dirt&quot;: &quot;Box(1,)&quot;
+            &quot;dirt&quot;: &quot;Box()&quot;
     },
     &quot;<a class="reference internal" href="handlers.html#pov"><span class="std std-ref">pov</span></a>&quot;: &quot;Box(64, 64, 3)&quot;
 })</pre>
@@ -486,9 +486,9 @@ building documentation for these handlers, and <strong>you can click those highl
 <div class="section" id="id7">
 <h2>Observation Space<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">compassAngle</span>&quot;: &quot;Box(1,)&quot;,
+    &quot;<span class="xref std std-ref">compassAngle</span>&quot;: &quot;Box()&quot;,
     &quot;<span class="xref std std-ref">inventory</span>&quot;: {
-            &quot;dirt&quot;: &quot;Box(1,)&quot;
+            &quot;dirt&quot;: &quot;Box()&quot;
     },
     &quot;<a class="reference internal" href="handlers.html#pov"><span class="std std-ref">pov</span></a>&quot;: &quot;Box(64, 64, 3)&quot;
 })</pre>
@@ -548,9 +548,9 @@ building documentation for these handlers, and <strong>you can click those highl
 <div class="section" id="id10">
 <h2>Observation Space<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">compassAngle</span>&quot;: &quot;Box(1,)&quot;,
+    &quot;<span class="xref std std-ref">compassAngle</span>&quot;: &quot;Box()&quot;,
     &quot;<span class="xref std std-ref">inventory</span>&quot;: {
-            &quot;dirt&quot;: &quot;Box(1,)&quot;
+            &quot;dirt&quot;: &quot;Box()&quot;
     },
     &quot;<a class="reference internal" href="handlers.html#pov"><span class="std std-ref">pov</span></a>&quot;: &quot;Box(64, 64, 3)&quot;
 })</pre>
@@ -628,26 +628,30 @@ item is given here:</p>
 <pre class="literal-block">Dict({
     &quot;<span class="xref std std-ref">equipped_items</span>&quot;: {
             &quot;mainhand&quot;: {
-                    &quot;damage&quot;: &quot;Box(1,)&quot;,
-                    &quot;maxDamage&quot;: &quot;Box(1,)&quot;,
-                    &quot;type&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,other)&quot;
+                    &quot;damage&quot;: &quot;Box()&quot;,
+                    &quot;maxDamage&quot;: &quot;Box()&quot;,
+                    &quot;type&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,other)&quot;
             }
     },
     &quot;<span class="xref std std-ref">inventory</span>&quot;: {
-            &quot;coal&quot;: &quot;Box(1,)&quot;,
-            &quot;crafting_table&quot;: &quot;Box(1,)&quot;,
-            &quot;dirt&quot;: &quot;Box(1,)&quot;,
-            &quot;furnace&quot;: &quot;Box(1,)&quot;,
-            &quot;iron_ingot&quot;: &quot;Box(1,)&quot;,
-            &quot;iron_ore&quot;: &quot;Box(1,)&quot;,
-            &quot;iron_pickaxe&quot;: &quot;Box(1,)&quot;,
-            &quot;log&quot;: &quot;Box(1,)&quot;,
-            &quot;planks&quot;: &quot;Box(1,)&quot;,
-            &quot;stick&quot;: &quot;Box(1,)&quot;,
-            &quot;stone&quot;: &quot;Box(1,)&quot;,
-            &quot;stone_pickaxe&quot;: &quot;Box(1,)&quot;,
-            &quot;torch&quot;: &quot;Box(1,)&quot;,
-            &quot;wooden_pickaxe&quot;: &quot;Box(1,)&quot;
+            &quot;coal&quot;: &quot;Box()&quot;,
+            &quot;cobblestone&quot;: &quot;Box()&quot;,
+            &quot;crafting_table&quot;: &quot;Box()&quot;,
+            &quot;dirt&quot;: &quot;Box()&quot;,
+            &quot;furnace&quot;: &quot;Box()&quot;,
+            &quot;iron_axe&quot;: &quot;Box()&quot;,
+            &quot;iron_ingot&quot;: &quot;Box()&quot;,
+            &quot;iron_ore&quot;: &quot;Box()&quot;,
+            &quot;iron_pickaxe&quot;: &quot;Box()&quot;,
+            &quot;log&quot;: &quot;Box()&quot;,
+            &quot;planks&quot;: &quot;Box()&quot;,
+            &quot;stick&quot;: &quot;Box()&quot;,
+            &quot;stone&quot;: &quot;Box()&quot;,
+            &quot;stone_axe&quot;: &quot;Box()&quot;,
+            &quot;stone_pickaxe&quot;: &quot;Box()&quot;,
+            &quot;torch&quot;: &quot;Box()&quot;,
+            &quot;wooden_axe&quot;: &quot;Box()&quot;,
+            &quot;wooden_pickaxe&quot;: &quot;Box()&quot;
     },
     &quot;<a class="reference internal" href="handlers.html#pov"><span class="std std-ref">pov</span></a>&quot;: &quot;Box(64, 64, 3)&quot;
 })</pre>
@@ -658,14 +662,14 @@ item is given here:</p>
     &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(2,)&quot;,
-    &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(none,torch,stick,planks)&quot;,
-    &quot;<span class="xref std std-ref">equip</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe)&quot;,
+    &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(none,torch,stick,planks,crafting_table)&quot;,
+    &quot;<span class="xref std std-ref">equip</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe)&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">jump</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">left</span>&quot;: &quot;Discrete(2)&quot;,
-    &quot;<span class="xref std std-ref">nearbyCraft</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,crafting_table,furnace)&quot;,
+    &quot;<span class="xref std std-ref">nearbyCraft</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,furnace)&quot;,
     &quot;<span class="xref std std-ref">nearbySmelt</span>&quot;: &quot;Enum(none,iron_ingot,coal)&quot;,
-    &quot;<span class="xref std std-ref">place</span>&quot;: &quot;Enum(none,dirt,stone,crafting_table,furnace,torch)&quot;,
+    &quot;<span class="xref std std-ref">place</span>&quot;: &quot;Enum(none,dirt,stone,cobblestone,crafting_table,furnace,torch)&quot;,
     &quot;<span class="xref std std-ref">right</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">sneak</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">sprint</span>&quot;: &quot;Discrete(2)&quot;
@@ -729,26 +733,30 @@ item are given here:</p>
 <pre class="literal-block">Dict({
     &quot;<span class="xref std std-ref">equipped_items</span>&quot;: {
             &quot;mainhand&quot;: {
-                    &quot;damage&quot;: &quot;Box(1,)&quot;,
-                    &quot;maxDamage&quot;: &quot;Box(1,)&quot;,
-                    &quot;type&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,other)&quot;
+                    &quot;damage&quot;: &quot;Box()&quot;,
+                    &quot;maxDamage&quot;: &quot;Box()&quot;,
+                    &quot;type&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,other)&quot;
             }
     },
     &quot;<span class="xref std std-ref">inventory</span>&quot;: {
-            &quot;coal&quot;: &quot;Box(1,)&quot;,
-            &quot;crafting_table&quot;: &quot;Box(1,)&quot;,
-            &quot;dirt&quot;: &quot;Box(1,)&quot;,
-            &quot;furnace&quot;: &quot;Box(1,)&quot;,
-            &quot;iron_ingot&quot;: &quot;Box(1,)&quot;,
-            &quot;iron_ore&quot;: &quot;Box(1,)&quot;,
-            &quot;iron_pickaxe&quot;: &quot;Box(1,)&quot;,
-            &quot;log&quot;: &quot;Box(1,)&quot;,
-            &quot;planks&quot;: &quot;Box(1,)&quot;,
-            &quot;stick&quot;: &quot;Box(1,)&quot;,
-            &quot;stone&quot;: &quot;Box(1,)&quot;,
-            &quot;stone_pickaxe&quot;: &quot;Box(1,)&quot;,
-            &quot;torch&quot;: &quot;Box(1,)&quot;,
-            &quot;wooden_pickaxe&quot;: &quot;Box(1,)&quot;
+            &quot;coal&quot;: &quot;Box()&quot;,
+            &quot;cobblestone&quot;: &quot;Box()&quot;,
+            &quot;crafting_table&quot;: &quot;Box()&quot;,
+            &quot;dirt&quot;: &quot;Box()&quot;,
+            &quot;furnace&quot;: &quot;Box()&quot;,
+            &quot;iron_axe&quot;: &quot;Box()&quot;,
+            &quot;iron_ingot&quot;: &quot;Box()&quot;,
+            &quot;iron_ore&quot;: &quot;Box()&quot;,
+            &quot;iron_pickaxe&quot;: &quot;Box()&quot;,
+            &quot;log&quot;: &quot;Box()&quot;,
+            &quot;planks&quot;: &quot;Box()&quot;,
+            &quot;stick&quot;: &quot;Box()&quot;,
+            &quot;stone&quot;: &quot;Box()&quot;,
+            &quot;stone_axe&quot;: &quot;Box()&quot;,
+            &quot;stone_pickaxe&quot;: &quot;Box()&quot;,
+            &quot;torch&quot;: &quot;Box()&quot;,
+            &quot;wooden_axe&quot;: &quot;Box()&quot;,
+            &quot;wooden_pickaxe&quot;: &quot;Box()&quot;
     },
     &quot;<a class="reference internal" href="handlers.html#pov"><span class="std std-ref">pov</span></a>&quot;: &quot;Box(64, 64, 3)&quot;
 })</pre>
@@ -759,14 +767,14 @@ item are given here:</p>
     &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(2,)&quot;,
-    &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(none,torch,stick,planks)&quot;,
-    &quot;<span class="xref std std-ref">equip</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe)&quot;,
+    &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(none,torch,stick,planks,crafting_table)&quot;,
+    &quot;<span class="xref std std-ref">equip</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe)&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">jump</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">left</span>&quot;: &quot;Discrete(2)&quot;,
-    &quot;<span class="xref std std-ref">nearbyCraft</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,crafting_table,furnace)&quot;,
+    &quot;<span class="xref std std-ref">nearbyCraft</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,furnace)&quot;,
     &quot;<span class="xref std std-ref">nearbySmelt</span>&quot;: &quot;Enum(none,iron_ingot,coal)&quot;,
-    &quot;<span class="xref std std-ref">place</span>&quot;: &quot;Enum(none,dirt,stone,crafting_table,furnace,torch)&quot;,
+    &quot;<span class="xref std std-ref">place</span>&quot;: &quot;Enum(none,dirt,stone,cobblestone,crafting_table,furnace,torch)&quot;,
     &quot;<span class="xref std std-ref">right</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">sneak</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">sprint</span>&quot;: &quot;Discrete(2)&quot;
@@ -837,26 +845,30 @@ item is given here:</p>
 <pre class="literal-block">Dict({
     &quot;<span class="xref std std-ref">equipped_items</span>&quot;: {
             &quot;mainhand&quot;: {
-                    &quot;damage&quot;: &quot;Box(1,)&quot;,
-                    &quot;maxDamage&quot;: &quot;Box(1,)&quot;,
-                    &quot;type&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,other)&quot;
+                    &quot;damage&quot;: &quot;Box()&quot;,
+                    &quot;maxDamage&quot;: &quot;Box()&quot;,
+                    &quot;type&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,other)&quot;
             }
     },
     &quot;<span class="xref std std-ref">inventory</span>&quot;: {
-            &quot;coal&quot;: &quot;Box(1,)&quot;,
-            &quot;crafting_table&quot;: &quot;Box(1,)&quot;,
-            &quot;dirt&quot;: &quot;Box(1,)&quot;,
-            &quot;furnace&quot;: &quot;Box(1,)&quot;,
-            &quot;iron_ingot&quot;: &quot;Box(1,)&quot;,
-            &quot;iron_ore&quot;: &quot;Box(1,)&quot;,
-            &quot;iron_pickaxe&quot;: &quot;Box(1,)&quot;,
-            &quot;log&quot;: &quot;Box(1,)&quot;,
-            &quot;planks&quot;: &quot;Box(1,)&quot;,
-            &quot;stick&quot;: &quot;Box(1,)&quot;,
-            &quot;stone&quot;: &quot;Box(1,)&quot;,
-            &quot;stone_pickaxe&quot;: &quot;Box(1,)&quot;,
-            &quot;torch&quot;: &quot;Box(1,)&quot;,
-            &quot;wooden_pickaxe&quot;: &quot;Box(1,)&quot;
+            &quot;coal&quot;: &quot;Box()&quot;,
+            &quot;cobblestone&quot;: &quot;Box()&quot;,
+            &quot;crafting_table&quot;: &quot;Box()&quot;,
+            &quot;dirt&quot;: &quot;Box()&quot;,
+            &quot;furnace&quot;: &quot;Box()&quot;,
+            &quot;iron_axe&quot;: &quot;Box()&quot;,
+            &quot;iron_ingot&quot;: &quot;Box()&quot;,
+            &quot;iron_ore&quot;: &quot;Box()&quot;,
+            &quot;iron_pickaxe&quot;: &quot;Box()&quot;,
+            &quot;log&quot;: &quot;Box()&quot;,
+            &quot;planks&quot;: &quot;Box()&quot;,
+            &quot;stick&quot;: &quot;Box()&quot;,
+            &quot;stone&quot;: &quot;Box()&quot;,
+            &quot;stone_axe&quot;: &quot;Box()&quot;,
+            &quot;stone_pickaxe&quot;: &quot;Box()&quot;,
+            &quot;torch&quot;: &quot;Box()&quot;,
+            &quot;wooden_axe&quot;: &quot;Box()&quot;,
+            &quot;wooden_pickaxe&quot;: &quot;Box()&quot;
     },
     &quot;<a class="reference internal" href="handlers.html#pov"><span class="std std-ref">pov</span></a>&quot;: &quot;Box(64, 64, 3)&quot;
 })</pre>
@@ -867,14 +879,14 @@ item is given here:</p>
     &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(2,)&quot;,
-    &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(none,torch,stick,planks)&quot;,
-    &quot;<span class="xref std std-ref">equip</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe)&quot;,
+    &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(none,torch,stick,planks,crafting_table)&quot;,
+    &quot;<span class="xref std std-ref">equip</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe)&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">jump</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">left</span>&quot;: &quot;Discrete(2)&quot;,
-    &quot;<span class="xref std std-ref">nearbyCraft</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,crafting_table,furnace)&quot;,
+    &quot;<span class="xref std std-ref">nearbyCraft</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,furnace)&quot;,
     &quot;<span class="xref std std-ref">nearbySmelt</span>&quot;: &quot;Enum(none,iron_ingot,coal)&quot;,
-    &quot;<span class="xref std std-ref">place</span>&quot;: &quot;Enum(none,dirt,stone,crafting_table,furnace,torch)&quot;,
+    &quot;<span class="xref std std-ref">place</span>&quot;: &quot;Enum(none,dirt,stone,cobblestone,crafting_table,furnace,torch)&quot;,
     &quot;<span class="xref std std-ref">right</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">sneak</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">sprint</span>&quot;: &quot;Discrete(2)&quot;
@@ -939,26 +951,30 @@ item are given here:</p>
 <pre class="literal-block">Dict({
     &quot;<span class="xref std std-ref">equipped_items</span>&quot;: {
             &quot;mainhand&quot;: {
-                    &quot;damage&quot;: &quot;Box(1,)&quot;,
-                    &quot;maxDamage&quot;: &quot;Box(1,)&quot;,
-                    &quot;type&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,other)&quot;
+                    &quot;damage&quot;: &quot;Box()&quot;,
+                    &quot;maxDamage&quot;: &quot;Box()&quot;,
+                    &quot;type&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,other)&quot;
             }
     },
     &quot;<span class="xref std std-ref">inventory</span>&quot;: {
-            &quot;coal&quot;: &quot;Box(1,)&quot;,
-            &quot;crafting_table&quot;: &quot;Box(1,)&quot;,
-            &quot;dirt&quot;: &quot;Box(1,)&quot;,
-            &quot;furnace&quot;: &quot;Box(1,)&quot;,
-            &quot;iron_ingot&quot;: &quot;Box(1,)&quot;,
-            &quot;iron_ore&quot;: &quot;Box(1,)&quot;,
-            &quot;iron_pickaxe&quot;: &quot;Box(1,)&quot;,
-            &quot;log&quot;: &quot;Box(1,)&quot;,
-            &quot;planks&quot;: &quot;Box(1,)&quot;,
-            &quot;stick&quot;: &quot;Box(1,)&quot;,
-            &quot;stone&quot;: &quot;Box(1,)&quot;,
-            &quot;stone_pickaxe&quot;: &quot;Box(1,)&quot;,
-            &quot;torch&quot;: &quot;Box(1,)&quot;,
-            &quot;wooden_pickaxe&quot;: &quot;Box(1,)&quot;
+            &quot;coal&quot;: &quot;Box()&quot;,
+            &quot;cobblestone&quot;: &quot;Box()&quot;,
+            &quot;crafting_table&quot;: &quot;Box()&quot;,
+            &quot;dirt&quot;: &quot;Box()&quot;,
+            &quot;furnace&quot;: &quot;Box()&quot;,
+            &quot;iron_axe&quot;: &quot;Box()&quot;,
+            &quot;iron_ingot&quot;: &quot;Box()&quot;,
+            &quot;iron_ore&quot;: &quot;Box()&quot;,
+            &quot;iron_pickaxe&quot;: &quot;Box()&quot;,
+            &quot;log&quot;: &quot;Box()&quot;,
+            &quot;planks&quot;: &quot;Box()&quot;,
+            &quot;stick&quot;: &quot;Box()&quot;,
+            &quot;stone&quot;: &quot;Box()&quot;,
+            &quot;stone_axe&quot;: &quot;Box()&quot;,
+            &quot;stone_pickaxe&quot;: &quot;Box()&quot;,
+            &quot;torch&quot;: &quot;Box()&quot;,
+            &quot;wooden_axe&quot;: &quot;Box()&quot;,
+            &quot;wooden_pickaxe&quot;: &quot;Box()&quot;
     },
     &quot;<a class="reference internal" href="handlers.html#pov"><span class="std std-ref">pov</span></a>&quot;: &quot;Box(64, 64, 3)&quot;
 })</pre>
@@ -969,14 +985,14 @@ item are given here:</p>
     &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(2,)&quot;,
-    &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(none,torch,stick,planks)&quot;,
-    &quot;<span class="xref std std-ref">equip</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe)&quot;,
+    &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(none,torch,stick,planks,crafting_table)&quot;,
+    &quot;<span class="xref std std-ref">equip</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe)&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">jump</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">left</span>&quot;: &quot;Discrete(2)&quot;,
-    &quot;<span class="xref std std-ref">nearbyCraft</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_pickaxe,crafting_table,furnace)&quot;,
+    &quot;<span class="xref std std-ref">nearbyCraft</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,furnace)&quot;,
     &quot;<span class="xref std std-ref">nearbySmelt</span>&quot;: &quot;Enum(none,iron_ingot,coal)&quot;,
-    &quot;<span class="xref std std-ref">place</span>&quot;: &quot;Enum(none,dirt,stone,crafting_table,furnace,torch)&quot;,
+    &quot;<span class="xref std std-ref">place</span>&quot;: &quot;Enum(none,dirt,stone,cobblestone,crafting_table,furnace,torch)&quot;,
     &quot;<span class="xref std std-ref">right</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">sneak</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">sprint</span>&quot;: &quot;Discrete(2)&quot;
