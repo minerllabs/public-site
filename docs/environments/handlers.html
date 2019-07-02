@@ -106,6 +106,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#actions">Actions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#camera-control-camera">Camera Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tool-control-camera">Tool Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -273,6 +274,7 @@ building documentation for these handlers, and <strong>you can click those highl
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#actions">Actions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#camera-control-camera">Camera Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tool-control-camera">Tool Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -318,10 +320,11 @@ the agent’s first-person perspective.</p>
 <span class="target" id="camera"></span><dl class="function">
 <dt>
 <code class="sig-name descname">camera : Box(2) [delta_pitch, delta_yaw]</code></dt>
-<dd><p>This action changes the oritentation  of the agent’s head.
+<dd><p>This action changes the orientation  of the agent’s head by the corresponding number of degrees.
 When the <code class="code docutils literal notranslate"><span class="pre">pov</span></code> observation is available, the
 camera changes its orientation pitch by the first component
-and its yaw by the second component.</p>
+and its yaw by the second component. Both <code class="code docutils literal notranslate"><span class="pre">delta_pitch</span></code> and <code class="code docutils literal notranslate"><span class="pre">delta_yaw</span></code> are limited to [-180, 180]
+inclusive</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><code class="code docutils literal notranslate"><span class="pre">np.float32</span></code></p>
@@ -330,6 +333,29 @@ and its yaw by the second component.</p>
 <dd class="field-even"><p>[2]</p>
 </dd>
 </dl>
+</dd></dl>
+
+</div>
+<div class="section" id="tool-control-camera">
+<h2>Tool Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code><a class="headerlink" href="#tool-control-camera" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="equip"></span><dl class="function">
+<dt>
+<code class="sig-name descname">equip : Enum('none', 'air', 'wooden_axe', 'wooden_pickaxe', 'stone_axe', 'stone_pickaxe', 'iron_axe', 'iron_pickaxe'))</code></dt>
+<dd><p>This action equips the first instance of the specified item from the agents inventory to the main hand if the
+specified item is present, otherwise does nothing. <code class="code docutils literal notranslate"><span class="pre">none</span></code> is never a valid item and functions as a no-op
+action. <code class="code docutils literal notranslate"><span class="pre">air</span></code> matches any empty slot in an agent’s inventory and functions as an un-equip action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="code docutils literal notranslate"><span class="pre">np.int64</span></code></p>
+</dd>
+<dt class="field-even">Shape</dt>
+<dd class="field-even"><p>[1]</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Agents may un-equip items by performing the <code class="code docutils literal notranslate"><span class="pre">equip</span> <span class="pre">air</span></code> action.</p>
+</div>
 </dd></dl>
 
 </div>

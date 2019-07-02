@@ -106,6 +106,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="handlers.html#actions">Actions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="handlers.html#camera-control-camera">Camera Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="handlers.html#tool-control-camera">Tool Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -254,7 +255,7 @@ be evaluated in <code class="code docutils literal notranslate"><span class="pre
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Al environments offer a default no-op action via <code class="code docutils literal notranslate"><span class="pre">env.action_space.noop()</span></code>
+<p>All environments offer a default no-op action via <code class="code docutils literal notranslate"><span class="pre">env.action_space.noop()</span></code>
 and a random action via <code class="code docutils literal notranslate"><span class="pre">env.action_space.sample()</span></code></p>
 </div>
 </div>
@@ -289,6 +290,7 @@ building documentation for these handlers, and <strong>you can click those highl
 </li>
 <li class="toctree-l1"><a class="reference internal" href="handlers.html#actions">Actions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="handlers.html#camera-control-camera">Camera Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="handlers.html#tool-control-camera">Tool Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -615,7 +617,7 @@ item is given here:</p>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stick&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;crafting_table&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;8&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;wooden_pickaxe&quot;</span> <span class="o">/&gt;</span>
-<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;cobblestone&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;furnace&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone_pickaxe&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;64&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_ore&quot;</span> <span class="o">/&gt;</span>
@@ -630,7 +632,7 @@ item is given here:</p>
             &quot;mainhand&quot;: {
                     &quot;damage&quot;: &quot;Box()&quot;,
                     &quot;maxDamage&quot;: &quot;Box()&quot;,
-                    &quot;type&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,other)&quot;
+                    &quot;type&quot;: &quot;Enum(none,air,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,other)&quot;
             }
     },
     &quot;<span class="xref std std-ref">inventory</span>&quot;: {
@@ -663,7 +665,7 @@ item is given here:</p>
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(2,)&quot;,
     &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(none,torch,stick,planks,crafting_table)&quot;,
-    &quot;<span class="xref std std-ref">equip</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#equip"><span class="std std-ref">equip</span></a>&quot;: &quot;Enum(none,air,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe)&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">jump</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">left</span>&quot;: &quot;Discrete(2)&quot;,
@@ -720,7 +722,7 @@ item are given here:</p>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stick&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;crafting_table&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;8&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;wooden_pickaxe&quot;</span> <span class="o">/&gt;</span>
-<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;cobblestone&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;furnace&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone_pickaxe&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">amount</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;64&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_ore&quot;</span> <span class="o">/&gt;</span>
@@ -735,7 +737,7 @@ item are given here:</p>
             &quot;mainhand&quot;: {
                     &quot;damage&quot;: &quot;Box()&quot;,
                     &quot;maxDamage&quot;: &quot;Box()&quot;,
-                    &quot;type&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,other)&quot;
+                    &quot;type&quot;: &quot;Enum(none,air,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,other)&quot;
             }
     },
     &quot;<span class="xref std std-ref">inventory</span>&quot;: {
@@ -768,7 +770,7 @@ item are given here:</p>
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(2,)&quot;,
     &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(none,torch,stick,planks,crafting_table)&quot;,
-    &quot;<span class="xref std std-ref">equip</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#equip"><span class="std std-ref">equip</span></a>&quot;: &quot;Enum(none,air,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe)&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">jump</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">left</span>&quot;: &quot;Discrete(2)&quot;,
@@ -831,7 +833,7 @@ item is given here:</p>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stick&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;crafting_table&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;8&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;wooden_pickaxe&quot;</span> <span class="o">/&gt;</span>
-<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;cobblestone&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;furnace&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone_pickaxe&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;64&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_ore&quot;</span> <span class="o">/&gt;</span>
@@ -847,7 +849,7 @@ item is given here:</p>
             &quot;mainhand&quot;: {
                     &quot;damage&quot;: &quot;Box()&quot;,
                     &quot;maxDamage&quot;: &quot;Box()&quot;,
-                    &quot;type&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,other)&quot;
+                    &quot;type&quot;: &quot;Enum(none,air,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,other)&quot;
             }
     },
     &quot;<span class="xref std std-ref">inventory</span>&quot;: {
@@ -880,7 +882,7 @@ item is given here:</p>
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(2,)&quot;,
     &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(none,torch,stick,planks,crafting_table)&quot;,
-    &quot;<span class="xref std std-ref">equip</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#equip"><span class="std std-ref">equip</span></a>&quot;: &quot;Enum(none,air,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe)&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">jump</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">left</span>&quot;: &quot;Discrete(2)&quot;,
@@ -937,7 +939,7 @@ item are given here:</p>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stick&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;4&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;crafting_table&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;8&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;wooden_pickaxe&quot;</span> <span class="o">/&gt;</span>
-<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;16&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;cobblestone&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;furnace&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;32&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;stone_pickaxe&quot;</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">&quot;64&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;iron_ore&quot;</span> <span class="o">/&gt;</span>
@@ -953,7 +955,7 @@ item are given here:</p>
             &quot;mainhand&quot;: {
                     &quot;damage&quot;: &quot;Box()&quot;,
                     &quot;maxDamage&quot;: &quot;Box()&quot;,
-                    &quot;type&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,other)&quot;
+                    &quot;type&quot;: &quot;Enum(none,air,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe,other)&quot;
             }
     },
     &quot;<span class="xref std std-ref">inventory</span>&quot;: {
@@ -986,7 +988,7 @@ item are given here:</p>
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(2,)&quot;,
     &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(none,torch,stick,planks,crafting_table)&quot;,
-    &quot;<span class="xref std std-ref">equip</span>&quot;: &quot;Enum(none,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#equip"><span class="std std-ref">equip</span></a>&quot;: &quot;Enum(none,air,wooden_axe,wooden_pickaxe,stone_axe,stone_pickaxe,iron_axe,iron_pickaxe)&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">jump</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">left</span>&quot;: &quot;Discrete(2)&quot;,

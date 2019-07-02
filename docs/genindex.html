@@ -105,6 +105,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="environments/handlers.html#actions">Actions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="environments/handlers.html#camera-control-camera">Camera Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="environments/handlers.html#tool-control-camera">Tool Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -264,6 +265,8 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/env.html#minerl.env.malmo.InstanceManager.add_keep_alive">add_keep_alive() (minerl.env.malmo.InstanceManager class method)</a>
+</li>
       <li><a href="api/env.html#minerl.env.malmo.InstanceManager.allocate_pool">allocate_pool() (minerl.env.malmo.InstanceManager class method)</a>
 </li>
   </ul></td>
@@ -278,6 +281,10 @@
         <li><a href="api/env.html#minerl.env.malmo.InstanceManager.Instance.close">(minerl.env.malmo.InstanceManager.Instance method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/env.html#minerl.env.malmo.CustomAsyncRemoteMethod">CustomAsyncRemoteMethod (class in minerl.env.malmo)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -301,6 +308,10 @@
       <li><a href="api/env.html#minerl.env.malmo.InstanceManager.get_instance">get_instance() (minerl.env.malmo.InstanceManager class method)</a>
 </li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/env.html#minerl.env.malmo.InstanceManager.Instance.get_output">get_output() (minerl.env.malmo.InstanceManager.Instance method)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="H">H</h2>
@@ -322,17 +333,25 @@
 </li>
       <li><a href="api/env.html#minerl.env.malmo.INSTANCE_MANAGER_PYRO">INSTANCE_MANAGER_PYRO (in module minerl.env.malmo)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/env.html#minerl.env.malmo.InstanceManager">InstanceManager (class in minerl.env.malmo)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/env.html#minerl.env.malmo.InstanceManager.Instance">InstanceManager.Instance (class in minerl.env.malmo)</a>
+</li>
+      <li><a href="api/env.html#minerl.env.core.MineRLEnv.is_closed">is_closed() (minerl.env.core.MineRLEnv method)</a>
+</li>
+      <li><a href="api/env.html#minerl.env.malmo.InstanceManager.is_remote">is_remote() (minerl.env.malmo.InstanceManager class method)</a>
 </li>
   </ul></td>
 </tr></table>
 
 <h2 id="K">K</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/env.html#minerl.env.malmo.InstanceManager.KEEP_ALIVE_PYRO_FREQUENCY">KEEP_ALIVE_PYRO_FREQUENCY (minerl.env.malmo.InstanceManager attribute)</a>
+</li>
+  </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/env.html#minerl.env.malmo.InstanceManager.Instance.kill">kill() (minerl.env.malmo.InstanceManager.Instance method)</a>
 </li>
@@ -348,6 +367,8 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/env.html#minerl.env.malmo.launch_queue_logger_thread">launch_queue_logger_thread() (in module minerl.env.malmo)</a>
+</li>
       <li><a href="api/data.html#minerl.data.DataPipeline.load_data">load_data() (minerl.data.DataPipeline static method)</a>
 </li>
       <li><a href="api/env.html#minerl.env.malmo.logger">logger (in module minerl.env.malmo)</a>
@@ -366,12 +387,14 @@
 </li>
       <li><a href="api/data.html#minerl.data.DataPipeline.map_to_dict">map_to_dict() (minerl.data.DataPipeline static method)</a>
 </li>
-      <li><a href="api/env.html#minerl.env.malmo.InstanceManager.MAXINSTANCES">MAXINSTANCES (minerl.env.malmo.InstanceManager attribute)</a>
+      <li><a href="api/env.html#minerl.env.malmo.InstanceManager.Instance.MAX_PIPE_LENGTH">MAX_PIPE_LENGTH (minerl.env.malmo.InstanceManager.Instance attribute)</a>
 </li>
-      <li><a href="api/env.html#minerl.env.core.MineRLEnv.metadata">metadata (minerl.env.core.MineRLEnv attribute)</a>
+      <li><a href="api/env.html#minerl.env.malmo.InstanceManager.MAXINSTANCES">MAXINSTANCES (minerl.env.malmo.InstanceManager attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/env.html#minerl.env.core.MineRLEnv.metadata">metadata (minerl.env.core.MineRLEnv attribute)</a>
+</li>
       <li><a href="api/env.html#minerl.env.malmo.InstanceManager.MINECRAFT_DIR">MINECRAFT_DIR (minerl.env.malmo.InstanceManager attribute)</a>
 </li>
       <li><a href="api/data.html#module-minerl.data">minerl.data (module)</a>
@@ -416,6 +439,8 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/env.html#minerl.env.malmo.InstanceManager.REMOTE">REMOTE (minerl.env.malmo.InstanceManager attribute)</a>
+</li>
       <li><a href="api/env.html#minerl.env.core.MineRLEnv.render">render() (minerl.env.core.MineRLEnv method)</a>
 </li>
       <li><a href="api/env.html#minerl.env.core.MineRLEnv.reset">reset() (minerl.env.core.MineRLEnv method)</a>
@@ -432,11 +457,15 @@
 </li>
       <li><a href="api/data.html#minerl.data.DataPipeline.seq_iter">seq_iter() (minerl.data.DataPipeline method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/env.html#minerl.env.malmo.InstanceManager.shutdown">shutdown() (minerl.env.malmo.InstanceManager class method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/env.html#minerl.env.core.MineRLEnv.status">status() (minerl.env.core.MineRLEnv method)</a>
+</li>
+      <li><a href="api/env.html#minerl.env.malmo.InstanceManager.STATUS_DIR">STATUS_DIR (minerl.env.malmo.InstanceManager attribute)</a>
+</li>
+      <li><a href="api/env.html#minerl.env.malmo.InstanceManager.Instance.status_dir">status_dir() (minerl.env.malmo.InstanceManager.Instance property)</a>
 </li>
       <li><a href="api/env.html#minerl.env.core.MineRLEnv.step">step() (minerl.env.core.MineRLEnv method)</a>
 </li>
