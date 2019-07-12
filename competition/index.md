@@ -12,8 +12,10 @@ title: MineRL Competition 2019
 </div>
 
 We are holding a competition on sample-efficient reinforcement learning using human priors. Standard methods require months to years of game time to attain human performance in complex games such as Go and StarCraft. In our competition, participants develop a system to obtain a diamond in Minecraft using only four days of training time. To facilitate solving this hard task with few samples, we provide a dataset of human demonstrations.
-
-<iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/KFMuI4TfC7c?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="560" height="315" allowtransparency="true" frameborder="0"><div style="text-align: center; margin: auto"><div></iframe>
+<!-- <div style="text-align: center; margin: auto" width='100%'> -->
+<iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/KFMuI4TfC7c?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
+</iframe>
+<!-- </div> -->
     
 This competition uses a set of Gym environments based on Malmo. To improve the experience for competition participants, we have extended Malmo to support many new features, including synchronous ticking. The environments and dataset loader will be available as a pip package when the competition begins.
 
