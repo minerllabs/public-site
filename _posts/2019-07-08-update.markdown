@@ -58,7 +58,7 @@ minerl.data.download('your/dataset/path`)
 **SUBMISSIONS SHOULD BE OPEN NEXT WEEK SO GET EXCITED!**  💯💯💯
 
 
-### ChaineRL Baselines for Auxiliary Environments released!
+### ChainerRL Baselines for Auxiliary Environments released!
 
 
 <div class="video-player" >
