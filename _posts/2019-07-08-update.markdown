@@ -4,6 +4,8 @@ title:  "HUGE Updates to MineRL: Dataset Fixes + Baselines!"
 date:   2019-07-08 00:00:01 -0600
 ---
 
+### [Competition launched! Sign-up to participate <u>[here]</u>!](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition)
+
 ### 💯 MineRL 0.2.0 released (new data, update now)!
 <img src="{{site.url}}/assets/videos/cropped_viewer.gif" width="100%"/>
 
