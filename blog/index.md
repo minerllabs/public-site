@@ -10,7 +10,7 @@ title: MineRL Blog
 Most recent post:
 -----------------
 
-### {{recent_post.title}}
+## {{recent_post.title}}
 #### {{ recent_post.date | date: "%b %-d, %Y" }}
 
 {{recent_post.content}} 

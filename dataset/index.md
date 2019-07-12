@@ -3,6 +3,9 @@ layout: default
 title: MineRL Dataset
 ---
 
+
+<img src="{{site.url}}/assets/videos/cropped_viewer.gif" width="100%"/>
+
 Details
 -------
 

@@ -8,14 +8,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Sampling The Dataset &mdash; MineRL 0.1.0 documentation</title>
+  <title>Installation &mdash; MineRL 0.1.0 documentation</title>
   
 
   
   
   
   
-    <link rel="canonical" href="docs/tutorials/data_sampling.html"/>
+    <link rel="canonical" href="docs/tutorials/index.html"/>
   
 
   
@@ -37,8 +37,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="General Information" href="../environments/index.html" />
-    <link rel="prev" title="Hello World: Your First Agent" href="first_agent.html" /> 
+    <link rel="next" title="Hello World: Your First Agent" href="first_agent.html" />
+    <link rel="prev" title="MineRL: Towards AI in Minecraft" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,15 +84,15 @@
             
               <p class="caption"><span class="caption-text">Tutorials and Guides</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="first_agent.html">Hello World: Your First Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="first_agent.html#creating-an-environment">Creating an environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="first_agent.html#taking-actions">Taking actions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="first_agent.html#no-op-actions-and-a-better-policy">No-op actions and a better policy</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sampling The Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#visualizing-the-data-minerl-viewer">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_sampling.html">Sampling The Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_sampling.html#visualizing-the-data-minerl-viewer">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
 </ul>
 <p class="caption"><span class="caption-text">MineRL Environments</span></p>
 <ul>
@@ -223,13 +223,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Sampling The Dataset</li>
+      <li>Installation</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/tutorials/data_sampling.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/tutorials/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -242,85 +242,62 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sampling-the-dataset">
-<h1>Sampling The Dataset<a class="headerlink" href="#sampling-the-dataset" title="Permalink to this headline">¶</a></h1>
-<p>Now that your agent can act in the environment, we should
-show it how to leverage human demonstrations.</p>
-<p>To get started, let’s ensure the data has been downloaded</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">minerl</span>
-
-<span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;/your/local/path&#39;</span><span class="p">)</span>
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to MineRL! This guide will get you started.</p>
+<p>To start using the data and set of reinforcement learning
+environments comprising MineRL, you’ll need to install the
+main python package, <code class="code docutils literal notranslate"><span class="pre">minerl</span></code>.</p>
+<ol class="arabic">
+<li><p>First <strong>make sure you have JDK 1.8</strong> installed on your
+system.</p>
+<ol class="loweralpha">
+<li><p><a class="reference external" href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Windows installer</a>  – On windows go this link and follow the
+instructions to install JDK 8.</p></li>
+<li><p>On Mac, you can install java8 using homebrew and AdoptOpenJDK (an open source mirror, used here to get around the fact that Java8 binaries are no longer available directly from Oracle):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">tap</span> <span class="n">AdoptOpenJDK</span><span class="o">/</span><span class="n">openjdk</span>
+<span class="n">brew</span> <span class="n">cask</span> <span class="n">install</span> <span class="n">adoptopenjdk8</span>
 </pre></div>
 </div>
-<p>Now we can build the datast for <code class="code docutils literal notranslate"><span class="pre">MineRLObtainDiamond-v0</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span>
-    <span class="s1">&#39;MineRLObtainDiamond-v0&#39;</span><span class="p">,</span>
-    <span class="n">data_dir</span><span class="o">=</span><span class="s1">&#39;/your/local/path&#39;</span><span class="p">)</span>
-
-<span class="c1"># Iterate through a single epoch gathering sequences of at most 32 steps</span>
-<span class="k">for</span> <span class="n">current_state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">done</span> \
-    <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">sarsd_iter</span><span class="p">(</span>
-        <span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_sequence_len</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
-
-        <span class="c1"># Print the POV @ the first step of the sequence</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">current_state</span><span class="p">[</span><span class="s1">&#39;pov&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="c1"># Print the final reward pf the sequence!</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">reward</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-
-        <span class="c1"># Check if final (next_state) is terminal.</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">done</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-
-        <span class="c1"># ... do something with the data.</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;At the end of trajectories the length&quot;</span>
-              <span class="s2">&quot;can be &lt; max_sequence_len&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">reward</span><span class="p">))</span>
+</li>
+<li><p>On Debian based systems (Ubuntu!) you can run the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">openjdk</span><span class="o">-</span><span class="n">r</span><span class="o">/</span><span class="n">ppa</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">openjdk</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="n">jdk</span>
 </pre></div>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> package uses environment variables to locate the data directory.
-For portability, plese define <code class="code docutils literal notranslate"><span class="pre">MINERL_DATA_ROOT</span></code> as
-<code class="code docutils literal notranslate"><span class="pre">/your/local/path/</span></code> in your system environment variables.</p>
-</div>
-</div>
-<div class="section" id="visualizing-the-data-minerl-viewer">
-<h1>Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code><a class="headerlink" href="#visualizing-the-data-minerl-viewer" title="Permalink to this headline">¶</a></h1>
-<p>To help you get familiar with the MineRL dataset,
-the <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> python package also provides a data trajectory viewer called
-<code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code>:</p>
-<a class="reference internal image-reference" href="../_images/cropped_viewer.gif"><img alt="" class="align-center" src="../_images/cropped_viewer.gif" style="width: 90%;" /></a>
-<p>The <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code> program lets you step through individual
-trajectories,
-showing the observation seen the player, the action
-they took (including camera, movement, and any action described by an MineRL
-environment’s action space), and the reward they received.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>usage: python3 -m minerl.viewer <span class="o">[</span>-h<span class="o">]</span> environment <span class="o">[</span>stream_name<span class="o">]</span>
-
-positional arguments:
-  environment  The MineRL environment to visualize. e.g.
-               MineRLObtainDiamondDense-v0
-  stream_name  <span class="o">(</span>optional<span class="o">)</span> The name of the trajectory to visualize. e.g.
-               v1_absolute_zucchini_basilisk-13_36805-50154.
-
-optional arguments:
-  -h, --help   show this <span class="nb">help</span> message and <span class="nb">exit</span>
+</li>
+</ol>
+</li>
+<li><p>Now install the <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> package!:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">minerl</span>
 </pre></div>
 </div>
-<p><strong>Try it out on a random trajectory by running:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make sure your MINERL_DATA_ROOT is set!</span>
-<span class="nb">export</span> <span class="nv">MINERL_DATA_ROOT</span><span class="o">=</span><span class="s1">&#39;/your/local/path&#39;</span>
-
-<span class="c1"># Visualizes a random trajectory of MineRLObtainDiamondDense-v0</span>
-python3 -m minerl.viewer MineRLObtainDiamondDense-v0
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>depending on your system you may need the user flag:
+<code class="code docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">minerl</span> <span class="pre">--user</span></code> to install property</p>
+</div>
+<ol class="arabic" start="3">
+<li><p>(Optional) Download the dataset - 13.6 GB:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">minerl</span>
+<span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="s2">&quot;/your/local/path/&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Try it out on a specific trajectory by running:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make sure your MINERL_DATA_ROOT is set!</span>
-<span class="nb">export</span> <span class="nv">MINERL_DATA_ROOT</span><span class="o">=</span><span class="s1">&#39;/your/local/path&#39;</span>
-<span class="c1"># Visualizes a specific trajectory. v1_absolute_zucch...</span>
-python3 -m minerl.viewer MineRLTreechop-v0 <span class="se">\</span>
-        v1_absolute_zucchini_basilisk-13_36805-50154
+</li>
+</ol>
+<p><strong>That’s it! Now you’re good to go :) 💯💯💯</strong></p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Currently <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> only supports environment rendering in <strong>headed environments</strong>
+(machines with monitors attached).</p>
+<p><strong>In order to run</strong> <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> <strong>environments without a head use a software renderer
+such as</strong> <code class="code docutils literal notranslate"><span class="pre">xvfb</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xvfb</span><span class="o">-</span><span class="n">run</span> <span class="n">python3</span> <span class="o">&lt;</span><span class="n">your_script</span><span class="o">.</span><span class="n">py</span><span class="o">&gt;</span>
 </pre></div>
+</div>
 </div>
 </div>
 
@@ -332,10 +309,10 @@ python3 -m minerl.viewer MineRLTreechop-v0 <span class="se">\</span>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../environments/index.html" class="btn btn-neutral float-right" title="General Information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="first_agent.html" class="btn btn-neutral float-right" title="Hello World: Your First Agent" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="first_agent.html" class="btn btn-neutral float-left" title="Hello World: Your First Agent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="MineRL: Towards AI in Minecraft" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -83,7 +83,7 @@
             
               <p class="caption"><span class="caption-text">Tutorials and Guides</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/first_agent.html">Hello World: Your First Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#creating-an-environment">Creating an environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#taking-actions">Taking actions</a></li>
@@ -91,6 +91,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/data_sampling.html">Sampling The Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/data_sampling.html#visualizing-the-data-minerl-viewer">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
 </ul>
 <p class="caption"><span class="caption-text">MineRL Environments</span></p>
 <ul>
@@ -278,7 +279,7 @@ as well as some basic usage examples. To see more detailed
 
 <dl class="function">
 <dt id="minerl.data.download">
-<code class="sig-prename descclassname">minerl.data.</code><code class="sig-name descname">download</code><span class="sig-paren">(</span><em class="sig-param">directory: &lt;module 'posixpath' from '/usr/lib/python3.6/posixpath.py'&gt;</em>, <em class="sig-param">resolution: str = 'low'</em>, <em class="sig-param">texture_pack: int = 0</em>, <em class="sig-param">update_environment_variables=True</em>, <em class="sig-param">disable_cache=False</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.download" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">minerl.data.</code><code class="sig-name descname">download</code><span class="sig-paren">(</span><em class="sig-param">directory=None</em>, <em class="sig-param">resolution='low'</em>, <em class="sig-param">texture_pack=0</em>, <em class="sig-param">update_environment_variables=True</em>, <em class="sig-param">disable_cache=False</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.download" title="Permalink to this definition">¶</a></dt>
 <dd><p>Downloads MineRLv0 to specified directory. If directory is None, attempts to
 download to $MINERL_DATA_ROOT. Raises ValueError if both are undefined.</p>
 <dl class="field-list simple">
@@ -300,13 +301,42 @@ download to $MINERL_DATA_ROOT. Raises ValueError if both are undefined.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Creates a data pipeline object used to itterate through the MineRL-v0 dataset</p>
 <dl class="method">
+<dt id="minerl.data.DataPipeline.action_space">
+<em class="property">property </em><code class="sig-name descname">action_space</code><a class="headerlink" href="#minerl.data.DataPipeline.action_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns: action space of current MineRL environment</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minerl.data.DataPipeline.get_trajectory_names">
+<code class="sig-name descname">get_trajectory_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.DataPipeline.get_trajectory_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets all the trajectory names</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>[description]</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>A list of experiment names</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="minerl.data.DataPipeline.load_data">
-<em class="property">static </em><code class="sig-name descname">load_data</code><span class="sig-paren">(</span><em class="sig-param">file_dir: str</em>, <em class="sig-param">environment: str</em>, <em class="sig-param">skip_interval=0</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.DataPipeline.load_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Loading mechanism for loading a trajectory from a file as a generator
-:param file_dir: file path to data directory
-:param environment: the environment name e.g. MineRLObtainDiamond-v0
-:param skip_interval: NOT IMPLEMENTED how many frames to skip between observations
-:return: iterator over files</p>
+<code class="sig-name descname">load_data</code><span class="sig-paren">(</span><em class="sig-param">stream_name: str</em>, <em class="sig-param">skip_interval=0</em>, <em class="sig-param">include_metadata=False</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.DataPipeline.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterates over an individual trajectory named stream_name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stream_name</strong> (<em>str</em>) – The stream name desired to be iterated through.</p></li>
+<li><p><strong>skip_interval</strong> (<em>int</em><em>, </em><em>optional</em>) – How many sices should be skipped.. Defaults to 0.</p></li>
+<li><p><strong>include_metadata</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not meta data about the loaded trajectory should be included.. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p>A tuple of (state, player_action, reward_from_action, next_state, is_next_state_terminal).
+These are tuples are yielded in order of the episode.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -315,9 +345,16 @@ download to $MINERL_DATA_ROOT. Raises ValueError if both are undefined.</p>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="minerl.data.DataPipeline.seq_iter">
-<code class="sig-name descname">seq_iter</code><span class="sig-paren">(</span><em class="sig-param">num_epochs=-1</em>, <em class="sig-param">max_sequence_len=32</em>, <em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.DataPipeline.seq_iter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a generator for iterating through sequences of the dataset.
+<dt id="minerl.data.DataPipeline.observation_space">
+<em class="property">property </em><code class="sig-name descname">observation_space</code><a class="headerlink" href="#minerl.data.DataPipeline.observation_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns: action space of current MineRL environment</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minerl.data.DataPipeline.sarsd_iter">
+<code class="sig-name descname">sarsd_iter</code><span class="sig-paren">(</span><em class="sig-param">num_epochs=-1</em>, <em class="sig-param">max_sequence_len=32</em>, <em class="sig-param">queue_size=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">include_metadata=False</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.DataPipeline.sarsd_iter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a generator for iterating through (state, action, reward, next_state, is_terminal)
+tuples in the dataset.
 Loads num_workers files at once as defined in minerl.data.make() and return up to
 max_sequence_len consecutive samples wrapped in a dict observation space</p>
 <dl class="field-list simple">
@@ -330,11 +367,19 @@ to loop forever. Defaults to -1.</p></li>
 will cause the ordering of examples to be the same after every call to seq_iter</p></li>
 </ul>
 </dd>
-</dl>
-<dl class="simple">
-<dt>Generates:</dt><dd><p>observation_dict, reward_list, done_list, action_dict</p>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p>A tuple of (state, player_action, reward_from_action, next_state, is_next_state_terminal).
+Each element is in the format of the environment action/state/reward space and contains as many
+samples are requested.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="minerl.data.DataPipeline.seq_iter">
+<code class="sig-name descname">seq_iter</code><span class="sig-paren">(</span><em class="sig-param">num_epochs=-1</em>, <em class="sig-param">max_sequence_len=32</em>, <em class="sig-param">queue_size=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">include_metadata=False</em><span class="sig-paren">)</span><a class="headerlink" href="#minerl.data.DataPipeline.seq_iter" title="Permalink to this definition">¶</a></dt>
+<dd><p>DEPRECATED METHOD FOR SAMPLING DATA FROM THE MINERL DATASET.</p>
+<p>This function is now <code class="code docutils literal notranslate"><span class="pre">DataPipeline.sarsd_iter()</span></code></p>
 </dd></dl>
 
 </dd></dl>

@@ -1,0 +1,97 @@
+---
+layout: post
+title:  "HUGE Updates to MineRL: Dataset Fixes + Baselines!"
+date:   2019-07-08 00:00:01 -0600
+---
+
+### ChaineRL Baselines for Auxiliary Environments released!
+
+
+<div class="video-player" >
+    <div class="video">
+        <video width="128" height="128" autoplay loop>
+            <source src="{{site.url}}/assets/videos/baselines/RainbowTreechop1small.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video">
+        <video width="128" height="128" autoplay loop>
+            <source src="{{site.url}}/assets/videos/baselines/RainbowTreechop2small.mp4" type="video/mp4">
+            <!-- <img src="assets/videos/baselines/RainbowTreechop1.gif" class="video"/> -->
+        </video>
+    </div>
+    <div class="video">
+        <video width="128" height="128" autoplay loop>
+            <source src="{{site.url}}/assets/videos/baselines/RainbowTreechop3small.mp4" type="video/mp4">
+            <!-- <img src="assets/videos/baselines/RainbowTreechop1.gif" class="video"/> -->
+        </video>
+    </div>
+    <div class="video">
+        <video width="128" height="128" autoplay loop>
+            <source src="{{site.url}}/assets/videos/baselines/PPOTreechop1small.mp4" type="video/mp4">
+            <!-- <img src="assets/videos/baselines/RainbowTreechop1.gif" class="video"/> -->
+        </video>
+    </div>
+
+</div>
+
+The awesome folks over at PFN **have released some initial baselines in their framework ChainerRL** on some of the auxiliary envrionments (Treechop + Navigate)! 
+
+**[Check out their amazing work here!](https://github.com/minerllabs/quick_start/tree/master/chainerrl_baselines)**
+
+They've released DDDQN, Rainbow, & PPO, and they solved `MineRLTreechop`!  Feel free to ask them if you have any questions!
+
+**Note:** when AIcrowd releases the competition submission and evaluation kit these baselines will be converted into that format an appear on the leaderboard. So **check back for updates**.
+
+
+
+### [IMPORTANT] MineRL 0.2.0 released (new data, update now)!
+<img src="{{site.url}}/assets/videos/cropped_viewer.gif" width="100%"/>
+
+We are excited to announce a HUGE update for `minerl` and the dataset **UPGRADE FOR FIXED DATA!**
+
+
+The package is now on `minerl-0.2.0`, and we have released a new version of the dataset! To upgrade:
+{% highlight bash %}
+pip3 install --upgrade minerl
+{% endhighlight %}
+Then **get the new dataset** by running the following in `python3!`  
+{% highlight python %}
+
+import minerl
+minerl.data.download('your/dataset/path`) 
+
+{% endhighlight %}
+
+#### **Changes in** `minerl-0.2.0`:
+
+* Adds `minerl.viewer`, [a new tool to visualize your the data](http://www.minerl.io/docs/tutorials/data_sampling.html#visualizing-the-data-minerl-viewer). Try it out on a random trajectory by running:
+
+{% highlight bash %}
+ # Make sure your MINERL_DATA_ROOT is set!
+ export MINERL_DATA_ROOT='/your/local/path'
+
+ # Visualizes a random trajectory 
+ python3 -m minerl.viewer MineRLObtainDiamondDense-v0
+
+{% endhighlight %}
+* Fixes an issue where the camera values are outside the interval [-180, 180] (#66)
+* Fixes an issue where there were invalid enum fields in the craft actions (#67)
+* Fixes an issue where the compass angle of a demonstration in the navigate task was always non-positive. (#75)
+* Fixes an issue where NavigateExtremeDense-v0 had extreme rewads (#76)
+* Adds a suppressor for the BrokenPipe error in seq_iter (#83)
+* **Deprecates `seq_iter` for a new function `sarsd_iter` which returns `state, action, reward, next_state, is_next_state_terminal`**
+* Fixes an issue where trajectories would complete the challenge but additional frames would be in the data (#127)
+* Removes a corrupted data stream (tempting_capers_shapeshifter-14_...) (#130)
+* Fixes an issue with the data downloader where the read operation would time out (#131)
+* Adds **resuming of downloads to the data downloader!**
+* Fixes massive issue with data alignment!
+* Frames at the beginning of experiments with teleportation are (mostly) removed!
+* Fixes an issue where random rewards would appear during experiments (opening a furnace).
+* Adjusts the brightness levels of the simulator and dataset to gamma=2.
+* Adds ambient occlusion to the dataset and the simulator to slightly improve graphical quality!
+* Fixes an issue where items would sometimes disappear from the inventory of player trajectories while they crafted.
+* Adds a versioning system to the dataset, **requiring that you use the latest version associated with your MineRL package.**
+
+
+**SUBMISSIONS SHOULD BE OPEN NEXT WEEK SO GET EXCITED!**  💯💯💯
+

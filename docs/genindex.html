@@ -83,7 +83,7 @@
             
               <p class="caption"><span class="caption-text">Tutorials and Guides</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/first_agent.html">Hello World: Your First Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/first_agent.html#creating-an-environment">Creating an environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/first_agent.html#taking-actions">Taking actions</a></li>
@@ -91,6 +91,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/data_sampling.html">Sampling The Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/data_sampling.html#visualizing-the-data-minerl-viewer">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
 </ul>
 <p class="caption"><span class="caption-text">MineRL Environments</span></p>
 <ul>
@@ -252,6 +253,7 @@
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
@@ -261,6 +263,8 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/data.html#minerl.data.DataPipeline.action_space">action_space() (minerl.data.DataPipeline property)</a>
+</li>
       <li><a href="api/env.html#minerl.env.malmo.InstanceManager.add_existing_instance">add_existing_instance() (minerl.env.malmo.InstanceManager class method)</a>
 </li>
   </ul></td>
@@ -310,6 +314,8 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/env.html#minerl.env.malmo.InstanceManager.Instance.get_output">get_output() (minerl.env.malmo.InstanceManager.Instance method)</a>
+</li>
+      <li><a href="api/data.html#minerl.data.DataPipeline.get_trajectory_names">get_trajectory_names() (minerl.data.DataPipeline method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -369,7 +375,7 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/env.html#minerl.env.malmo.launch_queue_logger_thread">launch_queue_logger_thread() (in module minerl.env.malmo)</a>
 </li>
-      <li><a href="api/data.html#minerl.data.DataPipeline.load_data">load_data() (minerl.data.DataPipeline static method)</a>
+      <li><a href="api/data.html#minerl.data.DataPipeline.load_data">load_data() (minerl.data.DataPipeline method)</a>
 </li>
       <li><a href="api/env.html#minerl.env.malmo.logger">logger (in module minerl.env.malmo)</a>
 </li>
@@ -422,6 +428,14 @@
   </ul></td>
 </tr></table>
 
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/data.html#minerl.data.DataPipeline.observation_space">observation_space() (minerl.data.DataPipeline property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -451,6 +465,8 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/data.html#minerl.data.DataPipeline.sarsd_iter">sarsd_iter() (minerl.data.DataPipeline method)</a>
+</li>
       <li><a href="api/env.html#minerl.env.malmo.InstanceManager.SCHEMAS_DIR">SCHEMAS_DIR (minerl.env.malmo.InstanceManager attribute)</a>
 </li>
       <li><a href="api/env.html#minerl.env.core.MineRLEnv.seed">seed() (minerl.env.core.MineRLEnv method)</a>

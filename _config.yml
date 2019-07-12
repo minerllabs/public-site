@@ -23,6 +23,8 @@ exclude:
    - .gitignore
    - README.md
 
+highlighter: rouge
+
 
 titles_from_headings:
   enabled:     true
