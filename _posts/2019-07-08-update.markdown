@@ -4,47 +4,7 @@ title:  "HUGE Updates to MineRL: Dataset Fixes + Baselines!"
 date:   2019-07-08 00:00:01 -0600
 ---
 
-### ChaineRL Baselines for Auxiliary Environments released!
-
-
-<div class="video-player" >
-    <div class="video">
-        <video width="128" height="128" autoplay loop>
-            <source src="{{site.url}}/assets/videos/baselines/RainbowTreechop1small.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="video">
-        <video width="128" height="128" autoplay loop>
-            <source src="{{site.url}}/assets/videos/baselines/RainbowTreechop2small.mp4" type="video/mp4">
-            <!-- <img src="assets/videos/baselines/RainbowTreechop1.gif" class="video"/> -->
-        </video>
-    </div>
-    <div class="video">
-        <video width="128" height="128" autoplay loop>
-            <source src="{{site.url}}/assets/videos/baselines/RainbowTreechop3small.mp4" type="video/mp4">
-            <!-- <img src="assets/videos/baselines/RainbowTreechop1.gif" class="video"/> -->
-        </video>
-    </div>
-    <div class="video">
-        <video width="128" height="128" autoplay loop>
-            <source src="{{site.url}}/assets/videos/baselines/PPOTreechop1small.mp4" type="video/mp4">
-            <!-- <img src="assets/videos/baselines/RainbowTreechop1.gif" class="video"/> -->
-        </video>
-    </div>
-
-</div>
-
-The awesome folks over at PFN **have released some initial baselines in their framework ChainerRL** on some of the auxiliary envrionments (Treechop + Navigate)! 
-
-**[Check out their amazing work here!](https://github.com/minerllabs/quick_start/tree/master/chainerrl_baselines)**
-
-They've released DDDQN, Rainbow, & PPO, and they solved `MineRLTreechop`!  Feel free to ask them if you have any questions!
-
-**Note:** when AIcrowd releases the competition submission and evaluation kit these baselines will be converted into that format an appear on the leaderboard. So **check back for updates**.
-
-
-
-### [IMPORTANT] MineRL 0.2.0 released (new data, update now)!
+### 💯 MineRL 0.2.0 released (new data, update now)!
 <img src="{{site.url}}/assets/videos/cropped_viewer.gif" width="100%"/>
 
 We are excited to announce a HUGE update for `minerl` and the dataset **UPGRADE FOR FIXED DATA!**
@@ -94,4 +54,46 @@ minerl.data.download('your/dataset/path`)
 
 
 **SUBMISSIONS SHOULD BE OPEN NEXT WEEK SO GET EXCITED!**  💯💯💯
+
+
+### ChaineRL Baselines for Auxiliary Environments released!
+
+
+<div class="video-player" >
+    <div class="video">
+        <video width="128" height="128" autoplay loop>
+            <source src="{{site.url}}/assets/videos/baselines/RainbowTreechop1small.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video">
+        <video width="128" height="128" autoplay loop>
+            <source src="{{site.url}}/assets/videos/baselines/RainbowTreechop2small.mp4" type="video/mp4">
+            <!-- <img src="assets/videos/baselines/RainbowTreechop1.gif" class="video"/> -->
+        </video>
+    </div>
+    <div class="video">
+        <video width="128" height="128" autoplay loop>
+            <source src="{{site.url}}/assets/videos/baselines/RainbowTreechop3small.mp4" type="video/mp4">
+            <!-- <img src="assets/videos/baselines/RainbowTreechop1.gif" class="video"/> -->
+        </video>
+    </div>
+    <div class="video">
+        <video width="128" height="128" autoplay loop>
+            <source src="{{site.url}}/assets/videos/baselines/PPOTreechop1small.mp4" type="video/mp4">
+            <!-- <img src="assets/videos/baselines/RainbowTreechop1.gif" class="video"/> -->
+        </video>
+    </div>
+
+</div>
+
+The awesome folks over at PFN **have released some initial baselines in their framework ChainerRL** on some of the auxiliary envrionments (Treechop + Navigate)! 
+
+**[Check out their amazing work here!](https://github.com/minerllabs/quick_start/tree/master/chainerrl_baselines)**
+
+<img src="{{site.url}}/assets/images/MineRLTreechop-v0.png" width="80%"/>
+
+They've released DDDQN, Rainbow, & PPO, and they solved `MineRLTreechop`!  Feel free to ask them if you have any questions!
+
+**Note:** when AIcrowd releases the competition submission and evaluation kit these baselines will be converted into that format an appear on the leaderboard. So **check back for updates**.
+
 
