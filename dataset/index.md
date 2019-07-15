@@ -12,7 +12,7 @@ Get the data!
 {% highlight bash %}
 pip3 install --upgrade minerl
 {% endhighlight %}
-Then **get the new dataset** by running the following in `python3!`  
+Then **get the dataset** by running the following in `python3!`  
 {% highlight python %}
 
 import minerl
