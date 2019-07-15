@@ -9,6 +9,19 @@ title: MineRL Dataset
 
 Get the data!
 ---------------
+{% highlight bash %}
+pip3 install --upgrade minerl
+{% endhighlight %}
+Then **get the new dataset** by running the following in `python3!`  
+{% highlight python %}
+
+import minerl
+minerl.data.download('your/dataset/path`) 
+
+{% endhighlight %}
+
+**To get started with the data [check out the data sampling tutorial]()!**
+
 
 
 Details
