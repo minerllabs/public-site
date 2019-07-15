@@ -8,14 +8,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Sampling The Dataset &mdash; MineRL 0.2.0 documentation</title>
+  <title>Windows FAQ &mdash; MineRL 0.2.0 documentation</title>
   
 
   
   
   
   
-    <link rel="canonical" href="docs/tutorials/data_sampling.html"/>
+    <link rel="canonical" href="docs/notes/windows.html"/>
   
 
   
@@ -37,8 +37,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="General Information" href="../environments/index.html" />
-    <link rel="prev" title="Hello World: Your First Agent" href="first_agent.html" /> 
+    <link rel="next" title="minerl.env" href="../api/env.html" />
+    <link rel="prev" title="Environment Handlers" href="../environments/handlers.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,16 +83,16 @@
             
             
               <p class="caption"><span class="caption-text">Tutorials and Guides</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="first_agent.html">Hello World: Your First Agent</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="first_agent.html#creating-an-environment">Creating an environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="first_agent.html#taking-actions">Taking actions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="first_agent.html#no-op-actions-and-a-better-policy">No-op actions and a better policy</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/first_agent.html">Hello World: Your First Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#creating-an-environment">Creating an environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#taking-actions">Taking actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#no-op-actions-and-a-better-policy">No-op actions and a better policy</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sampling The Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#visualizing-the-data-minerl-viewer">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/data_sampling.html">Sampling The Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/data_sampling.html#visualizing-the-data-minerl-viewer">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
 </ul>
 <p class="caption"><span class="caption-text">MineRL Environments</span></p>
 <ul>
@@ -168,9 +168,9 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Notes</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../notes/windows.html">Windows FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../notes/windows.html#the-freeze-support-error-multiprocessing">The <code class="code docutils literal notranslate"><span class="pre">freeze_support</span></code> error (multiprocessing)</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Windows FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-freeze-support-error-multiprocessing">The <code class="code docutils literal notranslate"><span class="pre">freeze_support</span></code> error (multiprocessing)</a></li>
 </ul>
 </li>
 </ul>
@@ -230,13 +230,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Sampling The Dataset</li>
+      <li>Windows FAQ</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/tutorials/data_sampling.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/notes/windows.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -249,85 +249,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sampling-the-dataset">
-<h1>Sampling The Dataset<a class="headerlink" href="#sampling-the-dataset" title="Permalink to this headline">¶</a></h1>
-<p>Now that your agent can act in the environment, we should
-show it how to leverage human demonstrations.</p>
-<p>To get started, let’s ensure the data has been downloaded</p>
+  <div class="section" id="windows-faq">
+<h1>Windows FAQ<a class="headerlink" href="#windows-faq" title="Permalink to this headline">¶</a></h1>
+<p>This note serves as a collection of fixes for errors which
+may occur on the Windows platform.</p>
+<div class="section" id="the-freeze-support-error-multiprocessing">
+<h2>The <code class="code docutils literal notranslate"><span class="pre">freeze_support</span></code> error (multiprocessing)<a class="headerlink" href="#the-freeze-support-error-multiprocessing" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-py3tb notranslate"><div class="highlight"><pre><span></span>RuntimeError:
+       An attempt has been made to start a new process before the
+       current process has finished its bootstrapping phase.
+
+   This probably means that you are not using fork to start your
+   child processes and you have forgotten to use the proper idiom
+   in the main module:
+
+       if __name__ == &#39;__main__&#39;:
+           freeze_support()
+           ...
+
+   The &quot;freeze_support()&quot; line can be omitted if the program
+   is not going to be frozen to produce an executable.
+</pre></div>
+</div>
+<p>The implementation of <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> is different on Windows, which
+uses <code class="docutils literal notranslate"><span class="pre">spawn</span></code> instead of <code class="docutils literal notranslate"><span class="pre">fork</span></code>. So we have to wrap the code with an
+if-clause to protect the code from executing multiple times. Refactor
+your code into the following structure.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">minerl</span>
+<span class="kn">import</span> <span class="nn">gym</span>
 
-<span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;/your/local/path&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">()</span>
+    <span class="c1"># do your main minerl code</span>
+    <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MineRLTreechop-v0&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Now we can build the datast for <code class="code docutils literal notranslate"><span class="pre">MineRLObtainDiamond-v0</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span>
-    <span class="s1">&#39;MineRLObtainDiamond-v0&#39;</span><span class="p">,</span>
-    <span class="n">data_dir</span><span class="o">=</span><span class="s1">&#39;/your/local/path&#39;</span><span class="p">)</span>
-
-<span class="c1"># Iterate through a single epoch gathering sequences of at most 32 steps</span>
-<span class="k">for</span> <span class="n">current_state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">done</span> \
-    <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">sarsd_iter</span><span class="p">(</span>
-        <span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_sequence_len</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
-
-        <span class="c1"># Print the POV @ the first step of the sequence</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">current_state</span><span class="p">[</span><span class="s1">&#39;pov&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="c1"># Print the final reward pf the sequence!</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">reward</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-
-        <span class="c1"># Check if final (next_state) is terminal.</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">done</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-
-        <span class="c1"># ... do something with the data.</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;At the end of trajectories the length&quot;</span>
-              <span class="s2">&quot;can be &lt; max_sequence_len&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">reward</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> package uses environment variables to locate the data directory.
-For portability, plese define <code class="code docutils literal notranslate"><span class="pre">MINERL_DATA_ROOT</span></code> as
-<code class="code docutils literal notranslate"><span class="pre">/your/local/path/</span></code> in your system environment variables.</p>
-</div>
-</div>
-<div class="section" id="visualizing-the-data-minerl-viewer">
-<h1>Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code><a class="headerlink" href="#visualizing-the-data-minerl-viewer" title="Permalink to this headline">¶</a></h1>
-<p>To help you get familiar with the MineRL dataset,
-the <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> python package also provides a data trajectory viewer called
-<code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code>:</p>
-<a class="reference internal image-reference" href="../_images/cropped_viewer.gif"><img alt="" class="align-center" src="../_images/cropped_viewer.gif" style="width: 90%;" /></a>
-<p>The <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code> program lets you step through individual
-trajectories,
-showing the observation seen the player, the action
-they took (including camera, movement, and any action described by an MineRL
-environment’s action space), and the reward they received.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>usage: python3 -m minerl.viewer <span class="o">[</span>-h<span class="o">]</span> environment <span class="o">[</span>stream_name<span class="o">]</span>
-
-positional arguments:
-  environment  The MineRL environment to visualize. e.g.
-               MineRLObtainDiamondDense-v0
-  stream_name  <span class="o">(</span>optional<span class="o">)</span> The name of the trajectory to visualize. e.g.
-               v1_absolute_zucchini_basilisk-13_36805-50154.
-
-optional arguments:
-  -h, --help   show this <span class="nb">help</span> message and <span class="nb">exit</span>
-</pre></div>
-</div>
-<p><strong>Try it out on a random trajectory by running:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make sure your MINERL_DATA_ROOT is set!</span>
-<span class="nb">export</span> <span class="nv">MINERL_DATA_ROOT</span><span class="o">=</span><span class="s1">&#39;/your/local/path&#39;</span>
-
-<span class="c1"># Visualizes a random trajectory of MineRLObtainDiamondDense-v0</span>
-python3 -m minerl.viewer MineRLObtainDiamondDense-v0
-</pre></div>
-</div>
-<p><strong>Try it out on a specific trajectory by running:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make sure your MINERL_DATA_ROOT is set!</span>
-<span class="nb">export</span> <span class="nv">MINERL_DATA_ROOT</span><span class="o">=</span><span class="s1">&#39;/your/local/path&#39;</span>
-<span class="c1"># Visualizes a specific trajectory. v1_absolute_zucch...</span>
-python3 -m minerl.viewer MineRLTreechop-v0 <span class="se">\</span>
-        v1_absolute_zucchini_basilisk-13_36805-50154
-</pre></div>
 </div>
 </div>
 
@@ -339,10 +297,10 @@ python3 -m minerl.viewer MineRLTreechop-v0 <span class="se">\</span>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../environments/index.html" class="btn btn-neutral float-right" title="General Information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../api/env.html" class="btn btn-neutral float-right" title="minerl.env" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="first_agent.html" class="btn btn-neutral float-left" title="Hello World: Your First Agent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../environments/handlers.html" class="btn btn-neutral float-left" title="Environment Handlers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
