@@ -20,7 +20,7 @@ minerl.data.download('your/dataset/path`)
 
 {% endhighlight %}
 
-**To get started with the data [check out the data sampling tutorial]()!**
+**To get started with the data [check out the data sampling tutorial]({{site.url}}/docs/tutorials/data_sampling.html)!**
 
 
 
