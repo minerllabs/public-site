@@ -16,7 +16,7 @@ Then **get the dataset** by running the following in `python3!`
 {% highlight python %}
 
 import minerl
-minerl.data.download('your/dataset/path`) 
+minerl.data.download('your/dataset/path') 
 
 {% endhighlight %}
 
