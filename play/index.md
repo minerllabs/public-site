@@ -10,7 +10,7 @@ title: MineRL Server
     <iframe src="https://minecraft-statistic.net/en/userbars/html/server/banner_190517_36433c_141f19_ffffff_ffb65f_1c250f_ffffff_ffffff_1_1_1.html" frameborder="0" scrolling="no" width="250" height="332"></iframe>
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
-Welcome to MineRL. We want to solve [Minecraft](http://minecraft.net) using state-of-the-art Machine Learning! To do so, we are creating one of the largest datasets  of recorded human player data. Our dataset includes a set of tasks which highlights many of the hardest problems in modern-day Reinforcement Learning: sparse rewards and hierarchical policies. 
+Welcome to MineRL. We want to solve [Minecraft](http://minecraft.net) using state-of-the-art Machine Learning! To do so, we are creating one of the largest datasets  of recorded human player data. Our dataset includes a set of tasks which highlights many of the hardest problems in modern-day Reinforcement Learning: sparse rewards and hierarchical policies.
 
 <div class="video-player">
     <div class="video-description">
