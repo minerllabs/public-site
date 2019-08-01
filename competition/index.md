@@ -3,9 +3,7 @@ layout: default
 title: MineRL Competition 2019
 ---
 
-### [Competition launched! Sign-up to participate <u>[here]</u>!](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition)
-### [Help build the dataset by playing Minecraft <u>[here]</u>!](http://minerl.io/play)
-
+### [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition)
 
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
@@ -76,12 +74,12 @@ This competition uses a set of Gym environments based on Malmo. To improve the e
 
 <h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
 
-The contest will run from June 5th to October 25th. All submissions will be through CrowdAI. Detailed rules and leaderboard will be available on the CrowdAI competition webpage. Additionally, we will release reference RL implementations, courtesy of Preferred Networks.
+The contest runs from June 5th to October 25th. All submissions are through [AIcrowd](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition). There you can find detailed rules and as well as the leaderboard. Additionally, Preferred Networks has released reference RL implementations available [on github](https://github.com/minerllabs/baselines).
 
 <h4 style="width: 100%; text-align: left;"> Round 1 </h4>
 1. Participants train their agents to play Minecraft. During the round, they submit trained models for evaluation to determine leaderboard ranks.
 2. At the end of the round, participants submit source code. The models at the top of the leaderboard are re-trained (from scratch) for four days to compute the final score used for ranking.
-3. Top 10 move on to Round 2.
+3. Top 10 scores move on to Round 2.
 
 <div>
     <img class="marginauto" src="{{site.url}}/assets/images/round1_procedure.png" alt="drawing" width="700"/>
@@ -150,15 +148,15 @@ In this competition, the goal is to obtain a diamond. The agent begins in a rand
 
 <h3 style="width: 100%; text-align: center;"> Inclusivity </h3>
 
-Through our generous sponsor, Microsoft, we will provide some compute grants for teams that self identify as lacking access to the necessary compute power to participate in the competition. We will also provide groups with the evaluation resources for their experiments in Round 2.
+Through our generous sponsor, Microsoft, we were able to provide 25 compute grants to participants competing in round 1. We will also provide additional compute grants for groups who move on to Round 2.
 
 The competition organizers are committed to increasing the participation of groups traditionally underrepresented in reinforcement learning and, more generally, in machine learning. To that end, we will offer Inclusion@NeurIPS scholarships/travel grants for some number of Round 1 participants who are traditionally underrepresented at NeurIPS to attend the conference. We also plan to provide travel grants to enable all of the top participants from Round 2 to attend our NeurIPS workshop.
 
-The applications for the compute grants and Inclusion@NeurIPS travel grants can be found [here](https://minerl.typeform.com/to/v2CUCN) and [here](https://minerl.typeform.com/to/wV18AM/), respectively.
+The applications for the Inclusion@NeurIPS travel grants can be found [here](https://minerl.typeform.com/to/wV18AM/).
 
 <h3 style="width: 100%; text-align: center;"> Prizes </h3>
 
-Top-ranking teams in round 2 will receive rewards from our sponsors. Details will be announced as we finalize agreements. Currently, Nvidia will be distributing three GPUs among the top teams.
+Top-ranking teams in round 2 will receive rewards from our sponsors. Details will be announced as we finalize agreements.
 
 
 <h3 style="width: 100%; text-align: center;"> Team </h3>
