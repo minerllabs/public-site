@@ -252,7 +252,7 @@
   <div class="section" id="general-information">
 <h1>General Information<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h1>
 <p>The <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> package includes several environments as follows.
-This page describes each of the incldued environments, provides usage samples,
+This page describes each of the included environments, provides usage samples,
 and describes the exact action and observation space provided by each
 environment!</p>
 <div class="admonition caution">
@@ -263,7 +263,7 @@ be evaluated in <code class="code docutils literal notranslate"><span class="pre
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>All environments offer a default no-op action via <code class="code docutils literal notranslate"><span class="pre">env.action_space.noop()</span></code>
+<p>All environments offer a default no-op action via <code class="code docutils literal notranslate"><span class="pre">env.action_space.no_op()</span></code>
 and a random action via <code class="code docutils literal notranslate"><span class="pre">env.action_space.sample()</span></code></p>
 </div>
 </div>
@@ -272,7 +272,7 @@ and a random action via <code class="code docutils literal notranslate"><span cl
 <p>Minecraft is an extremely complex environment which provides players
 with visual, auditory, and informational observation of many complex
 data types.
-Further players interact with Minecraft using more than just embodied actions:
+Furthermore, players interact with Minecraft using more than just embodied actions:
 players can craft, build, destroy, smelt, enchant, manage their inventory,
 and even communicate with other players via a text chat.</p>
 <p>To provide a unified interface with which agents can obtain and perform
@@ -340,7 +340,7 @@ building documentation for these handlers, and <strong>you can click those highl
 <span class="c1"># Run a random agent through the environment</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLTreechop-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLTreechop-v0 env</span>
 
-<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
 
 <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
@@ -402,7 +402,7 @@ building documentation for these handlers, and <strong>you can click those highl
 <span class="c1"># Run a random agent through the environment</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigateDense-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLNavigateDense-v0 env</span>
 
-<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
 
 <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
@@ -464,7 +464,7 @@ building documentation for these handlers, and <strong>you can click those highl
 <span class="c1"># Run a random agent through the environment</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigate-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLNavigate-v0 env</span>
 
-<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
 
 <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
@@ -526,7 +526,7 @@ building documentation for these handlers, and <strong>you can click those highl
 <span class="c1"># Run a random agent through the environment</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigateExtremeDense-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLNavigateExtremeDense-v0 env</span>
 
-<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
 
 <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
@@ -588,7 +588,7 @@ building documentation for these handlers, and <strong>you can click those highl
 <span class="c1"># Run a random agent through the environment</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLNavigateExtreme-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLNavigateExtreme-v0 env</span>
 
-<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
 
 <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
@@ -693,7 +693,7 @@ item is given here:</p>
 <span class="c1"># Run a random agent through the environment</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainIronPickaxe-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLObtainIronPickaxe-v0 env</span>
 
-<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
 
 <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
@@ -798,7 +798,7 @@ item are given here:</p>
 <span class="c1"># Run a random agent through the environment</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainIronPickaxeDense-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLObtainIronPickaxeDense-v0 env</span>
 
-<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
 
 <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
@@ -910,7 +910,7 @@ item is given here:</p>
 <span class="c1"># Run a random agent through the environment</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainDiamond-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLObtainDiamond-v0 env</span>
 
-<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
 
 <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
@@ -1016,7 +1016,7 @@ item are given here:</p>
 <span class="c1"># Run a random agent through the environment</span>
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;MineRLObtainDiamondDense-v0&quot;</span><span class="p">)</span> <span class="c1"># A MineRLObtainDiamondDense-v0 env</span>
 
-<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
 
 <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>

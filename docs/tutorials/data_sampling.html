@@ -259,6 +259,11 @@ show it how to leverage human demonstrations.</p>
 <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;/your/local/path&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Or simply download a single experiment</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;/your/local/path&#39;</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="s1">&#39;MineRLObtainDiamond-v0&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For a complete list of published experiments, <a class="reference external" href="http://minerl.io/docs/environments/">checkout the environment documentation</a>.</p>
 <p>Now we can build the datast for <code class="code docutils literal notranslate"><span class="pre">MineRLObtainDiamond-v0</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span>
     <span class="s1">&#39;MineRLObtainDiamond-v0&#39;</span><span class="p">,</span>

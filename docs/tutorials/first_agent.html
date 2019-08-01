@@ -300,8 +300,8 @@ you create the envrionment.</p>
 <h2>Taking actions<a class="headerlink" href="#taking-actions" title="Permalink to this headline">¶</a></h2>
 <p><strong>As a warm up let’s create a random agent.</strong> 🧠</p>
 <p>Now we can reset this environment to its first position
-and get our first observation from the agent by reseting the environment.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+and get our first observation from the agent by resetting the environment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>The <code class="code docutils literal notranslate"><span class="pre">obs</span></code> variable will be a dictionary containing the following
@@ -370,7 +370,7 @@ the angle between the agent’s movement direction and it’s target,  <code cla
 <span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MineRLNavigateDense-v0&#39;</span><span class="p">)</span>
 
 
-<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">obs</span>  <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
 <span class="n">net_reward</span> <span class="o">=</span> <span class="mi">0</span>
 
