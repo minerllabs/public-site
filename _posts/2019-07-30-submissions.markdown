@@ -39,7 +39,6 @@ The package is now on `minerl-0.2.3`, and we have released a new version of  To 
 {% highlight bash %}
 pip3 install --upgrade minerl
 {% endhighlight %}
-Then **get the new dataset** by running the following in `python3!`  
 
 
 #### **Changes in** `minerl-0.2.3`:
