@@ -10,7 +10,7 @@ date:   2019-07-30 00:00:01 -0600
 
 We are so excited to announce that Round 1 of the MineRL NeurIPS 2019 Competition is
 now open for submissions! Our partners at AIcrowd just released their
-[competition submission starter kit](https://github.com/AIcrowd/neurips2019_minerl_challenge_starter_kit) that you can find [here](https://github.com/AIcrowd/neurips2019_minerl_challenge_starter_kit).
+[competition submission starter kit](https://github.com/minerllabs/competition_submission_starter_template) that you can find [here](https://github.com/minerllabs/competition_submission_starter_template).
 
 <div>
     <img class="marginauto" src="{{site.url}}/assets/images/round1_procedure.png" alt="drawing" width="700"/>
@@ -25,9 +25,9 @@ now open for submissions! Our partners at AIcrowd just released their
 
 Once the full evaluation of the uploaded model/code is done, the participant's submission will appear on the leaderboard!
 
-[**>> Get started now! <<** ](https://github.com/minerllabs/competition_submission_starter_template)
+## [**>> Get started now! <<** ](https://github.com/minerllabs/competition_submission_starter_template)
 - [MineRL Competition Page](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition) - Main registration page & leaderboard.
-- [Submission Starter Template](https://github.com/minerllabs/competition_submission_starter_template) - Template for submisions and guide to submit!
+- [Submission Starter Template](https://github.com/minerllabs/competition_submission_starter_template) - Starting code for  submisions and guide to submit!
 - [Example Baselines](https://github.com/minerllabs/baselines) - A set of competition and non-competition baselines for `minerl`.
 
 

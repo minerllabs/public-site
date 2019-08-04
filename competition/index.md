@@ -5,6 +5,8 @@ title: MineRL Competition 2019
 
 ### [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition)
 
+### [Competition submissions OPEN! Submit your first agent <u>[here]</u>!](https://github.com/minerllabs/competition_submission_starter_template)
+
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
