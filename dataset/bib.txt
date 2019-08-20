@@ -1,0 +1,7 @@
+@article{guss2019minerldata,
+  title={Mine{RL}: A Large-Scale Dataset of {M}inecraft Demonstrations},
+  author={William H. Guss and Houghton, Brandon and Topin, Nicholay and Wang, Phillip and Codel, Cayden and Veloso, Manuela and Salakhutdinov, Ruslan},
+  journal={Twenty-Eighth International Joint Conference on Artificial Intelligence},
+  url={http://minerl.io},
+  year={2019},
+}

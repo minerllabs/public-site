@@ -22,6 +22,28 @@ minerl.data.download('your/dataset/path')
 
 **To get started with the data [check out the data sampling tutorial]({{site.url}}/docs/tutorials/data_sampling.html)!**
 
+<div class="paper-section">
+    <div class="paper-section-container">
+    <div>
+        <a href="https://arxiv.org/abs/1907.13440">
+        <img class="paper-thumbnail" src="{{site.url}}/assets/paper_thumbnail.jpg"/>
+        </a>
+    </div>
+    <div>
+        <!-- <h3>Paper</h3> -->
+        <h3> <a href="https://arxiv.org/abs/1907.13440"> MineRL: A Large-Scale Dataset of Minecraft Demonstrations </a></h3>
+        <!-- <h3>Citation</h3> -->
+        <p>William H Guss, Brandon Houghton, Nicholay Topin, Phillip Wang, Cayden Codel, Manuela Veloso, Ruslan Salakhutdinov</p>
+        <p>Twenty-Eighth International Joint Conference on Artificial Intelligence</p>
+        <p> 2019 </p>
+        <p style="margin: 10px 20px">
+        <a href="{{site.url}}/dataset/bib.txt">[BibTex]</a>
+        <a href="{{site.url}}/dataset">[Dataset Details]</a>
+        </p>
+    </div>
+    </div>
+</div>
+
 
 
 Details

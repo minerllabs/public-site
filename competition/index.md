@@ -197,4 +197,27 @@ If you have any questions, please feel free to contact us:
 competition@minerl.io
 
 
+<h3  style="width: 100%; text-align: center;"> Citation </h3>
 
+
+<div class="paper-section">
+    <div class="paper-section-container">
+    <div>
+        <a href="https://arxiv.org/abs/1904.10079">
+        <img class="paper-thumbnail" src="{{site.url}}/assets/paper_thumbnail.jpg"/>
+        </a>
+    </div>
+    <div>
+        <!-- <h3>Paper</h3> -->
+        <h3><a href="https://arxiv.org/abs/1904.10079">The MineRL Competition on Sample Efficient Reinforcement Learning using Human Priors </a></h3>
+        <!-- <h3>Citation</h3> -->
+        <p>William H. Guss, Cayden Codel, Katja Hofmann, Brandon Houghton, Noboru Kuno, Stephanie Milani, Sharada Mohanty, Diego Perez Liebana, Ruslan Salakhutdinov, Nicholay Topin, Manuela Veloso, Phillip Wang</p>
+        <p>NeurIPS 2019 Competition Track</p>
+        <p> 2019 </p>
+        <p style="margin: 10px 20px">
+        <a href="{{site.url}}/competition/bib.txt">[BibTex]</a>
+        <a href="{{site.url}}/competition">[Competition Details]</a>
+        </p>
+    </div>
+    </div>
+</div>

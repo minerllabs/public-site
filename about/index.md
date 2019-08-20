@@ -31,21 +31,50 @@ more general AI (for example, what is the reward structure of "building a house"
 more than 90 million monthly active users, making it a good environment on which to collect a large-scale dataset.
 
 
-Paper
+Papers
 -----
 
 <div class="paper-section">
     <div class="paper-section-container">
     <div>
+        <a href="https://arxiv.org/abs/1907.13440">
         <img class="paper-thumbnail" src="{{site.url}}/assets/paper_thumbnail.jpg"/>
+        </a>
     </div>
     <div>
-        <h3>Paper</h3>
-        <p>MineRL: A Large-Scale Dataset of Minecraft Demonstrations</p>
-        <h3>Citation</h3>
-        <p>Anonymous authors: paper under double-blind review</p>
+        <!-- <h3>Paper</h3> -->
+        <h3> <a href="https://arxiv.org/abs/1907.13440"> MineRL: A Large-Scale Dataset of Minecraft Demonstrations </a></h3>
+        <!-- <h3>Citation</h3> -->
+        <p>William H Guss, Brandon Houghton, Nicholay Topin, Phillip Wang, Cayden Codel, Manuela Veloso, Ruslan Salakhutdinov</p>
+        <p>Twenty-Eighth International Joint Conference on Artificial Intelligence</p>
+        <p> 2019 </p>
         <p style="margin: 10px 20px">
+        <a href="{{site.url}}/dataset/bib.txt">[BibTex]</a>
         <a href="{{site.url}}/dataset">[Dataset Details]</a>
+        </p>
+    </div>
+    </div>
+</div>
+
+
+
+<div class="paper-section">
+    <div class="paper-section-container">
+    <div>
+        <a href="https://arxiv.org/abs/1904.10079">
+        <img class="paper-thumbnail" src="{{site.url}}/assets/paper_thumbnail.jpg"/>
+        </a>
+    </div>
+    <div>
+        <!-- <h3>Paper</h3> -->
+        <h3><a href="https://arxiv.org/abs/1904.10079">The MineRL Competition on Sample Efficient Reinforcement Learning using Human Priors </a></h3>
+        <!-- <h3>Citation</h3> -->
+        <p>William H. Guss, Cayden Codel, Katja Hofmann, Brandon Houghton, Noboru Kuno, Stephanie Milani, Sharada Mohanty, Diego Perez Liebana, Ruslan Salakhutdinov, Nicholay Topin, Manuela Veloso, Phillip Wang</p>
+        <p>NeurIPS 2019 Competition Track</p>
+        <p> 2019 </p>
+        <p style="margin: 10px 20px">
+        <a href="{{site.url}}/competition/bib.txt">[BibTex]</a>
+        <a href="{{site.url}}/competition">[Competition Details]</a>
         </p>
     </div>
     </div>
