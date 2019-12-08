@@ -74,6 +74,22 @@ This competition uses a set of Gym environments based on Malmo. To improve the e
     <img  style="margin-right: auto" src="{{site.url}}/assets/videos/orion4.mp4.gif" class="video">
 </div>
 
+
+<h3 style="width: 100%; text-align: center;"> Top Submissions </h3>
+
+<video width="100%"  loop controls>
+  <source src="{{site.url}}/assets/videos/comp_mountain.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<br/>
+
+<video width="100%"  loop controls>
+  <source src="{{site.url}}/assets/videos/comp_cdsvideo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<br/>
+
 <h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
 
 The contest runs from June 5th to October 25th. All submissions are through [AIcrowd](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition). There you can find detailed rules and as well as the leaderboard. Additionally, Preferred Networks has released reference RL implementations available [on github](https://github.com/minerllabs/baselines).
