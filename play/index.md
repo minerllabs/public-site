@@ -3,7 +3,7 @@ layout: default
 title: MineRL Server
 ---
 
-
+ 
 ### tl;dr: Play Minecraft to benefit Science!
 
 <div class="sidebarstatus">
