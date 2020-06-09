@@ -23,68 +23,68 @@ This competition uses a set of Gym environments based on Malmo. To improve the e
 <div class="video-player">
 
 
-    <img  style="margin-left: auto" src="{{site.url}}/assets/videos/obed1.mp4.gif" class="video">
+    <img  style="margin-left: auto" src="/assets/videos/obed1.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/obed2.mp4.gif" class="video">
+    <img src="/assets/videos/obed2.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/obed3.mp4.gif" class="video">
+    <img src="/assets/videos/obed3.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/obed4.mp4.gif" class="video">
+    <img src="/assets/videos/obed4.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/odia1.mp4.gif" class="video">
+    <img src="/assets/videos/odia1.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/odia2.mp4.gif" class="video">
+    <img src="/assets/videos/odia2.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/odia3.mp4.gif" class="video">
+    <img src="/assets/videos/odia3.mp4.gif" class="video">
 
 
-    <img  style="margin-right: auto" src="{{site.url}}/assets/videos/odia4.mp4.gif" class="video">
+    <img  style="margin-right: auto" src="/assets/videos/odia4.mp4.gif" class="video">
 
 </div>
 <div class="video-player">
 
 
-    <img style="margin-left: auto" src="{{site.url}}/assets/videos/omeat1.mp4.gif" class="video">
+    <img style="margin-left: auto" src="/assets/videos/omeat1.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/omeat2.mp4.gif" class="video">
+    <img src="/assets/videos/omeat2.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/omeat3.mp4.gif" class="video">
+    <img src="/assets/videos/omeat3.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/omeat4.mp4.gif" class="video">
+    <img src="/assets/videos/omeat4.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/orion1.mp4.gif" class="video">
+    <img src="/assets/videos/orion1.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/orion2.mp4.gif" class="video">
+    <img src="/assets/videos/orion2.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/orion3.mp4.gif" class="video">
+    <img src="/assets/videos/orion3.mp4.gif" class="video">
 
 
-    <img  style="margin-right: auto" src="{{site.url}}/assets/videos/orion4.mp4.gif" class="video">
+    <img  style="margin-right: auto" src="/assets/videos/orion4.mp4.gif" class="video">
 </div>
 
 
 <h3 style="width: 100%; text-align: center;"> Top Submissions </h3>
 
 <video width="100%"  loop controls>
-  <source src="{{site.url}}/assets/videos/comp_mountain.mp4" type="video/mp4">
+  <source src="/assets/videos/comp_mountain.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 <br/>
 
 <video width="100%"  loop controls>
-  <source src="{{site.url}}/assets/videos/comp_cdsvideo.mp4" type="video/mp4">
+  <source src="/assets/videos/comp_cdsvideo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -100,7 +100,7 @@ The contest runs from June 5th to October 25th. All submissions are through [AIc
 3. Top 10 scores move on to Round 2.
 
 <div>
-    <img class="marginauto" src="{{site.url}}/assets/images/round1_procedure.png" alt="drawing" width="700"/>
+    <img class="marginauto" src="/assets/images/round1_procedure.png" alt="drawing" width="700"/>
 </div>
 
 <h4 style="width: 100%; text-align: left;"> Round 2 </h4>
@@ -109,7 +109,7 @@ The contest runs from June 5th to October 25th. All submissions are through [AIc
 3. The top participants will present their work at a workshop at NeurIPS 2019.
 
 <div>
-    <img class="marginauto" src="{{site.url}}/assets/images/round2_procedure.png" alt="drawing" width="700"/>
+    <img class="marginauto" src="/assets/images/round2_procedure.png" alt="drawing" width="700"/>
 </div>
 
 <h3 style="width: 100%; text-align: center;"> The Task: Obtain Diamond in Minecraft </h3>
@@ -132,13 +132,13 @@ In this competition, the goal is to obtain a diamond. The agent begins in a rand
     <th><small>Mine <br/> Iron Ore</small></th>
   </tr>
   <tr>
-    <td style="text-align:center"><img src="{{site.url}}/assets/videos/1_wood.gif" class="video" width="100"></td>
-    <td style="text-align:center"><img class="marginauto" src="{{site.url}}/assets/images/arrow.png" alt="drawing" width="40"/></td>
-    <td style="text-align:center"><img src="{{site.url}}/assets/videos/2_woodpick.gif" class="video" width="100"></td>
-    <td style="text-align:center"><img class="marginauto" src="{{site.url}}/assets/images/arrow.png" alt="drawing" width="40"/></td>
-    <td style="text-align:center"><img src="{{site.url}}/assets/videos/3_stone_stonepick.gif" class="video" width="100"></td>
-    <td style="text-align:center"><img class="marginauto" src="{{site.url}}/assets/images/arrow.png" alt="drawing" width="40"/></td>
-    <td style="text-align:center"><img src="{{site.url}}/assets/videos/4_ironore.gif" class="video" width="100"></td>
+    <td style="text-align:center"><img src="/assets/videos/1_wood.gif" class="video" width="100"></td>
+    <td style="text-align:center"><img class="marginauto" src="/assets/images/arrow.png" alt="drawing" width="40"/></td>
+    <td style="text-align:center"><img src="/assets/videos/2_woodpick.gif" class="video" width="100"></td>
+    <td style="text-align:center"><img class="marginauto" src="/assets/images/arrow.png" alt="drawing" width="40"/></td>
+    <td style="text-align:center"><img src="/assets/videos/3_stone_stonepick.gif" class="video" width="100"></td>
+    <td style="text-align:center"><img class="marginauto" src="/assets/images/arrow.png" alt="drawing" width="40"/></td>
+    <td style="text-align:center"><img src="/assets/videos/4_ironore.gif" class="video" width="100"></td>
   </tr>
 </table>
 
@@ -153,13 +153,13 @@ In this competition, the goal is to obtain a diamond. The agent begins in a rand
     <th><small>Mine <br/> Diamond</small></th>
   </tr>
   <tr>
-    <td style="text-align:center"><img src="{{site.url}}/assets/videos/5_furnace.gif" class="video" width="100"></td>
-    <td style="text-align:center"><img class="marginauto" src="{{site.url}}/assets/images/arrow.png" alt="drawing" width="40"/></td>
-    <td style="text-align:center"><img src="{{site.url}}/assets/videos/6_iron_ironpick.gif" class="video" width="100"></td>
-    <td style="text-align:center"><img class="marginauto" src="{{site.url}}/assets/images/arrow.png" alt="drawing" width="40"/></td>
-    <td style="text-align:center"><img src="{{site.url}}/assets/videos/7_searching.gif" class="video" width="100"></td>
-    <td style="text-align:center"><img class="marginauto" src="{{site.url}}/assets/images/arrow.png" alt="drawing" width="40"/></td>
-    <td style="text-align:center"><img src="{{site.url}}/assets/videos/8_diamond.gif" class="video" width="100"></td>
+    <td style="text-align:center"><img src="/assets/videos/5_furnace.gif" class="video" width="100"></td>
+    <td style="text-align:center"><img class="marginauto" src="/assets/images/arrow.png" alt="drawing" width="40"/></td>
+    <td style="text-align:center"><img src="/assets/videos/6_iron_ironpick.gif" class="video" width="100"></td>
+    <td style="text-align:center"><img class="marginauto" src="/assets/images/arrow.png" alt="drawing" width="40"/></td>
+    <td style="text-align:center"><img src="/assets/videos/7_searching.gif" class="video" width="100"></td>
+    <td style="text-align:center"><img class="marginauto" src="/assets/images/arrow.png" alt="drawing" width="40"/></td>
+    <td style="text-align:center"><img src="/assets/videos/8_diamond.gif" class="video" width="100"></td>
   </tr>
 </table>
 
@@ -220,7 +220,7 @@ competition@minerl.io
     <div class="paper-section-container">
     <div>
         <a href="https://arxiv.org/abs/1904.10079">
-        <img class="paper-thumbnail" src="{{site.url}}/assets/paper_thumbnail.jpg"/>
+        <img class="paper-thumbnail" src="/assets/paper_thumbnail.jpg"/>
         </a>
     </div>
     <div>
@@ -231,8 +231,8 @@ competition@minerl.io
         <p>NeurIPS 2019 Competition Track</p>
         <p> 2019 </p>
         <p style="margin: 10px 20px">
-        <a href="{{site.url}}/competition/bib.txt">[BibTex]</a>
-        <a href="{{site.url}}/competition">[Competition Details]</a>
+        <a href="/competition/bib.txt">[BibTex]</a>
+        <a href="/competition">[Competition Details]</a>
         </p>
     </div>
     </div>

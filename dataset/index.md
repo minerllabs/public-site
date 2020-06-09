@@ -4,7 +4,7 @@ title: MineRL Dataset
 ---
 
 
-<img src="{{site.url}}/assets/videos/cropped_viewer.gif" width="100%"/>
+<img src="/assets/videos/cropped_viewer.gif" width="100%"/>
 
 
 Get the data!
@@ -20,13 +20,13 @@ minerl.data.download('your/dataset/path')
 
 {% endhighlight %}
 
-**To get started with the data [check out the data sampling tutorial]({{site.url}}/docs/tutorials/data_sampling.html)!**
+**To get started with the data [check out the data sampling tutorial](/docs/tutorials/data_sampling.html)!**
 
 <div class="paper-section">
     <div class="paper-section-container">
     <div>
         <a href="https://arxiv.org/abs/1907.13440">
-        <img class="paper-thumbnail" src="{{site.url}}/assets/paper_thumbnail.jpg"/>
+        <img class="paper-thumbnail" src="/assets/paper_thumbnail.jpg"/>
         </a>
     </div>
     <div>
@@ -37,8 +37,8 @@ minerl.data.download('your/dataset/path')
         <p>Twenty-Eighth International Joint Conference on Artificial Intelligence</p>
         <p> 2019 </p>
         <p style="margin: 10px 20px">
-        <a href="{{site.url}}/dataset/bib.txt">[BibTex]</a>
-        <a href="{{site.url}}/dataset">[Dataset Details]</a>
+        <a href="/dataset/bib.txt">[BibTex]</a>
+        <a href="/dataset">[Dataset Details]</a>
         </p>
     </div>
     </div>
@@ -72,16 +72,16 @@ We also support dense reward-shaped version of Navigate, in which you are given 
     <b>Navigate:</b>
 </div>
 
-    <img src="{{site.url}}/assets/videos/navigate1.mp4.gif" class="video">
+    <img src="/assets/videos/navigate1.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/navigate2.mp4.gif" class="video">
+    <img src="/assets/videos/navigate2.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/navigate3.mp4.gif" class="video">
+    <img src="/assets/videos/navigate3.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/navigate4.mp4.gif" class="video">
+    <img src="/assets/videos/navigate4.mp4.gif" class="video">
 
 </div>
 <div class="video-player">
@@ -90,16 +90,16 @@ We also support dense reward-shaped version of Navigate, in which you are given 
 </div>
 
 
-    <img src="{{site.url}}/assets/videos/navigateextreme1.mp4.gif" class="video">
+    <img src="/assets/videos/navigateextreme1.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/navigateextreme2.mp4.gif" class="video">
+    <img src="/assets/videos/navigateextreme2.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/navigateextreme3.mp4.gif" class="video">
+    <img src="/assets/videos/navigateextreme3.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/navigateextreme4.mp4.gif" class="video">
+    <img src="/assets/videos/navigateextreme4.mp4.gif" class="video">
 
 </div>
 <h3>Treechop</h3>
@@ -115,16 +115,16 @@ The agent begins in a forest biome (near many trees) and with an iron axe for cu
     <b>Treechop:</b>
 </div>
 
-    <img src="{{site.url}}/assets/videos/treechop1.mp4.gif" class="video">
+    <img src="/assets/videos/treechop1.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/treechop2.mp4.gif" class="video">
+    <img src="/assets/videos/treechop2.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/treechop3.mp4.gif" class="video">
+    <img src="/assets/videos/treechop3.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/treechop4.mp4.gif" class="video">
+    <img src="/assets/videos/treechop4.mp4.gif" class="video">
 
 </div>
 <h3>Obtain Item</h3>
@@ -146,16 +146,16 @@ Together, these items represent what a player would need to be able to survive a
     <b>Bed:</b>
 </div>
 
-    <img src="{{site.url}}/assets/videos/obed1.mp4.gif" class="video">
+    <img src="/assets/videos/obed1.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/obed2.mp4.gif" class="video">
+    <img src="/assets/videos/obed2.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/obed3.mp4.gif" class="video">
+    <img src="/assets/videos/obed3.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/obed4.mp4.gif" class="video">
+    <img src="/assets/videos/obed4.mp4.gif" class="video">
 
 </div>
 <div class="video-player">
@@ -163,16 +163,16 @@ Together, these items represent what a player would need to be able to survive a
     <b>Diamond:</b>
 </div>
 
-    <img src="{{site.url}}/assets/videos/odia1.mp4.gif" class="video">
+    <img src="/assets/videos/odia1.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/odia2.mp4.gif" class="video">
+    <img src="/assets/videos/odia2.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/odia3.mp4.gif" class="video">
+    <img src="/assets/videos/odia3.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/odia4.mp4.gif" class="video">
+    <img src="/assets/videos/odia4.mp4.gif" class="video">
 
 </div>
 <div class="video-player">
@@ -180,16 +180,16 @@ Together, these items represent what a player would need to be able to survive a
     <b>Meat:</b>
 </div>
 
-    <img src="{{site.url}}/assets/videos/omeat1.mp4.gif" class="video">
+    <img src="/assets/videos/omeat1.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/omeat2.mp4.gif" class="video">
+    <img src="/assets/videos/omeat2.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/omeat3.mp4.gif" class="video">
+    <img src="/assets/videos/omeat3.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/omeat4.mp4.gif" class="video">
+    <img src="/assets/videos/omeat4.mp4.gif" class="video">
 
 </div>
 <div class="video-player">
@@ -197,16 +197,16 @@ Together, these items represent what a player would need to be able to survive a
     <b>Iron Pickaxe:</b>
 </div>
 
-    <img src="{{site.url}}/assets/videos/orion1.mp4.gif" class="video">
+    <img src="/assets/videos/orion1.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/orion2.mp4.gif" class="video">
+    <img src="/assets/videos/orion2.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/orion3.mp4.gif" class="video">
+    <img src="/assets/videos/orion3.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/orion4.mp4.gif" class="video">
+    <img src="/assets/videos/orion4.mp4.gif" class="video">
 
 </div>
 <h3>Survival</h3>
@@ -223,28 +223,28 @@ There is no known reward function, and one must be extracted from examples of hu
     <b>Survival:</b>
 </div>
 
-    <img src="{{site.url}}/assets/videos/survival1.mp4.gif" class="video">
+    <img src="/assets/videos/survival1.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/survival2.mp4.gif" class="video">
+    <img src="/assets/videos/survival2.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/survival3.mp4.gif" class="video">
+    <img src="/assets/videos/survival3.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/survival4.mp4.gif" class="video">
+    <img src="/assets/videos/survival4.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/survival5.mp4.gif" class="video">
+    <img src="/assets/videos/survival5.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/survival6.mp4.gif" class="video">
+    <img src="/assets/videos/survival6.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/survival7.mp4.gif" class="video">
+    <img src="/assets/videos/survival7.mp4.gif" class="video">
 
 
-    <img src="{{site.url}}/assets/videos/survival8.mp4.gif" class="video">
+    <img src="/assets/videos/survival8.mp4.gif" class="video">
 
 
 </div>

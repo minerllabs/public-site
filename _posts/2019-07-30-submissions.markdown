@@ -13,7 +13,7 @@ now open for submissions! Our partners at AIcrowd just released their
 [competition submission starter kit](https://github.com/minerllabs/competition_submission_starter_template) that you can find [here](https://github.com/minerllabs/competition_submission_starter_template).
 
 <div>
-    <img class="marginauto" src="{{site.url}}/assets/images/round1_procedure.png" alt="drawing" width="700"/>
+    <img class="marginauto" src="/assets/images/round1_procedure.png" alt="drawing" width="700"/>
 </div>
 
 **Here's how you submit in Round 1**:

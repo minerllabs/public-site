@@ -38,7 +38,7 @@ Papers
     <div class="paper-section-container">
     <div>
         <a href="https://arxiv.org/abs/1907.13440">
-        <img class="paper-thumbnail" src="{{site.url}}/assets/paper_thumbnail.jpg"/>
+        <img class="paper-thumbnail" src="/assets/paper_thumbnail.jpg"/>
         </a>
     </div>
     <div>
@@ -49,8 +49,8 @@ Papers
         <p>Twenty-Eighth International Joint Conference on Artificial Intelligence</p>
         <p> 2019 </p>
         <p style="margin: 10px 20px">
-        <a href="{{site.url}}/dataset/bib.txt">[BibTex]</a>
-        <a href="{{site.url}}/dataset">[Dataset Details]</a>
+        <a href="/dataset/bib.txt">[BibTex]</a>
+        <a href="/dataset">[Dataset Details]</a>
         </p>
     </div>
     </div>
@@ -62,7 +62,7 @@ Papers
     <div class="paper-section-container">
     <div>
         <a href="https://arxiv.org/abs/1904.10079">
-        <img class="paper-thumbnail" src="{{site.url}}/assets/paper_thumbnail.jpg"/>
+        <img class="paper-thumbnail" src="/assets/paper_thumbnail.jpg"/>
         </a>
     </div>
     <div>
@@ -73,8 +73,8 @@ Papers
         <p>NeurIPS 2019 Competition Track</p>
         <p> 2019 </p>
         <p style="margin: 10px 20px">
-        <a href="{{site.url}}/competition/bib.txt">[BibTex]</a>
-        <a href="{{site.url}}/competition">[Competition Details]</a>
+        <a href="/competition/bib.txt">[BibTex]</a>
+        <a href="/competition">[Competition Details]</a>
         </p>
     </div>
     </div>

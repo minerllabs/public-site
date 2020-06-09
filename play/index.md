@@ -17,28 +17,28 @@ Welcome to MineRL. We want to solve [Minecraft](http://minecraft.net) using stat
       
     </div>
     
-        <img src="{{site.url}}/assets/videos/navigate1.mp4.gif" class="video">
+        <img src="/assets/videos/navigate1.mp4.gif" class="video">
     
     
-        <img src="{{site.url}}/assets/videos/navigate2.mp4.gif" class="video">
+        <img src="/assets/videos/navigate2.mp4.gif" class="video">
     
     
-        <img src="{{site.url}}/assets/videos/navigate3.mp4.gif" class="video">
+        <img src="/assets/videos/navigate3.mp4.gif" class="video">
     
     
-        <img src="{{site.url}}/assets/videos/navigate4.mp4.gif" class="video">
+        <img src="/assets/videos/navigate4.mp4.gif" class="video">
     
     
-        <img src="{{site.url}}/assets/videos/navigateextreme1.mp4.gif" class="video">
+        <img src="/assets/videos/navigateextreme1.mp4.gif" class="video">
     
     
-        <img src="{{site.url}}/assets/videos/navigateextreme2.mp4.gif" class="video">
+        <img src="/assets/videos/navigateextreme2.mp4.gif" class="video">
     
     
-        <img src="{{site.url}}/assets/videos/navigateextreme3.mp4.gif" class="video">
+        <img src="/assets/videos/navigateextreme3.mp4.gif" class="video">
     
     
-        <img src="{{site.url}}/assets/videos/navigateextreme4.mp4.gif" class="video">
+        <img src="/assets/videos/navigateextreme4.mp4.gif" class="video">
     
     </div>
     
@@ -46,8 +46,8 @@ Welcome to MineRL. We want to solve [Minecraft](http://minecraft.net) using stat
 We'd love to have you play Minecraft for science with us! Our server is free and public, but there are a few steps before you can get started.
 
 1. Purchase and install Minecraft Java Edition on your computer ([Available here](http://minecraft.net))
-2. Run the MineRL Recording Mod installer: [Windows]({{site.url}}/downloads/minerl_installer.jar), [Linux]({{site.url}}/downloads/minerl_installer.jar),  [Mac]({{site.url}}/downloads/minerl_installer.jar)
-    1. If you already play with Forge for Minecraft 1.12, you can install our mod directly: [Download here]({{site.url}}/downloads/minerl.jar)
+2. Run the MineRL Recording Mod installer: [Windows](/downloads/minerl_installer.jar), [Linux](/downloads/minerl_installer.jar),  [Mac](/downloads/minerl_installer.jar)
+    1. If you already play with Forge for Minecraft 1.12, you can install our mod directly: [Download here](/downloads/minerl.jar)
 3. Read and fill out our consent form to indicate that you understand your gameplay will be recorded anonymously: [Here](http://herobraine.stream/consent_form/). *Make sure to use your Minecraft username.*
 4. Launch Minecraft with the newly installed configuration and connect to **mc.minerl.io**
 
