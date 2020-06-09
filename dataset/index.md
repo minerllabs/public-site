@@ -38,7 +38,7 @@ minerl.data.download('your/dataset/path')
         <p> 2019 </p>
         <p style="margin: 10px 20px">
         <a href="/dataset/bib.txt">[BibTex]</a>
-        <a href="/dataset">[Dataset Details]</a>
+        <a href="/dataset/index.html">[Dataset Details]</a>
         </p>
     </div>
     </div>
