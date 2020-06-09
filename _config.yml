@@ -26,8 +26,13 @@ exclude:
 
 highlighter: rouge
 
-
 titles_from_headings:
   enabled:     true
   strip_title: false
   collections: false
+
+permalink: /:categories/:title/
+permalink: pretty
+collections:
+    categories:
+        output: true

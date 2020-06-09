@@ -42,6 +42,8 @@ Welcome to MineRL. We want to solve [Minecraft](http://minecraft.net) using stat
     
     </div>
     
+</div>
+</div>
     
 We'd love to have you play Minecraft for science with us! Our server is free and public, but there are a few steps before you can get started.
 
