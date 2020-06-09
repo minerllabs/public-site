@@ -2,7 +2,7 @@ title: MineRL Project
 description: >- # this means to ignore newlines until "baseurl:"
   Reinforcement learning is the name of the game.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: test.minerl.io/index.html
+url: test.minerl.io
 
 # Build settings
 markdown: kramdown
