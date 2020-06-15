@@ -171,14 +171,6 @@ In this competition, the goal is to obtain a diamond. The agent begins in a rand
 </table>
 
 
-<h3 style="width: 100%; text-align: center;"> Inclusivity </h3>
-
-Through our generous sponsor, Microsoft, we were able to provide 25 compute grants to participants competing in round 1. We will also provide additional compute grants for groups who move on to Round 2.
-
-The competition organizers are committed to increasing the participation of groups traditionally underrepresented in reinforcement learning and, more generally, in machine learning. To that end, we will offer Inclusion@NeurIPS scholarships/travel grants for some number of Round 1 participants who are traditionally underrepresented at NeurIPS to attend the conference. We also plan to provide travel grants to enable all of the top participants from Round 2 to attend our NeurIPS workshop.
-
-The applications for the Inclusion@NeurIPS travel grants can be found [here](https://minerl.typeform.com/to/wV18AM/).
-
 <h3 style="width: 100%; text-align: center;"> Prizes </h3>
 
 Top-ranking teams in round 2 will receive rewards from our sponsors. Details will be announced as we finalize agreements.
@@ -188,31 +180,32 @@ Top-ranking teams in round 2 will receive rewards from our sponsors. Details wil
 
 The organizing team consists of:
 
-* William H. Guss (Carnegie Mellon University)
+* William H. Guss (OpenAI and Carnegie Mellon University)
+* Brandon Houghton (OpenAI and Carnegie Mellon University)
+* Stephanie Milani (Carnegie Mellon University)
+* Nicholay Topin (Carnegie Mellon University)
+* Ruslan Salakhutdinov (Carnegie Mellon University)
+* John Schulman (OpenAI)
 * Mario Ynocente Castro (Preferred Networks)
-* Cayden Codel (Carnegie Mellon University)
-* Katja Hofmann (Microsoft Research)
-* Brandon Houghton (Carnegie Mellon University)
-* Noboru Kuno (Microsoft Research)
 * Crissman Loomis (Preferred Networks)
 * Keisuke Nakata (Preferred Networks)
-* Stephanie Milani (University of Maryland, Baltimore County and Carnegie Mellon University)
-* Sharada Mohanty (AIcrowd)
-* Diego Perez Liebana (Queen Mary University of London)
-* Ruslan Salakhutdinov (Carnegie Mellon University)
 * Shinya Shiroshita (Preferred Networks)
-* Nicholay Topin (Carnegie Mellon University)
 * Avinash Ummadisingu (Preferred Networks)
-* Manuela Veloso (Carnegie Mellon University)
-* Phillip Wang (Carnegie Mellon University)
+* Sharada Mohanty (AIcrowd)
+* Sam Devlin (Microsoft Research)
+* Noboru Sean Kuno (Microsoft Research)
+* Oriol Vinyals (DeepMind)
 
 
 The advisory committee consists of:
 
+* Fei Fang (Carnegie Mellon University)
+* Zachary Chase Lipton (Carnegie Mellon University)
+* Manuela Veloso (Carnegie Mellon University and JPMorgan Chase)
+* David Ha (Google Brain)
 * Chelsea Finn (Google Brain and UC Berkeley)
+* Anca Dragan (UC Berkeley)
 * Sergey Levine (UC Berkeley)
-* Harm van Seijen (Microsoft Research)
-* Oriol Vinyals (Google DeepMind)
 
 <h3 style="width: 100%; text-align: center;"> Contact </h3>
 If you have any questions, please feel free to contact us: 
