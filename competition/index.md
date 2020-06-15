@@ -1,23 +1,27 @@
 ---
 layout: default
-title: MineRL Competition 2019
+title: MineRL Competition 2020
 ---
 
-### [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition)
-
-### [Competition submissions OPEN! Submit your first agent <u>[here]</u>!](https://github.com/minerllabs/competition_submission_starter_template)
+### [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition)
 
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
 
-We are holding a competition on sample-efficient reinforcement learning using human priors. Standard methods require months to years of game time to attain human performance in complex games such as Go and StarCraft. In our competition, participants develop a system to obtain a diamond in Minecraft using only four days of training time. To facilitate solving this hard task with few samples, we provide a dataset of human demonstrations.
+We are holding a competition on sample-efficient reinforcement learning using human priors. Standard methods require 
+months to years of game time to attain human performance in complex games such as Go and StarCraft. In our competition,
+ participants develop a system to obtain a diamond in Minecraft using only four days of training time. 
 <!-- <div style="text-align: center; margin: auto" width='100%'> -->
 <iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/ggo1WAldyq0?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
 </iframe>
 <!-- </div> -->
     
-This competition uses a set of Gym environments based on Malmo. To improve the experience for competition participants, we have extended Malmo to support many new features, including synchronous ticking. The environments and dataset loader will be available as a pip package when the competition begins.
+The MineRL competition offeres a set of Gym environments paired with human demonstrations to provide participants with
+the ability to tackle the difficult Minecraft sample efficiently. This year we are introducing a new 
+vectorized action and observation space that obscures the agent's actions to prevent participants from using domain
+knowlege to solve the ObtainDiamond task!
+ 
 
 <h5 style="text-align: center;"><b>Sample snippets of the dataset.</b></h5>
 <div class="video-player">
@@ -92,7 +96,10 @@ This competition uses a set of Gym environments based on Malmo. To improve the e
 
 <h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
 
-The contest runs from June 5th to October 25th. All submissions are through [AIcrowd](https://www.aicrowd.com/challenges/neurips-2019-minerl-competition). There you can find detailed rules and as well as the leaderboard. Additionally, Preferred Networks has released reference RL implementations available [on github](https://github.com/minerllabs/baselines).
+The contest runs from June 5th to October 25th. All submissions are through
+ [AIcrowd](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition). There you can find detailed rules and as
+  well as the leaderboard. Additionally, Preferred Networks has released reference RL implementations available [
+  on github](https://github.com/minerllabs/baselines).
 
 <h4 style="width: 100%; text-align: left;"> Round 1 </h4>
 1. Participants train their agents to play Minecraft. During the round, they submit trained models for evaluation to determine leaderboard ranks.
