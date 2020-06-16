@@ -112,7 +112,7 @@ All submissions are through
 
 <h4 style="width: 100%; text-align: left;"> Round 2 </h4>
 1. Participants may submit code up to four times. Each submission is trained for four days to compute score. Final ranking is based on best submission for each participant.
-2. The top participants will present their work at a workshop at NeurIPS 2019.
+2. The top participants will present their work at a workshop at NeurIPS 2020.
 
 <div>
     <img class="marginauto" src="/assets/images/round2_procedure.png" alt="drawing" width="700"/>

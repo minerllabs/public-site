@@ -135,4 +135,4 @@ Our project consists of three main components:
 
 * [A free, public Minecraft server for collecting data](/play/index.html)
 * [The expansive MineRL dataset](/dataset/index.html)
-* [A set of tools for performing research on our data using Python](/docs/index.html)
+* [Tools for research on MineRL-v0 dataset](/docs/index.html)
