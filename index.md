@@ -3,7 +3,7 @@ layout: default
 title: MineRL&#58; Towards AI in Minecraft
 ---
 
-### [tl;dr: Compete to build AI in Minecraft! [NeurIPS 2019 Competition]](/competition)
+### [tl;dr: Compete to build AI in Minecraft! [NeurIPS 2020 Competition]](/competition)
 ### [tl;dr: Use the MineRL reinforcement learning environment!](/docs)
 ### [tl;dr: Get the MineRL dataset!](/docs)
 ### [tl;dr: Play Minecraft to benefit Science!](/server)

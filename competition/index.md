@@ -96,7 +96,7 @@ knowlege to solve the ObtainDiamond task!
 
 <h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
 
-The contest runs from June 5th to October 25th. All submissions are through
+All submissions are through
  [AIcrowd](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition). There you can find detailed rules and as
   well as the leaderboard. Additionally, Preferred Networks has released reference RL implementations available [
   on github](https://github.com/minerllabs/baselines).
@@ -104,16 +104,15 @@ The contest runs from June 5th to October 25th. All submissions are through
 <h4 style="width: 100%; text-align: left;"> Round 1 </h4>
 1. Participants train their agents to play Minecraft. During the round, they submit trained models for evaluation to determine leaderboard ranks.
 2. At the end of the round, participants submit source code. The models at the top of the leaderboard are re-trained (from scratch) for four days to compute the final score used for ranking.
-3. Top 10 scores move on to Round 2.
+3. 20 participants move on to the second round, 15 from the main track and 5 from the data only track.
 
 <div>
     <img class="marginauto" src="/assets/images/round1_procedure.png" alt="drawing" width="700"/>
 </div>
 
 <h4 style="width: 100%; text-align: left;"> Round 2 </h4>
-1. Top 10 participants from previous round receive Azure credits.
-2. Participants may submit code up to four times. Each submission is trained for four days to compute score. Final ranking is based on best submission for each participant.
-3. The top participants will present their work at a workshop at NeurIPS 2019.
+1. Participants may submit code up to four times. Each submission is trained for four days to compute score. Final ranking is based on best submission for each participant.
+2. The top participants will present their work at a workshop at NeurIPS 2019.
 
 <div>
     <img class="marginauto" src="/assets/images/round2_procedure.png" alt="drawing" width="700"/>
@@ -215,6 +214,27 @@ competition@minerl.io
 
 <h3  style="width: 100%; text-align: center;"> Citation </h3>
 
+<div class="paper-section">
+    <div class="paper-section-container">
+    <div>
+        <a href="https://arxiv.org/abs/1904.10079">
+        <img class="paper-thumbnail" src="/assets/paper_thumbnail.jpg"/>
+        </a>
+    </div>
+    <div>
+        <!-- <h3>Paper</h3> -->
+        <h3><a href="https://arxiv.org/abs/1904.10079">The MineRL Competition on Sample Efficient Reinforcement Learning using Human Priors </a></h3>
+        <!-- <h3>Citation</h3> -->
+        <p>William H. Guss, Mario Ynocente Castro, Sam Devlin, Brandon Houghton, Noboru Sean Kuno, Crissman Loomis, Keisuke Nakata, Stephanie Milani, Sharada Mohanty, Ruslan Salakhutdinov, Shinya Shiroshita, John Schulman, Nicholay Topin, Avinash Ummadisingu, Oriol Vinyals</p>
+        <p>NeurIPS 2020 Competition Track</p>
+        <p> 2020 </p>
+        <p style="margin: 10px 20px">
+        <a href="/competition/bib.txt">[BibTex]</a>
+        <a href="/competition">[Competition Details]</a>
+        </p>
+    </div>
+    </div>
+</div>
 
 <div class="paper-section">
     <div class="paper-section-container">
