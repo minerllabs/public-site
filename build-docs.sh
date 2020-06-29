@@ -1,8 +1,9 @@
+
 ARG=$1
 
 if [ -z "$ARG" ]
 then
-	echo "Specify the docs directory."
+	echo "Specify the MineRL docs directory."
 else
 	cwd=$(pwd)
         cd $ARG

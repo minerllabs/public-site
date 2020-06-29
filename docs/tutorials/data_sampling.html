@@ -35,9 +35,10 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="General Information" href="../environments/index.html" />
+    <link rel="next" title="K-means exploration" href="k-means.html" />
     <link rel="prev" title="Hello World: Your First Agent" href="first_agent.html" /> 
 </head>
 
@@ -91,8 +92,13 @@
 <li class="toctree-l2"><a class="reference internal" href="first_agent.html#no-op-actions-and-a-better-policy">No-op actions and a better policy</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sampling The Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#visualizing-the-data-minerl-viewer">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sampling The Dataset</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#moderate-human-demonstrations">Moderate Human Demonstrations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="k-means.html">K-means exploration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="minerl_tools.html">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="minerl_tools.html#interactive-mode-minerl-interactor">Interactive Mode <code class="code docutils literal notranslate"><span class="pre">minerl.interactor</span></code></a></li>
 </ul>
 <p class="caption"><span class="caption-text">MineRL Environments</span></p>
 <ul>
@@ -316,25 +322,29 @@ show it how to leverage human demonstrations.</p>
 <p>To get started, let’s ensure the data has been downloaded.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Unix, Linux</span>
 <span class="nv">$MINERL_DATA_ROOT</span><span class="o">=</span><span class="s2">&quot;your/local/path&quot;</span> python3 -m minerl.data.download
+
 <span class="c1"># Windows</span>
 <span class="nv">$env</span>:MINERL_DATA_ROOT<span class="o">=</span><span class="s2">&quot;your/local/path&quot;</span><span class="p">;</span> python3 -m minerl.data.download
 </pre></div>
 </div>
-<p>Or simply download a single experiment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m minerl.data.download <span class="s1">&#39;MineRLObtainDiamond-v0&#39;</span>
+<p>Or we can simply download a single experiment</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Unix, Linux</span>
+<span class="nv">$MINERL_DATA_ROOT</span><span class="o">=</span><span class="s2">&quot;your/local/path&quot;</span> python3 -m minerl.data.download <span class="s2">&quot;MineRLObtainDiamond-v0&quot;</span>
+
+<span class="c1"># Windows</span>
+<span class="nv">$env</span>:MINERL_DATA_ROOT<span class="o">=</span><span class="s2">&quot;your/local/path&quot;</span><span class="p">;</span> python3 -m minerl.data.download <span class="s2">&quot;MineRLObtainDiamond-v0&quot;</span>
 </pre></div>
 </div>
-<p>For a complete list of published experiments, <a class="reference external" href="http://minerl.io/docs/environments/">checkout the environment documentation</a>. You can also download the data
+<p>For a complete list of published experiments, <a class="reference external" href="http://minerl.io/docs/environments/index.html#competition-environments">checkout the environment documentation</a>. You can also download the data
 in your python scripts</p>
 <p>Now we can build the datast for <code class="code docutils literal notranslate"><span class="pre">MineRLObtainDiamond-v0</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">minerl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">make</span><span class="p">(</span>
-    <span class="s1">&#39;MineRLObtainDiamond-v0&#39;</span><span class="p">,</span>
-    <span class="n">data_dir</span><span class="o">=</span><span class="s1">&#39;/your/local/path&#39;</span><span class="p">)</span>
+    <span class="s1">&#39;MineRLObtainDiamond-v0&#39;</span><span class="p">)</span>
 
-<span class="c1"># Iterate through a single epoch gathering sequences of at most 32 steps</span>
+
 <span class="k">for</span> <span class="n">current_state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">done</span> \
-    <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">sarsd_iter</span><span class="p">(</span>
-        <span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_sequence_len</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">batch_iter</span><span class="p">(</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">seq_len</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
 
         <span class="c1"># Print the POV @ the first step of the sequence</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">current_state</span><span class="p">[</span><span class="s1">&#39;pov&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
@@ -356,36 +366,18 @@ in your python scripts</p>
 For portability, plese define <code class="code docutils literal notranslate"><span class="pre">MINERL_DATA_ROOT</span></code> as
 <code class="code docutils literal notranslate"><span class="pre">/your/local/path/</span></code> in your system environment variables.</p>
 </div>
-</div>
-<div class="section" id="visualizing-the-data-minerl-viewer">
-<h1>Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code><a class="headerlink" href="#visualizing-the-data-minerl-viewer" title="Permalink to this headline">¶</a></h1>
-<p>To help you get familiar with the MineRL dataset,
-the <code class="code docutils literal notranslate"><span class="pre">minerl</span></code> python package also provides a data trajectory viewer called
-<code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code>:</p>
-<a class="reference internal image-reference" href="../_images/cropped_viewer.gif"><img alt="" class="align-center" src="../_images/cropped_viewer.gif" style="width: 90%;" /></a>
-<p>The <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code> program lets you step through individual
-trajectories,
-showing the observation seen the player, the action
-they took (including camera, movement, and any action described by an MineRL
-environment’s action space), and the reward they received.</p>
-<div class="admonition error">
-<p class="admonition-title">Error</p>
-<p>Unable to execute python code at data_sampling.rst:90:</p>
-<p>module ‘minerl.viewer’ has no attribute ‘parser’</p>
-</div>
-<p><strong>Try it out on a random trajectory by running:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make sure your MINERL_DATA_ROOT is set!</span>
-<span class="nb">export</span> <span class="nv">MINERL_DATA_ROOT</span><span class="o">=</span><span class="s1">&#39;/your/local/path&#39;</span>
-
-<span class="c1"># Visualizes a random trajectory of MineRLObtainDiamondDense-v0</span>
-python3 -m minerl.viewer MineRLObtainDiamondDense-v0
-</pre></div>
-</div>
-<p><strong>Try it out on a specific trajectory by running:</strong></p>
-<div class="admonition error">
-<p class="admonition-title">Error</p>
-<p>Unable to execute python code at data_sampling.rst:116:</p>
-<p>module ‘minerl.viewer’ has no attribute ‘_DOC_TRAJ_NAME’</p>
+<div class="section" id="moderate-human-demonstrations">
+<h2>Moderate Human Demonstrations<a class="headerlink" href="#moderate-human-demonstrations" title="Permalink to this headline">¶</a></h2>
+<p>MineRL-v0 uses community driven demonstrations to help researchers develop sample efficient techniques.
+Some of these demonstrations are less than optimal, however others could feacture bugs with the client,
+server errors, or adversarial behavior.</p>
+<p>Using the MineRL viewer, you can help curate this dataset by viewing these demonstrations manually and
+reporting bad streams by submitting an issue to github with the following information:</p>
+<ol class="arabic simple">
+<li><p>The stream name of the stream in question</p></li>
+<li><p>The reason the stream or segment needs to be modified</p></li>
+<li><p>The sample / frame number(s) (shown at the bottom of the viewer)</p></li>
+</ol>
 </div>
 </div>
 
@@ -397,7 +389,7 @@ python3 -m minerl.viewer MineRLObtainDiamondDense-v0
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../environments/index.html" class="btn btn-neutral float-right" title="General Information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="k-means.html" class="btn btn-neutral float-right" title="K-means exploration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="first_agent.html" class="btn btn-neutral float-left" title="Hello World: Your First Agent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -409,7 +401,7 @@ python3 -m minerl.viewer MineRLObtainDiamondDense-v0
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, William H. Guss, Brandon Houghton
+        &copy; Copyright 2020, William H. Guss, Brandon Houghton
 
     </p>
   </div>
@@ -447,7 +439,18 @@ python3 -m minerl.viewer MineRLObtainDiamondDense-v0
     </script>
 
     
-   
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+</script>
+
 
 </body>
 </html>

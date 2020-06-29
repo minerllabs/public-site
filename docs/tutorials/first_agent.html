@@ -35,6 +35,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Sampling The Dataset" href="data_sampling.html" />
@@ -91,8 +92,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#no-op-actions-and-a-better-policy">No-op actions and a better policy</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="data_sampling.html">Sampling The Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_sampling.html#visualizing-the-data-minerl-viewer">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_sampling.html">Sampling The Dataset</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data_sampling.html#moderate-human-demonstrations">Moderate Human Demonstrations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="k-means.html">K-means exploration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="minerl_tools.html">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="minerl_tools.html#interactive-mode-minerl-interactor">Interactive Mode <code class="code docutils literal notranslate"><span class="pre">minerl.interactor</span></code></a></li>
 </ul>
 <p class="caption"><span class="caption-text">MineRL Environments</span></p>
 <ul>
@@ -481,7 +487,7 @@ better than our random policy.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, William H. Guss, Brandon Houghton
+        &copy; Copyright 2020, William H. Guss, Brandon Houghton
 
     </p>
   </div>
@@ -519,7 +525,18 @@ better than our random policy.</p>
     </script>
 
     
-   
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+</script>
+
 
 </body>
 </html>

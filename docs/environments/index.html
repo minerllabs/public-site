@@ -35,10 +35,11 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Environment Handlers" href="handlers.html" />
-    <link rel="prev" title="Sampling The Dataset" href="../tutorials/data_sampling.html" /> 
+    <link rel="prev" title="Visualizing The Data minerl.viewer" href="../tutorials/minerl_tools.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,8 +92,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#no-op-actions-and-a-better-policy">No-op actions and a better policy</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/data_sampling.html">Sampling The Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/data_sampling.html#visualizing-the-data-minerl-viewer">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/data_sampling.html">Sampling The Dataset</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/data_sampling.html#moderate-human-demonstrations">Moderate Human Demonstrations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/k-means.html">K-means exploration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/minerl_tools.html">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/minerl_tools.html#interactive-mode-minerl-interactor">Interactive Mode <code class="code docutils literal notranslate"><span class="pre">minerl.interactor</span></code></a></li>
 </ul>
 <p class="caption"><span class="caption-text">MineRL Environments</span></p>
 <ul class="current">
@@ -366,6 +372,11 @@ building documentation for these handlers, and <strong>you can click those highl
 </div>
 <div class="section" id="basic-environments">
 <h1>Basic Environments<a class="headerlink" href="#basic-environments" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The following basic environments are NOT part of the 2020 MineRL Competition! Feel free to use them for exploration
+but agents may only be trained on <a class="reference external" href="http://minerl.io/docs/environments/index.html#competition-environments">MineRL competition environments</a>!</p>
+</div>
 <div class="section" id="minerltreechop-v0">
 <h2>MineRLTreechop-v0<a class="headerlink" href="#minerltreechop-v0" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../_images/treechop1.mp4.gif"><img alt="" src="../_images/treechop1.mp4.gif" style="width: 64.0px; height: 64.0px;" /></a>
@@ -383,7 +394,7 @@ building documentation for these handlers, and <strong>you can click those highl
 <div class="section" id="action-space">
 <h3>Action Space<a class="headerlink" href="#action-space" title="Permalink to this headline">¶</a></h3>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#attack"><span class="std std-ref">attack</span></a>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(low=-180.0, high=180.0, shape=(2,))&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
@@ -444,7 +455,7 @@ building documentation for these handlers, and <strong>you can click those highl
 <div class="section" id="id2">
 <h3>Action Space<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#attack"><span class="std std-ref">attack</span></a>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(low=-180.0, high=180.0, shape=(2,))&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
@@ -506,7 +517,7 @@ building documentation for these handlers, and <strong>you can click those highl
 <div class="section" id="id5">
 <h3>Action Space<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#attack"><span class="std std-ref">attack</span></a>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(low=-180.0, high=180.0, shape=(2,))&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
@@ -568,7 +579,7 @@ building documentation for these handlers, and <strong>you can click those highl
 <div class="section" id="id8">
 <h3>Action Space<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#attack"><span class="std std-ref">attack</span></a>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(low=-180.0, high=180.0, shape=(2,))&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
@@ -630,7 +641,7 @@ building documentation for these handlers, and <strong>you can click those highl
 <div class="section" id="id11">
 <h3>Action Space<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#attack"><span class="std std-ref">attack</span></a>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(low=-180.0, high=180.0, shape=(2,))&quot;,
     &quot;<span class="xref std std-ref">forward</span>&quot;: &quot;Discrete(2)&quot;,
@@ -729,7 +740,7 @@ item are given here:</p>
 <div class="section" id="id14">
 <h3>Action Space<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#attack"><span class="std std-ref">attack</span></a>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(low=-180.0, high=180.0, shape=(2,))&quot;,
     &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(crafting_table,none,planks,stick,torch)&quot;,
@@ -832,7 +843,7 @@ item are given here:</p>
 <div class="section" id="id17">
 <h3>Action Space<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#attack"><span class="std std-ref">attack</span></a>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(low=-180.0, high=180.0, shape=(2,))&quot;,
     &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(crafting_table,none,planks,stick,torch)&quot;,
@@ -933,7 +944,7 @@ item is given here:</p>
 <div class="section" id="id20">
 <h3>Action Space<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#attack"><span class="std std-ref">attack</span></a>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(low=-180.0, high=180.0, shape=(2,))&quot;,
     &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(crafting_table,none,planks,stick,torch)&quot;,
@@ -1034,7 +1045,7 @@ item is given here:</p>
 <div class="section" id="id23">
 <h3>Action Space<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <pre class="literal-block">Dict({
-    &quot;<span class="xref std std-ref">attack</span>&quot;: &quot;Discrete(2)&quot;,
+    &quot;<a class="reference internal" href="handlers.html#attack"><span class="std std-ref">attack</span></a>&quot;: &quot;Discrete(2)&quot;,
     &quot;<span class="xref std std-ref">back</span>&quot;: &quot;Discrete(2)&quot;,
     &quot;<a class="reference internal" href="handlers.html#camera"><span class="std std-ref">camera</span></a>&quot;: &quot;Box(low=-180.0, high=180.0, shape=(2,))&quot;,
     &quot;<span class="xref std std-ref">craft</span>&quot;: &quot;Enum(crafting_table,none,planks,stick,torch)&quot;,
@@ -1611,7 +1622,7 @@ item is given here:</p>
         <a href="handlers.html" class="btn btn-neutral float-right" title="Environment Handlers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../tutorials/data_sampling.html" class="btn btn-neutral float-left" title="Sampling The Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../tutorials/minerl_tools.html" class="btn btn-neutral float-left" title="Visualizing The Data minerl.viewer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1620,7 +1631,7 @@ item is given here:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, William H. Guss, Brandon Houghton
+        &copy; Copyright 2020, William H. Guss, Brandon Houghton
 
     </p>
   </div>
@@ -1658,7 +1669,18 @@ item is given here:</p>
     </script>
 
     
-   
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+</script>
+
 
 </body>
 </html>

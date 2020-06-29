@@ -35,6 +35,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Windows FAQ" href="../notes/windows.html" />
@@ -91,8 +92,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/first_agent.html#no-op-actions-and-a-better-policy">No-op actions and a better policy</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/data_sampling.html">Sampling The Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/data_sampling.html#visualizing-the-data-minerl-viewer">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/data_sampling.html">Sampling The Dataset</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/data_sampling.html#moderate-human-demonstrations">Moderate Human Demonstrations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/k-means.html">K-means exploration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/minerl_tools.html">Visualizing The Data <code class="code docutils literal notranslate"><span class="pre">minerl.viewer</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/minerl_tools.html#interactive-mode-minerl-interactor">Interactive Mode <code class="code docutils literal notranslate"><span class="pre">minerl.interactor</span></code></a></li>
 </ul>
 <p class="caption"><span class="caption-text">MineRL Environments</span></p>
 <ul class="current">
@@ -415,6 +421,20 @@ inclusive</p>
 </dl>
 </dd></dl>
 
+<span class="target" id="attack"></span><dl class="py function">
+<dt>
+<code class="sig-name descname">attack : Discrete(1) [attack]</code></dt>
+<dd><p>This action causes the agent to attack.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="code docutils literal notranslate"><span class="pre">np.float32</span></code></p>
+</dd>
+<dt class="field-even">Shape</dt>
+<dd class="field-even"><p>[1]</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="section" id="tool-control-camera">
 <h2>Tool Control - <code class="code docutils literal notranslate"><span class="pre">camera</span></code><a class="headerlink" href="#tool-control-camera" title="Permalink to this headline">¶</a></h2>
@@ -461,7 +481,7 @@ action. <code class="code docutils literal notranslate"><span class="pre">air</s
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, William H. Guss, Brandon Houghton
+        &copy; Copyright 2020, William H. Guss, Brandon Houghton
 
     </p>
   </div>
@@ -499,7 +519,18 @@ action. <code class="code docutils literal notranslate"><span class="pre">air</s
     </script>
 
     
-   
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+</script>
+
 
 </body>
 </html>
