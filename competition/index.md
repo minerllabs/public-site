@@ -3,10 +3,11 @@ layout: default
 title: MineRL Competition 2020
 ---
 
-### [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition)
+## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition)
+
 
 <div class="sidebarstatus">
-    <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4ohomnzr1LM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 We are holding a competition on sample-efficient reinforcement learning using human priors. Standard methods require 
@@ -98,7 +99,8 @@ knowlege to solve the ObtainDiamond task!
 
 All submissions are through
  [AIcrowd](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition). There you can find detailed rules and as
-  well as the leaderboard. Additionally, Preferred Networks has released reference RL implementations available [
+  well as the leaderboard. Additionally, Preferred Networks is releasing reference RL implementations available soon! 
+   Previous baselines can be found [
   on github](https://github.com/minerllabs/baselines).
 
 <h4 style="width: 100%; text-align: left;"> Round 1 </h4>
@@ -223,13 +225,13 @@ competition@minerl.io
     </div>
     <div>
         <!-- <h3>Paper</h3> -->
-        <h3><a href="https://arxiv.org/abs/1904.10079">The MineRL Competition on Sample Efficient Reinforcement Learning using Human Priors </a></h3>
+        <h3><a href="https://arxiv.org/abs/1904.10079">NeurIPS 2020 Competition:  The MineRL Competition onSample Efficient Reinforcement Learning using Human Priors </a></h3>
         <!-- <h3>Citation</h3> -->
         <p>William H. Guss, Mario Ynocente Castro, Sam Devlin, Brandon Houghton, Noboru Sean Kuno, Crissman Loomis, Keisuke Nakata, Stephanie Milani, Sharada Mohanty, Ruslan Salakhutdinov, Shinya Shiroshita, John Schulman, Nicholay Topin, Avinash Ummadisingu, Oriol Vinyals</p>
         <p>NeurIPS 2020 Competition Track</p>
         <p> 2020 </p>
         <p style="margin: 10px 20px">
-        <a href="/competition/bib.txt">[BibTex]</a>
+        <a href="/competition/2020_bib.txt">[BibTex]</a>
         <a href="/competition">[Competition Details]</a>
         </p>
     </div>
