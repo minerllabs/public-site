@@ -7,14 +7,14 @@ title: MineRL Competition 2020
 
 
 <div class="sidebarstatus">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4ohomnzr1LM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
 
 We are holding a competition on sample-efficient reinforcement learning using human priors. Standard methods require 
 months to years of game time to attain human performance in complex games such as Go and StarCraft. In our competition,
  participants develop a system to obtain a diamond in Minecraft using only four days of training time. 
 <!-- <div style="text-align: center; margin: auto" width='100%'> -->
-<iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/ggo1WAldyq0?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
+<iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/4ohomnzr1LM?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
 </iframe>
 <!-- </div> -->
     
@@ -79,19 +79,21 @@ knowlege to solve the ObtainDiamond task!
     <img  style="margin-right: auto" src="/assets/videos/orion4.mp4.gif" class="video">
 </div>
 
-
+<br/>
 <h3 style="width: 100%; text-align: center;"> Top Submissions </h3>
 
-<video width="100%"  loop controls>
-  <source src="/assets/videos/comp_mountain.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<!-- <div style="text-align: center; margin: auto" width='100%'> -->
+<iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/GHo8B4JMC38?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
+</iframe>
+<!-- </div> -->
 <br/>
 
-<video width="100%"  loop controls>
-  <source src="/assets/videos/comp_cdsvideo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+<!-- <div style="text-align: center; margin: auto" width='100%'> -->
+<iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/W9-7FX4YZbI?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
+</iframe>
+<!-- </div> -->
+<br/>
 
 <br/>
 
