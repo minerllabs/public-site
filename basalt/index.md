@@ -107,24 +107,29 @@ All submissions are through (TODO make link correct)
 </div>
 
 
-<h4 style="width: 100%; text-align: left;"> Round 1: Leaderboard </h4>
-1. Participants train agents to solve BASALT tasks. Participants submit both the training code as well as already-trained models for evaluation.
-2. Leaderboard ranks are determined by generating videos from already-trained models on new environment seeds, and having visitors to the competition site compare which of the videos they see is better.
-3. 100 participants move on to Round 2.
+<h4 style="width: 100%; text-align: left;"> Competition Round 1: Submit Trained Agents </h4>
+- Participants train agents to solve BASALT tasks. Participants submit both the training code as well as already-trained models for evaluation.
+
+<h4 style="width: 100%; text-align: left;"> Evaluation 1: Leaderboard </h4>
+- During the competition, leaderboard ranks will be determined by generating videos from already-trained models on new environment seeds, and having visitors to the competition site compare which of the videos they see is better.
+- 100 participants according to a combination of overall and per-task score move on to Evaluation
+
+<h4 style="width: 100%; text-align: left;"> Evaluation 2: Mechanical Turk </h4>
+- Submissions will be shown to Mechanical Turk workers, who will give numeric ratings as well as qualitative assessments.
+- The top 10 participants will advance to Round 2.
 
 
-<h4 style="width: 100%; text-align: left;"> Round 2: Mechanical Turk </h4>
-1. Submissions will be shown to Mechanical Turk workers, who will give numeric ratings as well as qualitative assessments.
-2. The top 10 participants will advance to Round 3.
+<h4 style="width: 100%; text-align: left;"> Competition Round 2: Examination and Re-Training </h4>
+- Participants submit documentation of their code, and instructions on how to provide human feedback to their training process.
 
-
-<h4 style="width: 100%; text-align: left;"> Round 3: Examination and Re-Training </h4>
-1. Participants submit documentation of their code, and instructions on how to providing human feedback when training the model.
-2. Competition organizers inspect the training code for remaining participants to ensure it follows competition rules.
-3. Models will be retrained on our hardware, with paid contractors providing human feedback if required. If the resulting models achieve significantly lower scores than found in Round 2, they are disqualified.
-4. The top 3 participants will present their solutions at NeurIPS.
+<h4 style="width: 100%; text-align: left;"> Retraining & Validation</h4>
+- Competition organizers inspect the training code for remaining participants to ensure it follows competition rules.
+- Models will be retrained on our hardware, with paid contractors providing human feedback if required. If the resulting models achieve significantly lower scores than found in Round 2, they are disqualified.
+- The top 3 participants will present their solutions at NeurIPS.
 
 <br/>
+
+
 
 <h3 style="width: 100%; text-align: center;"> The Tasks</h3>
 
