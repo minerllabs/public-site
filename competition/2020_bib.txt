@@ -1,7 +1,0 @@
-@article{guss2020minerlcomp,
-  title={NeurIPS 2020 Competition:  The {M}ine{RL} Competition on Sample Efficient Reinforcement Learning using Human Priors },
-  author={William H. Guss and Mario Ynocente Castro* and Sam Devlin* and Brandon Houghton* and Noboru Sean Kuno* and Crissman Loomis* and Stephanie Milani* and Sharada Mohanty* and Keisuke Nakata* and Ruslan Salakhutdinov* and John Schulman* and Shinya Shiroshita* and Nicholay Topin* and Avinash Ummadisingu* and Oriol Vinyals*}  journal={NeurIPS Competition Track},
-  journal={NeurIPS Competition Track},
-  year={2020}
-}
-
