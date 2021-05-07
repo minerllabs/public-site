@@ -9,4 +9,4 @@ If you want to run the site locally, you can do so with `./test`
 4) deploy changes with ./update
 
 Links are relative and don't need index.html or the website URL to be specified
-Only new files are uploaded - exising ones are not touched
+Only new files are uploaded - existing ones are not touched
