@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MineRL Competition 2020
+title: BASALT Competition 2021
 ---
 
 ## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition)
@@ -9,22 +9,19 @@ title: MineRL Competition 2020
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
+This year, we are adding a new sister competition to the MineRL family: BASALT, a competition on solving human-judged tasks. The tasks in this competition do not have a pre-defined reward function: the goal is to produce trajectories that are judged by real humans to be effective at solving a given task. 
 
-We are holding a competition on sample-efficient reinforcement learning using human priors. Standard methods require 
-months to years of game time to attain human performance in complex games such as Go and StarCraft. In our competition,
- participants develop a system to obtain a diamond in Minecraft using only four days of training time. 
+We realize this is somewhat uncharted territory for the ML community, and that it will require a different set of norms and training procedures - perhaps integrating demonstrations with sources of live human ranking, rating, or comparison to guide agents in the right direction. Our hope is that this competition can provide an impetus for the research community to invest in this category of poorly-specified task, which we expect will become increasingly relevant as we want artificially intelligent systems to integrate into more areas of our lives. 
+
 <!-- <div style="text-align: center; margin: auto" width='100%'> -->
-<iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/4ohomnzr1LM?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
-</iframe>
+<!-- <iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/4ohomnzr1LM?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
+</iframe> -->
 <!-- </div> -->
     
-The MineRL competition offeres a set of Gym environments paired with human demonstrations to provide participants with
-the ability to tackle the difficult Minecraft sample efficiently. This year we are introducing a new 
-vectorized action and observation space that obscures the agent's actions to prevent participants from using domain
-knowlege to solve the ObtainDiamond task!
+Similar to the MineRL Diamond competition, BASALT provides a set of Gym environments paired with human demonstrations, since methods based on imitation are an important building block for solving hard-to-specify tasks.
  
 
-<h5 style="text-align: center;"><b>Sample snippets of the dataset.</b></h5>
+<h5 style="text-align: center;"><b>(TODO: Make our dataset) Sample snippets of the dataset.</b></h5>
 <div class="video-player">
 
 
@@ -99,116 +96,76 @@ knowlege to solve the ObtainDiamond task!
 
 <h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
 
-All submissions are through
+All submissions are through (TODO make link correct)
  [AIcrowd](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition). There you can find detailed rules and as
-  well as the leaderboard. Additionally, Preferred Networks is releasing reference RL implementations available soon! 
-   Previous baselines can be found [
-  on github](https://github.com/minerllabs/baselines).
+  well as the leaderboard.
+<!--    Previous baselines can be found [
+  on github](https://github.com/minerllabs/baselines). -->
 
-<h4 style="width: 100%; text-align: left;"> Round 1 </h4>
-1. Participants train their agents to play Minecraft. During the round, they submit trained models for evaluation to determine leaderboard ranks.
-2. At the end of the round, participants submit source code. The models at the top of the leaderboard are re-trained (from scratch) for four days to compute the final score used for ranking.
-3. 20 participants move on to the second round, 15 from the main track and 5 from the data only track.
+<h4 style="width: 100%; text-align: left;"> Round 1: Leaderboard </h4>
+1. Participants train their agents to be able to solve BASALT tasks. During the round, they submit already-trained models for evaluation to determine leaderboard ranks.
+2. Leaderboard ranks are determined by generating videos from trajectories on new seeds of environments, and having visitors to the competition site give comparisons between trajectories they see. 
+3. 100 participants move on to Round 2
 
 <div>
     <img class="marginauto" src="/assets/images/round1_procedure.png" alt="drawing" width="700"/>
 </div>
 
-<h4 style="width: 100%; text-align: left;"> Round 2 </h4>
-1. Participants may submit code up to four times. Each submission is trained for four days to compute score. Final ranking is based on best submission for each participant.
-2. The top participants will present their work at a workshop at NeurIPS 2020.
+<h4 style="width: 100%; text-align: left;"> Round 2: Mechanical Turk </h4>
+1. Submissions will be shown to Mechanical Turk workers, who will give numeric ratings as well as qualitative assessments  
+2. The top 10 participants will be asked to submit their code for retraining in Round 3 
 
 <div>
     <img class="marginauto" src="/assets/images/round2_procedure.png" alt="drawing" width="700"/>
 </div>
 
-<h3 style="width: 100%; text-align: center;"> The Task: Obtain Diamond in Minecraft </h3>
+<h4 style="width: 100%; text-align: left;"> Round 3: Examination and Re-Training </h4>
+1. Training code will be submitted; competition organizers will inspect it for following competition rules 
+2. Models will be retrained on our hardware, and with paid contractors providing human feedback if models require it 
+2. The top 3 participants will present their solutions at NeurIPS
+<div>
+    <img class="marginauto" src="/assets/images/round2_procedure.png" alt="drawing" width="700"/>
+</div>
 
-Minecraft is a 3D, first-person, open-world game centered around the gathering of resources and creation of structures and items. These structures and items have prerequisite tools and materials required for their creation. As a result, many items require the completion of a series of natural subtasks.
+<h3 style="width: 100%; text-align: center;"> The Tasks</h3>
 
-The procedurally generated world is composed of discrete blocks that allow modification. Over the course of gameplay, players change their surroundings by gathering resources and constructing structures.
+<h4 style="width: 100%; text-align: left;">FindCave</h4>
+The agent should search for a cave, and terminate the episode when it is inside one. 
 
-In this competition, the goal is to obtain a diamond. The agent begins in a random starting location without any items, and receives rewards for obtaining items which are prerequisites for diamond.
+<h4 style="width: 100%; text-align: left;">MakeWaterfall</h4>
+After spawning in a mountainous area, the agent should build a beautiful waterfall and then reposition itself to take a scenic picture of the same waterfall. 
 
-  <h5 style="text-align: center;"><b>The stages of obtaining a diamond.</b></h5>
-<table style="width:100%" align="center">
-  <tr>
-    <th><small>Gather <br/> Wood</small></th>
-    <th></th>
-    <th><small>Create <br/> Wood Pickaxe</small></th>
-    <th></th>
-    <th><small>Mine Stone <br/> and Create <br/> Stone Pickaxe</small></th>
-    <th></th>
-    <th><small>Mine <br/> Iron Ore</small></th>
-  </tr>
-  <tr>
-    <td style="text-align:center"><img src="/assets/videos/1_wood.gif" class="video" width="100"></td>
-    <td style="text-align:center"><img class="marginauto" src="/assets/images/arrow.png" alt="drawing" width="40"/></td>
-    <td style="text-align:center"><img src="/assets/videos/2_woodpick.gif" class="video" width="100"></td>
-    <td style="text-align:center"><img class="marginauto" src="/assets/images/arrow.png" alt="drawing" width="40"/></td>
-    <td style="text-align:center"><img src="/assets/videos/3_stone_stonepick.gif" class="video" width="100"></td>
-    <td style="text-align:center"><img class="marginauto" src="/assets/images/arrow.png" alt="drawing" width="40"/></td>
-    <td style="text-align:center"><img src="/assets/videos/4_ironore.gif" class="video" width="100"></td>
-  </tr>
-</table>
+<h4 style="width: 100%; text-align: left;">CreateVillageAnimalPen</h4>
+After spawning in a village, the agent should build an animal pen containing two of the same kind of animal next to one of the houses in a village
 
-<table style="width:100%" align="center">
-  <tr>
-    <th><small>Create <br/> Furnace</small></th>
-    <th></th>
-    <th><small>Smelt Iron <br/> and Create <br/>Iron Pickaxe</small></th>
-    <th></th>
-    <th><small>Search</small></th>
-    <th></th>
-    <th><small>Mine <br/> Diamond</small></th>
-  </tr>
-  <tr>
-    <td style="text-align:center"><img src="/assets/videos/5_furnace.gif" class="video" width="100"></td>
-    <td style="text-align:center"><img class="marginauto" src="/assets/images/arrow.png" alt="drawing" width="40"/></td>
-    <td style="text-align:center"><img src="/assets/videos/6_iron_ironpick.gif" class="video" width="100"></td>
-    <td style="text-align:center"><img class="marginauto" src="/assets/images/arrow.png" alt="drawing" width="40"/></td>
-    <td style="text-align:center"><img src="/assets/videos/7_searching.gif" class="video" width="100"></td>
-    <td style="text-align:center"><img class="marginauto" src="/assets/images/arrow.png" alt="drawing" width="40"/></td>
-    <td style="text-align:center"><img src="/assets/videos/8_diamond.gif" class="video" width="100"></td>
-  </tr>
-</table>
-
+<h4 style="width: 100%; text-align: left;">BuildVillageHouse</h4>
+Using items in its starting inventory, the agent should build a new house in the style of the village, in an appropriate location (e.g. next to the path through the village), without harming the village in the process.
 
 <h3 style="width: 100%; text-align: center;"> Prizes </h3>
 
-Top-ranking teams in round 2 will receive rewards from our sponsors. Details will be announced as we finalize agreements.
+Top-ranking teams in round 3 will receive (prizes that may ever exist? TODO)
 
 
 <h3 style="width: 100%; text-align: center;"> Team </h3>
 
 The organizing team consists of:
 
-* William H. Guss (OpenAI and Carnegie Mellon University)
-* Brandon Houghton (OpenAI and Carnegie Mellon University)
+* Rohin Shah (UC Berkeley)
+* Cody Wild (UC Berkeley) 
+* Steven H. Wang (UC Berkeley) 
+* Neel Alex (UC Berkeley)
+* Brandon Houghton (OpenAI)
+* William Guss (OpenAI)
+* Sharada Mohanty (AIcrowd)
 * Stephanie Milani (Carnegie Mellon University)
 * Nicholay Topin (Carnegie Mellon University)
-* Ruslan Salakhutdinov (Carnegie Mellon University)
-* John Schulman (OpenAI)
-* Mario Ynocente Castro (Preferred Networks)
-* Crissman Loomis (Preferred Networks)
-* Keisuke Nakata (Preferred Networks)
-* Shinya Shiroshita (Preferred Networks)
-* Avinash Ummadisingu (Preferred Networks)
-* Sharada Mohanty (AIcrowd)
-* Sam Devlin (Microsoft Research)
-* Noboru Sean Kuno (Microsoft Research)
-* Oriol Vinyals (DeepMind)
-
-
-The advisory committee consists of:
-
-* Fei Fang (Carnegie Mellon University)
-* Zachary Chase Lipton (Carnegie Mellon University)
-* Manuela Veloso (Carnegie Mellon University and JPMorgan Chase)
-* David Ha (Google Brain)
-* Chelsea Finn (Google Brain and UC Berkeley)
+* Pieter Abbeel (UC Berkeley)
+* Stuart Russell (UC Berkeley)
 * Anca Dragan (UC Berkeley)
-* Sergey Levine (UC Berkeley)
+
+Advisors:
+
+* Sergio Guadarrama (Google)
 
 <h3 style="width: 100%; text-align: center;"> Contact </h3>
 If you have any questions, please feel free to contact us: 
