@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Diamond Competition 2021
+redirect_from: 
+    - /competition/
 ---
 
 ## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition)
