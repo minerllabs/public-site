@@ -47,7 +47,7 @@ Why Minecraft?
 
 Minecraft is a rich environment to do RL on: it is an open-world environment, has sparse rewards, and has many innate
 task hierarchies and subgoals. People can have many different goals within the game: perhaps you want to [defeat the Ender
-Dragon while others stop you](https://www.youtube.com/watch?v=tylNqtyj0gs), or [build a giant floating island
+Dragon while others try to stop you](https://www.youtube.com/watch?v=tylNqtyj0gs), or [build a giant floating island
 chained to the ground](https://www.youtube.com/watch?v=elewb1b7Rqo), or [produce more stuff than you will ever
 need](https://www.youtube.com/watch?v=v6gIYk6sRqw). In addition, Minecraft has more than 90 million monthly active users,
 making it a good environment on which to collect a large-scale dataset.
