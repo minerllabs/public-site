@@ -9,7 +9,7 @@ title: BASALT Competition 2021
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
-This year, we are adding a new sister competition to the MineRL family: BASALT, a competition on solving human-judged tasks. The tasks in this competition do not have a pre-defined reward function: the goal is to produce trajectories that are judged by real humans to be effective at solving a given task. 
+This year, we are adding a new competition to the MineRL family: BASALT, a competition on solving human-judged tasks. The tasks in this competition do not have a pre-defined reward function: the goal is to produce trajectories that are judged by real humans to be effective at solving a given task. 
 
 We realize this is somewhat uncharted territory for the ML community, and that it will require a different set of norms and training procedures - perhaps integrating demonstrations with sources of live human ranking, rating, or comparison to guide agents in the right direction. Our hope is that this competition can provide an impetus for the research community to invest in this category of poorly-specified task, which we expect will become increasingly relevant as we want artificially intelligent systems to integrate into more areas of our lives. 
 
@@ -102,30 +102,26 @@ All submissions are through (TODO make link correct)
 <!--    Previous baselines can be found [
   on github](https://github.com/minerllabs/baselines). -->
 
+<div>
+    <img class="marginauto" src="/assets/images/basalt_diagram.png" alt="drawing" width="700"/>
+</div>
+
+
 <h4 style="width: 100%; text-align: left;"> Round 1: Leaderboard </h4>
 1. Participants train their agents to be able to solve BASALT tasks. During the round, they submit already-trained models for evaluation to determine leaderboard ranks.
 2. Leaderboard ranks are determined by generating videos from trajectories on new seeds of environments, and having visitors to the competition site give comparisons between trajectories they see. 
 3. 100 participants move on to Round 2
 
-<div>
-    <img class="marginauto" src="/assets/images/round1_procedure.png" alt="drawing" width="700"/>
-</div>
 
 <h4 style="width: 100%; text-align: left;"> Round 2: Mechanical Turk </h4>
 1. Submissions will be shown to Mechanical Turk workers, who will give numeric ratings as well as qualitative assessments  
 2. The top 10 participants will be asked to submit their code for retraining in Round 3 
 
-<div>
-    <img class="marginauto" src="/assets/images/round2_procedure.png" alt="drawing" width="700"/>
-</div>
 
 <h4 style="width: 100%; text-align: left;"> Round 3: Examination and Re-Training </h4>
 1. Training code will be submitted; competition organizers will inspect it for following competition rules 
 2. Models will be retrained on our hardware, and with paid contractors providing human feedback if models require it 
 2. The top 3 participants will present their solutions at NeurIPS
-<div>
-    <img class="marginauto" src="/assets/images/round2_procedure.png" alt="drawing" width="700"/>
-</div>
 
 <h3 style="width: 100%; text-align: center;"> The Tasks</h3>
 
