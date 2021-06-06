@@ -111,25 +111,21 @@ All submissions are through [AIcrowd](https://www.aicrowd.com/challenges/neurips
 </div>
 
 
-<h4 style="width: 100%; text-align: left;"> Competition Round 1: Submit Trained Agents </h4>
+<h4 style="width: 100%; text-align: left;"> Submission: Submit Trained Agents </h4>
 - Participants train agents to solve BASALT tasks. Participants submit both the training code as well as already-trained models for evaluation.
 
 <h4 style="width: 100%; text-align: left;"> Evaluation 1: Leaderboard </h4>
 - During the competition, leaderboard ranks will be determined by generating videos from already-trained models on new environment seeds, and having visitors to the competition site compare which of the videos they see is better.
-- 100 participants according to a combination of overall and per-task score move on to Evaluation
+- 50 teams, chosen according to a combination of overall and per-task score, move on to the next evaluation round.
 
-<h4 style="width: 100%; text-align: left;"> Evaluation 2: Mechanical Turk </h4>
-- Submissions will be shown to Mechanical Turk workers, who will give numeric ratings as well as qualitative assessments.
-- The top 10 participants will advance to Round 2.
+<h4 style="width: 100%; text-align: left;"> Evaluation 2: Final Scores</h4>
+- Submissions will be shown to Mechanical Turk workers or contractors via the same leaderboard mechanism. The difference from the previous round is that these workers will spend more time understanding the tasks and providing good comparisons, and will <i>not</i> consist of other participants.
+- The top 10 teams will advance to Round 2.
 
-
-<h4 style="width: 100%; text-align: left;"> Competition Round 2: Examination and Re-Training </h4>
-- Participants submit documentation of their code, and instructions on how to provide human feedback to their training process.
-
-<h4 style="width: 100%; text-align: left;"> Retraining & Validation</h4>
+<h4 style="width: 100%; text-align: left;"> Validation</h4>
 - Competition organizers inspect the training code for remaining participants to ensure it follows competition rules.
-- Models will be retrained on our hardware, with paid contractors providing human feedback if required. If the resulting models achieve significantly lower scores than found in Round 2, they are disqualified.
-- Winners will present their solutions at NeurIPS.
+- Models will be retrained on our hardware, with paid contractors providing human feedback if required. If the resulting models are significantly worse than the initial agents submitted by the team, that team is disqualified.
+- Winners are chosen from the remaining teams, according to their scores from the second evaluation round.
 
 <br/>
 
@@ -143,7 +139,7 @@ Thanks to the generosity of our sponsors, there will be $11,000 worth of cash pr
 * Most human-like: $500
 * Creativity of research: $500
 
-Note that as we expect to be unable to evaluate all submissions, prizes may be restricted to entries that reach the second evaluation phase, or the validation phase, at the organizers' discretion.
+Note that as we expect to be unable to evaluate all submissions, prizes may be restricted to entries that reach the second evaluation phase, or the validation phase, at the organizers' discretion. Prize winners are expected to present their solutions at NeurIPS.
 
 We also have an additional $1,000 worth of prizes for participants who provide support for the competition:
 
