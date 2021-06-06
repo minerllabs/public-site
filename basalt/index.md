@@ -12,17 +12,27 @@ title: BASALT Competition 2021
 This year, we are adding a new competition to the MineRL family: BASALT, a competition on solving human-judged tasks. The tasks in this competition do not have a pre-defined reward function: the goal is to produce trajectories that are judged by real humans to be effective at solving a given task. 
 
 We realize this is somewhat uncharted territory for the ML community, and that it will require a different set of norms and training procedures - perhaps integrating demonstrations with sources of live human ranking, rating, or comparison to guide agents in the right direction. Our hope is that this competition can provide an impetus for the research community to build these new procedures, which we expect will become increasingly relevant as we want artificially intelligent systems to integrate into more areas of our lives.
-
-<!-- <div style="text-align: center; margin: auto" width='100%'> -->
-<!-- <iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/4ohomnzr1LM?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
-</iframe> -->
-<!-- </div> -->
     
 Similar to the [Diamond competition](/diamond), BASALT provides a set of Gym environments paired with human demonstrations, since methods based on imitation are an important building block for solving hard-to-specify tasks.
- 
 
-<h5 style="text-align: center;"><b>(TODO: Make our dataset) Sample snippets of the dataset.</b></h5>
-<div class="video-player">
+
+<h3 style="width: 100%; text-align: center;"> The Tasks</h3>
+
+<h4 style="width: 100%; text-align: left;">FindCave</h4>
+The agent should search for a cave, and terminate the episode when it is inside one.
+
+<h4 style="width: 100%; text-align: left;">MakeWaterfall</h4>
+After spawning in a mountainous area, the agent should build a beautiful waterfall and then reposition itself to take a scenic picture of the same waterfall.
+
+<h4 style="width: 100%; text-align: left;">CreateVillageAnimalPen</h4>
+After spawning in a village, the agent should build an animal pen containing two of the same kind of animal next to one of the houses in a village.
+
+<h4 style="width: 100%; text-align: left;">BuildVillageHouse</h4>
+Using items in its starting inventory, the agent should build a new house in the style of the village, in an appropriate location (e.g. next to the path through the village), without harming the village in the process.
+
+<!-- TODO add these snippets using the video player class below  -->
+<h5 style="text-align: center;"><b>Sample snippets of the dataset coming soon!</b></h5>
+<!-- <div class="video-player">
 
 
     <img  style="margin-left: auto" src="/assets/videos/obed1.mp4.gif" class="video">
@@ -75,32 +85,26 @@ Similar to the [Diamond competition](/diamond), BASALT provides a set of Gym env
 
     <img  style="margin-right: auto" src="/assets/videos/orion4.mp4.gif" class="video">
 </div>
+-->
 
+<!-- TODO add videos from baseline submissions
 <br/>
-<h3 style="width: 100%; text-align: center;"> TODO: Baseline submissions</h3>
+<h3 style="width: 100%; text-align: center;"> Baseline submissions</h3>
 
-<!-- <div style="text-align: center; margin: auto" width='100%'> -->
 <iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/GHo8B4JMC38?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
 </iframe>
-<!-- </div> -->
 <br/>
 
 
-<!-- <div style="text-align: center; margin: auto" width='100%'> -->
 <iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/W9-7FX4YZbI?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
 </iframe>
-<!-- </div> -->
-<br/>
+<br/> -->
 
 <br/>
 
 <h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
 
-All submissions are through (TODO make link correct)
- [AIcrowd](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition). There you can find detailed rules and as
-  well as the leaderboard.
-<!--    Previous baselines can be found [
-  on github](https://github.com/minerllabs/baselines). -->
+All submissions are through [AIcrowd](https://www.aicrowd.com/challenges/neurips-2021-minerl-basalt-competition). There you can find detailed rules as well as the leaderboard.
 
 <div>
     <img class="marginauto" src="/assets/images/basalt_diagram.png" alt="drawing" width="700"/>
@@ -125,29 +129,26 @@ All submissions are through (TODO make link correct)
 <h4 style="width: 100%; text-align: left;"> Retraining & Validation</h4>
 - Competition organizers inspect the training code for remaining participants to ensure it follows competition rules.
 - Models will be retrained on our hardware, with paid contractors providing human feedback if required. If the resulting models achieve significantly lower scores than found in Round 2, they are disqualified.
-- The top 3 participants will present their solutions at NeurIPS.
+- Winners will present their solutions at NeurIPS.
 
 <br/>
 
-
-
-<h3 style="width: 100%; text-align: center;"> The Tasks</h3>
-
-<h4 style="width: 100%; text-align: left;">FindCave</h4>
-The agent should search for a cave, and terminate the episode when it is inside one. 
-
-<h4 style="width: 100%; text-align: left;">MakeWaterfall</h4>
-After spawning in a mountainous area, the agent should build a beautiful waterfall and then reposition itself to take a scenic picture of the same waterfall. 
-
-<h4 style="width: 100%; text-align: left;">CreateVillageAnimalPen</h4>
-After spawning in a village, the agent should build an animal pen containing two of the same kind of animal next to one of the houses in a village.
-
-<h4 style="width: 100%; text-align: left;">BuildVillageHouse</h4>
-Using items in its starting inventory, the agent should build a new house in the style of the village, in an appropriate location (e.g. next to the path through the village), without harming the village in the process.
-
 <h3 style="width: 100%; text-align: center;"> Prizes </h3>
 
-Top-ranking teams in round 3 will receive (prizes that may ever exist? TODO)
+Thanks to the generosity of our sponsors, there will be $11,000 worth of cash prizes:
+
+* First place: $5,000
+* Second place: $3,000
+* Third place: $2,000
+* Most human-like: $500
+* Creativity of research: $500
+
+Note that as we expect to be unable to evaluate all submissions, prizes may be restricted to entries that reach the second evaluation phase, or the validation phase, at the organizers' discretion.
+
+We also have an additional $1,000 worth of prizes for participants who provide support for the competition:
+
+* Community support: $500 (may be split across participants at the organizers' discretion)
+* Lottery for leaderboard ratings (above and beyond those used to “pay” for submissions): 5 prizes each worth $100
 
 
 <h3 style="width: 100%; text-align: center;"> Team </h3>
@@ -169,13 +170,20 @@ The organizing team consists of:
 
 Advisors:
 
-* Sergio Guadarrama (Google)
+* Sergio Guadarrama (Google Brain)
+* Katja Hofmann (Microsoft Research)
+
+Sponsors:
+
+* Open Philanthropy
+* Microsoft
+* OpenAI
 
 <h3 style="width: 100%; text-align: center;"> Contact </h3>
 If you have any questions, please feel free to contact us at rohinmshah AT berkeley DOT edu.
 
-
-<h3  style="width: 100%; text-align: center;"> TODO: Citation </h3>
+<!-- TODO add citation once it is up on arXiv
+<h3  style="width: 100%; text-align: center;"> Citation </h3>
 
 <div class="paper-section">
     <div class="paper-section-container">
@@ -185,9 +193,7 @@ If you have any questions, please feel free to contact us at rohinmshah AT berke
         </a>
     </div>
     <div>
-        <!-- <h3>Paper</h3> -->
         <h3><a href="https://arxiv.org/abs/1904.10079">NeurIPS 2020 Competition:  The MineRL Competition onSample Efficient Reinforcement Learning using Human Priors </a></h3>
-        <!-- <h3>Citation</h3> -->
         <p>William H. Guss, Mario Ynocente Castro, Sam Devlin, Brandon Houghton, Noboru Sean Kuno, Crissman Loomis, Keisuke Nakata, Stephanie Milani, Sharada Mohanty, Ruslan Salakhutdinov, Shinya Shiroshita, John Schulman, Nicholay Topin, Avinash Ummadisingu, Oriol Vinyals</p>
         <p>NeurIPS 2020 Competition Track</p>
         <p> 2020 </p>
@@ -198,3 +204,4 @@ If you have any questions, please feel free to contact us at rohinmshah AT berke
     </div>
     </div>
 </div>
+-->
