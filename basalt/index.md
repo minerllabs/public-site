@@ -139,6 +139,8 @@ Thanks to the generosity of our sponsors, there will be $11,000 worth of cash pr
 * Most human-like: $500
 * Creativity of research: $500
 
+In addition, the top three teams will be invited to coauthor the competition report.
+
 Note that as we expect to be unable to evaluate all submissions, prizes may be restricted to entries that reach the second evaluation phase, or the validation phase, at the organizers' discretion. Prize winners are expected to present their solutions at NeurIPS.
 
 We also have an additional $1,000 worth of prizes for participants who provide support for the competition:
