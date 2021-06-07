@@ -3,7 +3,7 @@ layout: default
 title: BASALT Competition 2021
 ---
 
-## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition)
+## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2021-minerl-basalt-competition)
 
 
 <div class="sidebarstatus">
