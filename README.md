@@ -13,8 +13,7 @@ Only new files are uploaded - existing ones are not touched
 
 
 ## How to build MineRL Sphinx documentation (copied to docs/ directory)
-1. Enter your `minerl` Python virtual environment, with both the default minerl package requirements and minerl/docs/requirements.txt installed.
-  * You will need to be in this Python environment in order to build the repository.
+1. Activate your `minerl` Python virtual environment, with both the default minerl package requirements and minerl/docs/requirements.txt installed.
 1. `cd` into the root directory of this repo (as opposed to the minerl repo).
 1. Run the shell script `./build-docs.sh ${YOUR_MINERL_REPO_DIRECTORY}/docs`.
 1. You should expect to see several warnings and errors ("circular toctree", "undefined label"), but this is okay.
