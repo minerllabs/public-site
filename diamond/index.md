@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Diamond Competition 2021
+title: MineRL Diamond Competition 2021
 redirect_from: 
     - /competition/
 ---
@@ -20,10 +20,13 @@ months to years of game time to attain human performance in complex games such a
 </iframe>
 <!-- </div> -->
     
-The MineRL competition offers a set of Gym environments paired with human demonstrations to provide participants with
-the ability to tackle the difficult Minecraft sample efficiently. This year we are introducing a new 
-vectorized action and observation space that obscures the agent's actions to prevent participants from using domain
-knowlege to solve the ObtainDiamond task!
+The MineRL Diamond competition offers a set of Gym environments paired with human demonstrations to provide participants with
+the ability to tackle the difficult Minecraft sample efficiently. This year we have two tracks:
+
+1. *Research Track* - continues the challenge from last year where the 
+action and observation spaces are vectorized and obfuscated to prevent participants from using domain
+knowledge to solve the ObtainDiamond task.
+2. *Intro Track* - Removes the obfuscation and allows for any creative solution to solving the task, whether entirely scripted, entirely learned, or a hybrid approach.
  
 
 <h5 style="text-align: center;"><b>Sample snippets of the dataset.</b></h5>
@@ -102,7 +105,7 @@ knowlege to solve the ObtainDiamond task!
 <h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
 
 All submissions are through
- [AIcrowd](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition). There you can find detailed rules and as
+ [AIcrowd](https://www.aicrowd.com/challenges/neurips-2021-minerl-competition). There you can find detailed rules and as
   well as the leaderboard. Additionally, Preferred Networks is releasing reference RL implementations available soon! 
    Previous baselines can be found [
   on github](https://github.com/minerllabs/baselines).
@@ -118,7 +121,7 @@ All submissions are through
 
 <h4 style="width: 100%; text-align: left;"> Round 2 </h4>
 1. Participants may submit code up to four times. Each submission is trained for four days to compute score. Final ranking is based on best submission for each participant.
-2. The top participants will present their work at a workshop at NeurIPS 2020.
+2. The top participants will present their work at a workshop at NeurIPS 2021.
 
 <div>
     <img class="marginauto" src="/assets/images/round2_procedure.png" alt="drawing" width="700"/>
@@ -186,31 +189,25 @@ Top-ranking teams in round 2 will receive rewards from our sponsors. Details wil
 The organizing team consists of:
 
 * William H. Guss (OpenAI and Carnegie Mellon University)
+* Alara Dirik (Boğaziçi University)
+* Byron V. Galbraith (Talla)
 * Brandon Houghton (OpenAI and Carnegie Mellon University)
-* Stephanie Milani (Carnegie Mellon University)
-* Nicholay Topin (Carnegie Mellon University)
-* Ruslan Salakhutdinov (Carnegie Mellon University)
-* John Schulman (OpenAI)
-* Mario Ynocente Castro (Preferred Networks)
-* Crissman Loomis (Preferred Networks)
-* Keisuke Nakata (Preferred Networks)
-* Shinya Shiroshita (Preferred Networks)
-* Avinash Ummadisingu (Preferred Networks)
-* Sharada Mohanty (AIcrowd)
-* Sam Devlin (Microsoft Research)
+* Anssi Kanervisto (University of Eastern Finland)
 * Noboru Sean Kuno (Microsoft Research)
-* Oriol Vinyals (DeepMind)
-
+* Stephanie Milani (Carnegie Mellon University)
+* Sharada Mohanty (AIcrowd)
+* Karolis Ramanauskas
+* Ruslan Salakhutdinov (Carnegie Mellon University)
+* Rohin Shah (UC Berkeley)
+* Nicholay Topin (Carnegie Mellon University)
+* Steven H. Wang (UC Berkeley)
+* Cody Wild (UC Berkeley)
 
 The advisory committee consists of:
 
-* Fei Fang (Carnegie Mellon University)
-* Zachary Chase Lipton (Carnegie Mellon University)
 * Manuela Veloso (Carnegie Mellon University and JPMorgan Chase)
-* David Ha (Google Brain)
-* Chelsea Finn (Google Brain and UC Berkeley)
-* Anca Dragan (UC Berkeley)
-* Sergey Levine (UC Berkeley)
+* Oriol Vinyals (DeepMind)
+* More TBA
 
 <h3 style="width: 100%; text-align: center;"> Contact </h3>
 If you have any questions, please feel free to contact us: 
@@ -228,7 +225,7 @@ competition@minerl.io
         </a>
     </div>
     <div>
-        <!-- <h3>Paper</h3> -->
+        <!-- <h3>Previous Paper [2021 edition coming soon!]</h3> -->
         <h3><a href="https://arxiv.org/abs/1904.10079">NeurIPS 2020 Competition:  The MineRL Competition on Sample Efficient Reinforcement Learning using Human Priors </a></h3>
         <!-- <h3>Citation</h3> -->
         <p>William H. Guss, Mario Ynocente Castro, Sam Devlin, Brandon Houghton, Noboru Sean Kuno, Crissman Loomis, Keisuke Nakata, Stephanie Milani, Sharada Mohanty, Ruslan Salakhutdinov, Shinya Shiroshita, John Schulman, Nicholay Topin, Avinash Ummadisingu, Oriol Vinyals</p>
