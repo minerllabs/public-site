@@ -1,6 +1,8 @@
 ---
 layout: default
-title: MineRL Competition 2020
+title: Diamond Competition 2021
+redirect_from: 
+    - /competition/
 ---
 
 ## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition)
@@ -18,7 +20,7 @@ months to years of game time to attain human performance in complex games such a
 </iframe>
 <!-- </div> -->
     
-The MineRL competition offeres a set of Gym environments paired with human demonstrations to provide participants with
+The MineRL competition offers a set of Gym environments paired with human demonstrations to provide participants with
 the ability to tackle the difficult Minecraft sample efficiently. This year we are introducing a new 
 vectorized action and observation space that obscures the agent's actions to prevent participants from using domain
 knowlege to solve the ObtainDiamond task!
@@ -227,7 +229,7 @@ competition@minerl.io
     </div>
     <div>
         <!-- <h3>Paper</h3> -->
-        <h3><a href="https://arxiv.org/abs/1904.10079">NeurIPS 2020 Competition:  The MineRL Competition onSample Efficient Reinforcement Learning using Human Priors </a></h3>
+        <h3><a href="https://arxiv.org/abs/1904.10079">NeurIPS 2020 Competition:  The MineRL Competition on Sample Efficient Reinforcement Learning using Human Priors </a></h3>
         <!-- <h3>Citation</h3> -->
         <p>William H. Guss, Mario Ynocente Castro, Sam Devlin, Brandon Houghton, Noboru Sean Kuno, Crissman Loomis, Keisuke Nakata, Stephanie Milani, Sharada Mohanty, Ruslan Salakhutdinov, Shinya Shiroshita, John Schulman, Nicholay Topin, Avinash Ummadisingu, Oriol Vinyals</p>
         <p>NeurIPS 2020 Competition Track</p>

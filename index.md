@@ -3,12 +3,11 @@ layout: default
 title: MineRL&#58; Towards AI in Minecraft
 ---
 
-### [tl;dr: Compete to build AI in Minecraft! [NeurIPS 2020 Competition]](/competition)
-### [tl;dr: Use the MineRL reinforcement learning environment!](/docs)
-### [tl;dr: Get the MineRL dataset!](/docs)
-### [tl;dr: Play Minecraft to benefit Science!](/play)
+### tl;dr: Build AI in Minecraft in the [Diamond](/diamond) and [BASALT](/basalt) competitions!
+### tl;dr: Use the [MineRL environments](/docs)!
+### tl;dr: Get the [MineRL dataset](/dataset)!
 
-Welcome to MineRL. We want to solve [Minecraft](http://minecraft.net) using state-of-the-art Machine Learning! To do so, we have created one of the largest imitation learning datasets with **over 60 million frames** of recorded human player data. Our dataset includes a set of tasks which highlights many of the hardest problems in modern-day Reinforcement Learning: sparse rewards and hierarchical policies. 
+Welcome to MineRL. We want to build agents that play [Minecraft](http://minecraft.net) using state-of-the-art Machine Learning! To do so, we have created one of the largest imitation learning datasets with **over 60 million frames** of recorded human player data. Our dataset includes a set of tasks which highlights many of the hardest problems with current techniques: environments with lots of hierarchy, tasks where rewards are sparse, and tasks where rewards are hard to define.
 
 <div class="video-player">
     <div class="video-description">
@@ -133,6 +132,6 @@ Get involved
 
 Our project consists of three main components:
 
-* [A free, public Minecraft server for collecting data](/play/index.html)
+* [Challenging](/diamond/index.html) [environments](/basalt/index.html)
 * [The expansive MineRL dataset](/dataset/index.html)
 * [Tools for research on MineRL-v0 dataset](/docs/index.html)
