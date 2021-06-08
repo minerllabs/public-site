@@ -5,7 +5,7 @@ redirect_from:
     - /competition/
 ---
 
-## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2020-minerl-competition)
+## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2021-minerl-diamond-competition)
 
 
 <div class="sidebarstatus">
