@@ -34,6 +34,6 @@ files.
 * `update.sh`, used to deploy changes to S3, will also perform this docs/ copy on our behalf.
 
 #### You may need to invalidaate the cache to see your changes!
-* E.g. `aws cloudfront create-invalidation --distribution-id EEUNB0Q5HAJC --paths "/*"`
+* E.g. `aws cloudfront create-invalidation --distribution-id EEUNB0Q5HAJC2 --paths "/*"`
 * Note the above operation is expensive and should be done infrequently with as specific a path as possible
 * See https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html for more info
