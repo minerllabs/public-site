@@ -1,4 +1,5 @@
-
+#!/usr/bin/env bash
+set -e
 ARG=$1
 
 if [ -z "$ARG" ]

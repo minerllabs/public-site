@@ -24,6 +24,16 @@ exclude:
    - build.sh
    - .gitignore
    - README.md
+include:
+  # Sadly, this doesn't seem to be enough to get docs to work
+  # with test.sh. These directories are copied over into _site
+  # for some reason. We solve this by manually copying over the
+  # docs directory into _site, like `update.sh` and `build.sh`.
+  #
+  # See README.md for special instructions on testing Sphinx docs
+  # locally.
+  - docs/_sites/
+  - docs/_images/
 
 highlighter: rouge
 
