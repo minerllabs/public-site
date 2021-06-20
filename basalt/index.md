@@ -21,71 +21,127 @@ Similar to the [Diamond competition](/diamond), BASALT provides a set of Gym env
 <h4 style="width: 100%; text-align: left;">FindCave</h4>
 The agent should search for a cave, and terminate the episode when it is inside one.
 
+<div class="video-player">
+
+
+    <img  style="margin-left: auto" src="/assets/videos/caves_short_gifs/caves1_0:05.gif" class="video">
+
+
+    <img src="/assets/videos/caves_short_gifs/caves1_0:12.gif" class="video">
+
+
+    <img src="/assets/videos/caves_short_gifs/caves2_0:30.gif" class="video">
+
+
+    <img src="/assets/videos/caves_short_gifs/caves2_0:47.gif" class="video">
+
+
+    <img src="/assets/videos/caves_short_gifs/caves4_0:05.gif" class="video">
+
+
+    <img src="/assets/videos/caves_short_gifs/caves4_1:00.gif" class="video">
+
+
+    <img src="/assets/videos/caves_short_gifs/caves4_1:47.gif" class="video">
+
+
+    <img  style="margin-right: auto" src="/assets/videos/caves_short_gifs/caves5_0:30.gif" class="video">
+
+</div>
+
 <h4 style="width: 100%; text-align: left;">MakeWaterfall</h4>
 After spawning in a mountainous area, the agent should build a beautiful waterfall and then reposition itself to take a scenic picture of the same waterfall.
+
+<div class="video-player">
+
+
+    <img  style="margin-left: auto" src="/assets/videos/waterfall_short_gifs/waterfall0_0:30.gif" class="video">
+
+
+    <img src="/assets/videos/waterfall_short_gifs/waterfall0_1:00.gif" class="video">
+
+
+    <img src="/assets/videos/waterfall_short_gifs/waterfall1_1:00.gif" class="video">
+
+
+    <img src="/assets/videos/waterfall_short_gifs/waterfall4_0:05.gif" class="video">
+
+
+    <img src="/assets/videos/waterfall_short_gifs/waterfall4_1:00.gif" class="video">
+
+
+    <img src="/assets/videos/waterfall_short_gifs/waterfall6_0:05.gif" class="video">
+
+
+    <img src="/assets/videos/waterfall_short_gifs/waterfall6_3:00.gif" class="video">
+
+
+    <img  style="margin-right: auto" src="/assets/videos/waterfall_short_gifs/waterfall7_3:00.gif" class="video">
+
+</div>
 
 <h4 style="width: 100%; text-align: left;">CreateVillageAnimalPen</h4>
 After spawning in a village, the agent should build an animal pen containing two of the same kind of animal next to one of the houses in a village.
 
-<h4 style="width: 100%; text-align: left;">BuildVillageHouse</h4>
-Using items in its starting inventory, the agent should build a new house in the style of the village, in an appropriate location (e.g. next to the path through the village), without harming the village in the process.
-
-<!-- TODO add these snippets using the video player class below  -->
-<h5 style="text-align: center;"><b>Sample snippets of the dataset coming soon!</b></h5>
-<!-- <div class="video-player">
-
-
-    <img  style="margin-left: auto" src="/assets/videos/obed1.mp4.gif" class="video">
-
-
-    <img src="/assets/videos/obed2.mp4.gif" class="video">
-
-
-    <img src="/assets/videos/obed3.mp4.gif" class="video">
-
-
-    <img src="/assets/videos/obed4.mp4.gif" class="video">
-
-
-    <img src="/assets/videos/odia1.mp4.gif" class="video">
-
-
-    <img src="/assets/videos/odia2.mp4.gif" class="video">
-
-
-    <img src="/assets/videos/odia3.mp4.gif" class="video">
-
-
-    <img  style="margin-right: auto" src="/assets/videos/odia4.mp4.gif" class="video">
-
-</div>
 <div class="video-player">
 
 
-    <img style="margin-left: auto" src="/assets/videos/omeat1.mp4.gif" class="video">
+    <img  style="margin-left: auto" src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village1_0:30.gif" class="video">
 
 
-    <img src="/assets/videos/omeat2.mp4.gif" class="video">
+    <img src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village1_1:00.gif" class="video">
 
 
-    <img src="/assets/videos/omeat3.mp4.gif" class="video">
+    <img src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village2_1:00.gif" class="video">
 
 
-    <img src="/assets/videos/omeat4.mp4.gif" class="video">
+    <img src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village3_0:05.gif" class="video">
 
 
-    <img src="/assets/videos/orion1.mp4.gif" class="video">
+    <img src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village4_0:05.gif" class="video">
 
 
-    <img src="/assets/videos/orion2.mp4.gif" class="video">
+    <img src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village4_1:00.gif" class="video">
 
 
-    <img src="/assets/videos/orion3.mp4.gif" class="video">
+    <img src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village5_0:30.gif" class="video">
 
 
-    <img  style="margin-right: auto" src="/assets/videos/orion4.mp4.gif" class="video">
+    <img  style="margin-right: auto" src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village5_1:00.gif" class="video">
+
 </div>
--->
+
+<h4 style="width: 100%; text-align: left;">BuildVillageHouse</h4>
+Using items in its starting inventory, the agent should build a new house in the style of the village, in an appropriate location (e.g. next to the path through the village), without harming the village in the process.
+
+<div class="video-player">
+
+
+    <img  style="margin-left: auto" src="/assets/videos/house_short_gifs/house_0_0:50.gif" class="video">
+
+
+    <img src="/assets/videos/house_short_gifs/house_0_1:20.gif" class="video">
+
+
+    <img src="/assets/videos/house_short_gifs/house_0_3:00.gif" class="video">
+
+
+    <img src="/assets/videos/house_short_gifs/house_1_3:00.gif" class="video">
+
+
+    <img src="/assets/videos/house_short_gifs/house_1_3:32.gif" class="video">
+
+
+    <img src="/assets/videos/house_short_gifs/house_long_1:00.gif" class="video">
+
+
+    <img src="/assets/videos/house_short_gifs/house_long_3:00.gif" class="video">
+
+
+    <img  style="margin-right: auto" src="/assets/videos/house_short_gifs/house_long_7:41.gif" class="video">
+
+</div>
+
 
 <!-- TODO add videos from baseline submissions
 <br/>
