@@ -46,8 +46,8 @@ minerl.data.download('your/dataset/path')
 
 
 
-Details
--------
+MineRL Diamond
+--------------
 
 We collected human observations from a set of four main task families, each of which we explain more about below.
 Throughout all tasks, the agent has access to the same set of actions and observations as a human player. All tasks have a time limit, which is a part of the observation. With the exception of "Navigate," all tasks center around obtaining specific items and have sparse rewards (+1 only for obtaining the required items).
@@ -247,4 +247,56 @@ There is no known reward function, and one must be extracted from examples of hu
     <img src="/assets/videos/survival8.mp4.gif" class="video">
 
 
+</div>
+
+MineRL BASALT
+-------------
+
+More detailed descriptions of the tasks can be found at the [BASALT page](/basalt).
+
+<p>In FindCave, the agent spawns in a plains biome and must find a cave.</p>
+<div class="video-player">
+<div class="video-description-big">
+    <b>FindCave:</b>
+</div>
+    <img src="/assets/videos/caves_short_gifs/caves1_0:05.gif" class="video">
+    <img src="/assets/videos/caves_short_gifs/caves1_0:12.gif" class="video">
+    <img src="/assets/videos/caves_short_gifs/caves2_0:30.gif" class="video">
+    <img src="/assets/videos/caves_short_gifs/caves2_0:47.gif" class="video">
+</div>
+
+
+<p>In MakeWaterfall, the agent must create a waterfall and take a pretty picture of it.</p>
+<div class="video-player">
+<div class="video-description-big">
+    <b>MakeWaterfall:</b>
+</div>
+    <img src="/assets/videos/waterfall_short_gifs/waterfall0_0:30.gif" class="video">
+    <img src="/assets/videos/waterfall_short_gifs/waterfall1_1:00.gif" class="video">
+    <img src="/assets/videos/waterfall_short_gifs/waterfall4_0:05.gif" class="video">
+    <img src="/assets/videos/waterfall_short_gifs/waterfall4_1:00.gif" class="video">
+</div>
+
+
+<p>In CreateVillageAnimalPen, the agent must create a pen next to a village house and fill it with one type of animal.</p>
+<div class="video-player">
+<div class="video-description-big">
+    <b>VillageAnimalPen:</b>
+</div>
+    <img src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village1_0:30.gif" class="video">
+    <img src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village1_1:00.gif" class="video">
+    <img src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village5_0:30.gif" class="video">
+    <img src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village5_1:00.gif" class="video">
+</div>
+
+
+<p>In BuildVillageHouse, the agent must build a new house in the village, in the same style as other houses in the village.</p>
+<div class="video-player">
+<div class="video-description-big">
+    <b>BuildVillageHouse:</b>
+</div>
+    <img src="/assets/videos/house_short_gifs/house_0_1:20.gif" class="video">
+    <img src="/assets/videos/house_short_gifs/house_0_3:00.gif" class="video">
+    <img src="/assets/videos/house_short_gifs/house_1_3:32.gif" class="video">
+    <img src="/assets/videos/house_short_gifs/house_long_7:41.gif" class="video">
 </div>
