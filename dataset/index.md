@@ -266,7 +266,7 @@ More detailed descriptions of the tasks can be found at the [BASALT page](/basal
 </div>
 
 
-<p>In MakeWaterfall, given two water buckets and other tools, the agent must create a waterfall and take a pretty picture of it.</p>
+<p>In MakeWaterfall, the agent must create a waterfall and take a pretty picture of it.</p>
 <div class="video-player">
 <div class="video-description-big">
     <b>MakeWaterfall:</b>
@@ -278,7 +278,7 @@ More detailed descriptions of the tasks can be found at the [BASALT page](/basal
 </div>
 
 
-<p>In CreateVillageAnimalPen, the agent must create a pen next to a village house, and establish a breeding population of some animal in the pen.</p>
+<p>In CreateVillageAnimalPen, the agent must create a pen next to a village house and fill it with one type of animal.</p>
 <div class="video-player">
 <div class="video-description-big">
     <b>VillageAnimalPen:</b>
