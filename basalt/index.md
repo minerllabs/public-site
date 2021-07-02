@@ -229,7 +229,6 @@ Advisors:
 
 Sponsors:
 
-* Open Philanthropy
 * Microsoft
 * OpenAI
 
