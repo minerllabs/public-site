@@ -220,13 +220,13 @@ competition@minerl.io
 <div class="paper-section">
     <div class="paper-section-container">
     <div>
-        <a href="https://arxiv.org/abs/1904.10079">
+        <a href="https://arxiv.org/abs/2101.11071">
         <img class="paper-thumbnail" src="/assets/paper_thumbnail.jpg"/>
         </a>
     </div>
     <div>
         <!-- <h3>Previous Paper [2021 edition coming soon!]</h3> -->
-        <h3><a href="https://arxiv.org/abs/1904.10079">NeurIPS 2020 Competition:  The MineRL Competition on Sample Efficient Reinforcement Learning using Human Priors </a></h3>
+        <h3><a href="https://arxiv.org/abs/2101.11071">NeurIPS 2020 Competition:  The MineRL Competition on Sample Efficient Reinforcement Learning using Human Priors </a></h3>
         <!-- <h3>Citation</h3> -->
         <p>William H. Guss, Mario Ynocente Castro, Sam Devlin, Brandon Houghton, Noboru Sean Kuno, Crissman Loomis, Keisuke Nakata, Stephanie Milani, Sharada Mohanty, Ruslan Salakhutdinov, Shinya Shiroshita, John Schulman, Nicholay Topin, Avinash Ummadisingu, Oriol Vinyals</p>
         <p>NeurIPS 2020 Competition Track</p>
