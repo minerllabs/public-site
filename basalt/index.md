@@ -216,6 +216,7 @@ The organizing team consists of:
 * Brandon Houghton (OpenAI)
 * William Guss (OpenAI)
 * Sharada Mohanty (AIcrowd)
+* Anssi Kanervisto (University of Eastern Finland)
 * Stephanie Milani (Carnegie Mellon University)
 * Nicholay Topin (Carnegie Mellon University)
 * Pieter Abbeel (UC Berkeley)
@@ -235,26 +236,24 @@ Sponsors:
 <h3 style="width: 100%; text-align: center;"> Contact </h3>
 If you have any questions, please feel free to contact us at rohinmshah AT berkeley DOT edu.
 
-<!-- TODO add citation once it is up on arXiv
 <h3  style="width: 100%; text-align: center;"> Citation </h3>
 
 <div class="paper-section">
     <div class="paper-section-container">
     <div>
-        <a href="https://arxiv.org/abs/1904.10079">
+        <a href="https://arxiv.org/abs/2107.01969">
         <img class="paper-thumbnail" src="/assets/paper_thumbnail.jpg"/>
         </a>
     </div>
     <div>
-        <h3><a href="https://arxiv.org/abs/1904.10079">NeurIPS 2020 Competition:  The MineRL Competition onSample Efficient Reinforcement Learning using Human Priors </a></h3>
-        <p>William H. Guss, Mario Ynocente Castro, Sam Devlin, Brandon Houghton, Noboru Sean Kuno, Crissman Loomis, Keisuke Nakata, Stephanie Milani, Sharada Mohanty, Ruslan Salakhutdinov, Shinya Shiroshita, John Schulman, Nicholay Topin, Avinash Ummadisingu, Oriol Vinyals</p>
-        <p>NeurIPS 2020 Competition Track</p>
-        <p> 2020 </p>
+        <h3><a href="https://arxiv.org/abs/2107.01969">The MineRL BASALT Competition on Learning from Human Feedback</a></h3>
+        <p>Rohin Shah, Cody Wild, Steven H. Wang, Neel Alex, Brandon Houghton, William Guss, Sharada Mohanty, Anssi Kanervisto, Stephanie Milani, Nicholay Topin, Pieter Abbeel, Stuart Russell, Anca Dragan</p>
+        <p>NeurIPS 2021 Competition Track</p>
+        <p> 2021 </p>
         <p style="margin: 10px 20px">
-        <a href="/competition/2020_bib.txt">[BibTex]</a>
-        <a href="/competition">[Competition Details]</a>
+        <a href="/basalt/2021_bib.txt">[BibTex]</a>
+        <a href="/basalt">[Competition Details]</a>
         </p>
     </div>
     </div>
 </div>
--->
