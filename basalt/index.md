@@ -9,11 +9,11 @@ title: BASALT Competition 2021
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
-This year, we are adding a new competition to the MineRL family: BASALT, a competition on solving human-judged tasks. The tasks in this competition do not have a pre-defined reward function: the goal is to produce trajectories that are judged by real humans to be effective at solving a given task. 
+This year, we are adding a new competition to the MineRL family: BASALT, a competition on solving human-judged tasks, with $11,000 in prizes. The tasks in this competition do not have a pre-defined reward function: the goal is to produce trajectories that are judged by real humans to be effective at solving a given task.
 
 We realize this is somewhat uncharted territory for the ML community, and that it will require a different set of norms and training procedures - perhaps integrating demonstrations with sources of live human ranking, rating, or comparison to guide agents in the right direction. Our hope is that this competition can provide an impetus for the research community to build these new procedures, which we expect will become increasingly relevant as we want artificially intelligent systems to integrate into more areas of our lives.
     
-Similar to the [Diamond competition](/diamond), BASALT provides a set of Gym environments paired with human demonstrations, since methods based on imitation are an important building block for solving hard-to-specify tasks.
+Like the [Diamond competition](/diamond), BASALT provides a set of Gym environments paired with human demonstrations, since methods based on imitation are an important building block for solving hard-to-specify tasks.
 
 
 <h3 style="width: 100%; text-align: center;"> The Tasks</h3>
@@ -142,20 +142,6 @@ Using items in its starting inventory, the agent should build a new house in the
 
 </div>
 
-
-<!-- TODO add videos from baseline submissions
-<br/>
-<h3 style="width: 100%; text-align: center;"> Baseline submissions</h3>
-
-<iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/GHo8B4JMC38?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
-</iframe>
-<br/>
-
-
-<iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/W9-7FX4YZbI?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
-</iframe>
-<br/> -->
-
 <br/>
 
 <h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
@@ -182,6 +168,17 @@ All submissions are through [AIcrowd](https://www.aicrowd.com/challenges/neurips
 - Competition organizers inspect the training code for remaining participants to ensure it follows competition rules.
 - Models will be retrained on our hardware, with paid contractors providing human feedback if required. If the resulting models are significantly worse than the initial agents submitted by the team, that team is disqualified.
 - Winners are chosen from the remaining teams, according to their scores from the second evaluation round.
+
+
+
+<br/>
+<h3 style="width: 100%; text-align: center;"> Baseline submission</h3>
+
+Our [baseline](https://github.com/minerllabs/basalt_competition_baseline_submissions) is a simple behavioral cloning algorithm trained for a couple of hours. We hope to see participants improve upon it significantly!
+
+<div style="text-align: center; margin: auto" width='100%'>
+    <img style="text-align: center;" src="/assets/videos/basalt_bc.gif" class="video">
+</div>
 
 <br/>
 

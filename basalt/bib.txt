@@ -1,6 +1,0 @@
-@article{guss2019minerlcomp,
-  title={The {M}ine{RL} Competition on Sample Efficient Reinforcement Learning using Human Priors},
-  author={William H. Guss and Codel, Cayden and Hofmann, Katja and Houghton, Brandon and Kuno, Noboru and Milani, Stephanie and Mohanty, Sharada and Liebana, Diego Perez and Salakhutdinov, Ruslan and Topin, Nicholay and others},
-  journal={NeurIPS Competition Track},
-  year={2019}
-}

@@ -1,0 +1,6 @@
+@article{shah2021basalt,
+  title={{NeurIPS} 2021 Competition proposal: The {M}ine{RL} {BASALT} Competition on Learning from Human Feedback},
+  author={Rohin Shah and Cody Wild and Steven H. Wang and Neel Alex and Brandon Houghton and William Guss and Sharada Mohanty and Anssi Kanervisto and Stephanie Milani and Nicholay Topin and Pieter Abbeel and Stuart Russell and Anca Dragan},
+  journal={NeurIPS Competition Track},
+  year={2021}
+}
