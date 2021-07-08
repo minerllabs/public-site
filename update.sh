@@ -5,7 +5,4 @@
 
 git pull
 JEKYLL_ENV=production bundle exec jekyll build
-mv _site html
-cp -r docs html
-aws s3 sync --acl public-read --size-only ./html s3://minerl-web
-mv html _site
+aws s3 sync --acl public-read --size-only ./_site s3://minerl-web
