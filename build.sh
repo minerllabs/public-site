@@ -5,6 +5,3 @@
 
 git pull
 JEKYLL_ENV=production bundle exec jekyll build
-mv _site html
-cp -r docs html
-mv html _site
