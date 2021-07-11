@@ -133,6 +133,12 @@ body {
     box-shadow: 3px 5px #a6a6a6;
 }
 
+.index-notification {
+    text-align:center;
+    padding: 1em;
+    background-color: #e6fff2;
+}
+
 .title {
     text-align: center;
     margin-top: 0;
