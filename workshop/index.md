@@ -42,7 +42,7 @@ Link to the gather.town meeting will be shared here on this webpage once the wor
 <h3 style="width: 100%; text-align: center;"> Tutors (may be updated) </h3>
 
 * [Anssi Kanervisto](https://github.com/Miffyli) (Main organizer, University of Eastern Finland)
-* [Brandon Houghton](https://github.com/brandonhoughton) (OpenAI & Carnegie Mellon University)
+* [Brandon Houghton](https://github.com/brandonhoughton) (OpenAI)
 * [Cody Wild](https://github.com/decodyng) (UC Berkeley) 
 * [Karolis Ramanauskas](https://github.com/KarolisRam) (Independent)
 * [Nicholay Topin](https://scholar.google.com/citations?user=IiSg8R0AAAAJ&hl=en) (Carnegie Mellon University)

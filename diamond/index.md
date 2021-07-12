@@ -191,7 +191,7 @@ The organizing team consists of:
 * William H. Guss (OpenAI and Carnegie Mellon University)
 * Alara Dirik (Boğaziçi University)
 * Byron V. Galbraith (Talla)
-* Brandon Houghton (OpenAI and Carnegie Mellon University)
+* Brandon Houghton (OpenAI)
 * Anssi Kanervisto (University of Eastern Finland)
 * Noboru Sean Kuno (Microsoft Research)
 * Stephanie Milani (Carnegie Mellon University)
