@@ -3,6 +3,11 @@ layout: default
 title: MineRL&#58; Towards AI in Minecraft
 ---
 
+<div class="index-notification">
+    <h2>Heads up!</h2>
+    We are organizing a <a href="/workshop">workshop</a> to get you started with MineRL on August 5th 2021!
+</div>
+
 ### tl;dr: Build AI in Minecraft in the [Diamond](/diamond) and [BASALT](/basalt) competitions!
 ### tl;dr: Use the [MineRL environments](/docs)!
 ### tl;dr: Get the [MineRL dataset](/dataset)!
