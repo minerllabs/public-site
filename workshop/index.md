@@ -35,16 +35,16 @@ We wish to assist you regardless of your proficiency in programming or machine l
 
 Event takes place on **August 5th**, encompassing time zones from the **west-coast US to Japan**. Detailed schedule will be added here later. The workshop is split into sessions of two-three hours each. You are free to join any of the sessions at any time!
 
-We will be using the [gather.town](https://gather.town/) platform with a small classroom setup. This is both fun and functional, where we tutors can jump around and help everyone individually, instead of plain-old video lecture! **Note** that the meeting room can only fit a limited number of participants at any given times.
+We will be using the [gather.town](https://gather.town/) platform with a small classroom setup. This is both fun and functional, where we tutors can jump around and help everyone individually, instead of plain-old video lecture! **Note** that the meeting room can only fit a limited number of participants at any given time.
 
 Link to the gather.town meeting will be shared here on this webpage once the workshop starts!
 
 <h3 style="width: 100%; text-align: center;"> Tutors (may be updated) </h3>
 
 * [Anssi Kanervisto](https://github.com/Miffyli) (Main organizer, University of Eastern Finland)
-* [Karolis Ramanauskas](https://github.com/KarolisRam) (Independent)
-* [Rohin Shah](https://rohinshah.com/) (UC Berkeley)
-* [Cody Wild](https://github.com/decodyng) (UC Berkeley) 
 * [Brandon Houghton](https://github.com/brandonhoughton) (OpenAI & Carnegie Mellon University)
-* [Stephanie Milani](https://stephmilani.github.io/) (Carnegie Mellon University)
+* [Cody Wild](https://github.com/decodyng) (UC Berkeley) 
+* [Karolis Ramanauskas](https://github.com/KarolisRam) (Independent)
 * [Nicholay Topin](https://scholar.google.com/citations?user=IiSg8R0AAAAJ&hl=en) (Carnegie Mellon University)
+* [Rohin Shah](https://rohinshah.com/) (UC Berkeley)
+* [Stephanie Milani](https://stephmilani.github.io/) (Carnegie Mellon University)
