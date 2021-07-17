@@ -224,9 +224,11 @@ Advisors:
 
 * Sergio Guadarrama (Google Brain)
 * Katja Hofmann (Microsoft Research)
+* Andrew Critch (UC Berkeley)
 
 Sponsors:
 
+* Open Philanthropy
 * Microsoft
 * OpenAI
 
