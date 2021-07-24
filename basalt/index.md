@@ -231,6 +231,7 @@ Sponsors:
 * Open Philanthropy
 * Microsoft
 * OpenAI
+* Google
 
 <h3 style="width: 100%; text-align: center;"> Contact </h3>
 If you have any questions, please feel free to contact us at rohinmshah AT berkeley DOT edu.
