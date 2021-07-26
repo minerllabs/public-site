@@ -34,7 +34,7 @@ We wish to assist you regardless of your proficiency in programming or machine l
 
 <h3 style="width: 100%; text-align: center;">Schedule and venue</h3>
 
-Event takes place on **August 5th**, encompassing time zones from the **west-coast US to Japan**. The workshop is split into sessions of two-three hours each.
+Event takes place on **August 5th**, encompassing time zones from the **west-coast US to Japan**. The workshop is split into sessions of three hours each.
 
 1. August 5th, 6am - 9am UTC. [See in your timezone here](https://dateful.com/eventlink/2894739281).
 2. August 5th, 10am - 1pm UTC. [See in your timezone here](https://dateful.com/eventlink/8359265532).
