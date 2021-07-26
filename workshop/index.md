@@ -5,6 +5,7 @@ title: Getting Started - Workhshop
 
 ## August 5th 2021, virtual ([gather.town](https://gather.town/))
 
+**Update 27th July**: Schedule added.
 
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
@@ -33,7 +34,14 @@ We wish to assist you regardless of your proficiency in programming or machine l
 
 <h3 style="width: 100%; text-align: center;">Schedule and venue</h3>
 
-Event takes place on **August 5th**, encompassing time zones from the **west-coast US to Japan**. Detailed schedule will be added here later. The workshop is split into sessions of two-three hours each. You are free to join any of the sessions at any time!
+Event takes place on **August 5th**, encompassing time zones from the **west-coast US to Japan**. The workshop is split into sessions of two-three hours each.
+
+1. August 5th, 6am - 9am UTC. [See in your timezone here](https://dateful.com/eventlink/2894739281).
+2. August 5th, 10am - 1pm UTC. [See in your timezone here](https://dateful.com/eventlink/8359265532).
+3. August 5th, 8pm - 11pm UTC. [See in your timezone here](https://dateful.com/eventlink/5368822814).
+4. August *6th*, midnight - 3am UTC. [See in your timezone here](https://dateful.com/eventlink/2996039302).
+
+You are free to join any of the sessions, even multiple ones! We recommend you join at the beginning of the session for a quick presentation on how practicalities are handled.
 
 We will be using the [gather.town](https://gather.town/) platform with a small classroom setup. This is both fun and functional, where we tutors can jump around and help everyone individually, instead of plain-old video lecture! **Note** that the meeting room can only fit a limited number of participants at any given time.
 
