@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Getting Started - Workhshop
+title: Getting Started - Workshop
 ---
 
 ## August 5th 2021, virtual ([gather.town](https://gather.town/))
