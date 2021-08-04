@@ -50,11 +50,11 @@ Join us on [gather.town by clicking here](https://gather.town/invite?token=FDIzC
 During the workshop, pick one of the following tasks to work on to get familiar with MineRL.
 Number of stars (\*) indicate the difficulty (\*newcomer, \*\*programmer, \*\*\*machine learner).
 
-* *[Getting started with MinerRL.](https://docs.google.com/document/d/1b0IFccv9gGnzvsxj6Enm9CM3qLdtYpz4nXPG2iWg29g/edit?usp=sharing).
-* **[Implementing behavioural cloning from (almost) scratch.](https://docs.google.com/document/d/1hM0NOnwndB5mAwcu5ck8oUnZhjOxu27MnMMgbrWZ2Pc/edit?usp=sharing).
-* **[Improve Intro baseline for the Diamond competition and start competing!](https://docs.google.com/document/d/12d0jMnsoR5xjyye4Rlpo84yJOZRMbfSYOb17OWOJdFw/edit?usp=sharing).
-* ***[Learn to use stable-baselines and imitation libraries with MineRL for more sophisticated agents](https://colab.research.google.com/drive/13_jI8YLk9ATRQSd7_3rV5rOsll7jsSz0).
-* ***[Improve Research baseline for the Diamond competition to get started with competition](https://docs.google.com/document/d/1BxKAFZN1-qfc83GjVYMdsJamU01sngn2LlreuvdxWu0/edit?usp=sharing).
+* *[Getting started with MinerRL.](https://docs.google.com/document/d/1b0IFccv9gGnzvsxj6Enm9CM3qLdtYpz4nXPG2iWg29g/edit?usp=sharing)
+* **[Implementing behavioural cloning from (almost) scratch.](https://docs.google.com/document/d/1hM0NOnwndB5mAwcu5ck8oUnZhjOxu27MnMMgbrWZ2Pc/edit?usp=sharing)
+* **[Improve Intro baseline for the Diamond competition and start competing!](https://docs.google.com/document/d/12d0jMnsoR5xjyye4Rlpo84yJOZRMbfSYOb17OWOJdFw/edit?usp=sharing)
+* ***[Learn to use stable-baselines and imitation libraries with MineRL for more sophisticated agents.](https://colab.research.google.com/drive/13_jI8YLk9ATRQSd7_3rV5rOsll7jsSz0)
+* ***[Improve Research baseline for the Diamond competition to get started with competition.](https://docs.google.com/document/d/1BxKAFZN1-qfc83GjVYMdsJamU01sngn2LlreuvdxWu0/edit?usp=sharing)
 
 If none of the above seems suitable for you, you can also check out the two competitions ([Diamond](/diamond) and [BASALT](/basalt)) and begin competing in them!
 You may also work on other projects related to MineRL. We may not have best answers for you, but are happy to help! 
