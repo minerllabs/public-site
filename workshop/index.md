@@ -5,7 +5,7 @@ title: Getting Started - Workshop
 
 ## August 5th 2021, virtual ([gather.town](https://gather.town/invite?token=FDIzC0hp))
 
-**Update August 5th**: Link to gather.town added. Join us **[here](https://gather.town/invite?token=FDIzC0hp)**! See schedule below.
+**Update August 5th**: Link to gather.town added and tasks shared. Join us **[here](https://gather.town/invite?token=FDIzC0hp)**! See schedule and tasks below.
 
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
@@ -44,6 +44,20 @@ Event takes place on **August 5th**, encompassing time zones from the **west-coa
 You are free to join any of the sessions, even multiple ones! We recommend you join at the beginning of the session for a quick presentation on how practicalities are handled.
 
 Join us on [gather.town by clicking here](https://gather.town/invite?token=FDIzC0hp)! Gather Town both fun and functional, where we tutors can jump around and help everyone individually, instead of plain-old video lecture! **Note** that the meeting room can only fit a limited number of participants at any given time.
+
+<h3 style="width: 100%; text-align: center;">Tasks</h3>
+
+During the workshop, pick one of the following tasks to work on to get familiar with MineRL.
+Number of stars (\*) indicate the difficulty (\*newcomer, \*\*programmer, \*\*\*machine learner).
+
+* *[Getting started with MinerRL.](https://docs.google.com/document/d/1b0IFccv9gGnzvsxj6Enm9CM3qLdtYpz4nXPG2iWg29g/edit?usp=sharing).
+* **[Implementing behavioural cloning from (almost) scratch.](https://docs.google.com/document/d/1hM0NOnwndB5mAwcu5ck8oUnZhjOxu27MnMMgbrWZ2Pc/edit?usp=sharing).
+* **[Improve Intro baseline for the Diamond competition and start competing!](https://docs.google.com/document/d/12d0jMnsoR5xjyye4Rlpo84yJOZRMbfSYOb17OWOJdFw/edit?usp=sharing).
+* ***[Learn to use stable-baselines and imitation libraries with MineRL for more sophisticated agents](https://colab.research.google.com/drive/13_jI8YLk9ATRQSd7_3rV5rOsll7jsSz0).
+* ***[Improve Research baseline for the Diamond competition to get started with competition](https://docs.google.com/document/d/1BxKAFZN1-qfc83GjVYMdsJamU01sngn2LlreuvdxWu0/edit?usp=sharing).
+
+If none of the above seems suitable for you, you can also check out the two competitions ([Diamond](/diamond) and [BASALT](/basalt)) and begin competing in them!
+You may also work on other projects related to MineRL. We may not have best answers for you, but are happy to help! 
 
 <h3 style="width: 100%; text-align: center;"> Tutors (may be updated) </h3>
 
