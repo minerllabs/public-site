@@ -3,9 +3,9 @@ layout: default
 title: Getting Started - Workshop
 ---
 
-## August 5th 2021, virtual ([gather.town](https://gather.town/invite?token=FDIzC0hp))
+## August 5th 2021, virtual (gather.town)
 
-**Update August 5th**: Link to gather.town added and tasks shared. Join us **[here](https://gather.town/invite?token=FDIzC0hp)**! See schedule and tasks below.
+**Update August 6th: Event is now over, thanks for attending!**
 
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
@@ -43,7 +43,7 @@ Event takes place on **August 5th**, encompassing time zones from the **west-coa
 
 You are free to join any of the sessions, even multiple ones! We recommend you join at the beginning of the session for a quick presentation on how practicalities are handled.
 
-Join us on [gather.town by clicking here](https://gather.town/invite?token=FDIzC0hp)! Gather Town both fun and functional, where we tutors can jump around and help everyone individually, instead of plain-old video lecture! **Note** that the meeting room can only fit a limited number of participants at any given time.
+Join us on gather.town by clicking here (note: invalid link removed)! Gather Town both fun and functional, where we tutors can jump around and help everyone individually, instead of plain-old video lecture! **Note** that the meeting room can only fit a limited number of participants at any given time.
 
 <h3 style="width: 100%; text-align: center;">Tasks</h3>
 
