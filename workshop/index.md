@@ -5,7 +5,7 @@ title: Getting Started - Workshop
 
 ## August 5th 2021, virtual (gather.town)
 
-**Update August 6th: Event is now over, thanks for attending!**
+**Update August 6th: Event is now over, thanks for attending!** You can find the material [here](https://github.com/minerllabs/getting-started-tasks/).
 
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
@@ -49,6 +49,8 @@ Join us on gather.town by clicking here (note: invalid link removed)! Gather Tow
 
 During the workshop, pick one of the following tasks to work on to get familiar with MineRL.
 Number of stars (\*) indicate the difficulty (\*newcomer, \*\*programmer, \*\*\*machine learner).
+
+**Update 9th August**: You can find these tasks and example answers [here](https://github.com/minerllabs/getting-started-tasks/).
 
 * *[Getting started with MinerRL.](https://docs.google.com/document/d/1b0IFccv9gGnzvsxj6Enm9CM3qLdtYpz4nXPG2iWg29g/edit?usp=sharing)
 * **[Implementing behavioural cloning from (almost) scratch.](https://docs.google.com/document/d/1hM0NOnwndB5mAwcu5ck8oUnZhjOxu27MnMMgbrWZ2Pc/edit?usp=sharing)
