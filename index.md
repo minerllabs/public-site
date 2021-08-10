@@ -9,6 +9,8 @@ title: MineRL&#58; Towards AI in Minecraft
 
 Welcome to MineRL. We want to build agents that play [Minecraft](http://minecraft.net) using state-of-the-art Machine Learning! To do so, we have created one of the largest imitation learning datasets with **over 60 million frames** of recorded human player data. Our dataset includes a set of tasks which highlights many of the hardest problems with current techniques: environments with lots of hierarchy, tasks where rewards are sparse, and tasks where rewards are hard to define.
 
+Get started by [installing the environment](https://minerl.readthedocs.io/en/latest/tutorials/index.html), [running your first agent](https://minerl.readthedocs.io/en/latest/tutorials/first_agent.html) and by checking out [tasks designed to get you started with MineRL](https://github.com/minerllabs/getting-started-tasks/).
+
 <div class="video-player">
     <div class="video-description">
         <b>Navigate:</b>
