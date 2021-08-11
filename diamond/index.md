@@ -106,9 +106,7 @@ knowledge to solve the ObtainDiamond task.
 
 All submissions are through
  [AIcrowd](https://www.aicrowd.com/challenges/neurips-2021-minerl-competition). There you can find detailed rules and as
-  well as the leaderboard. Additionally, Preferred Networks is releasing reference RL implementations available soon! 
-   Previous baselines can be found [
-  on github](https://github.com/minerllabs/baselines).
+  well as the leaderboard. You can find the baselines [on Github](https://github.com/minerllabs/baselines).
 
 <h4 style="width: 100%; text-align: left;"> Round 1 </h4>
 1. Participants train their agents to play Minecraft. During the round, they submit trained models for evaluation to determine leaderboard ranks.
