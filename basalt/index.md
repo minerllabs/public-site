@@ -230,6 +230,7 @@ Sponsors:
 
 * Open Philanthropy
 * Microsoft
+* AI Journal
 * OpenAI
 * Google
 
