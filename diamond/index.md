@@ -5,28 +5,26 @@ redirect_from:
     - /competition/
 ---
 
-## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2021-minerl-diamond-competition)
+
+## [The Diamond challenge is now a part of the <u>[BASALT]</u> competition!](https://minerl.io/basalt/)
 
 
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
 
-We are holding a competition on sample-efficient reinforcement learning using human priors. Standard methods require 
-months to years of game time to attain human performance in complex games such as Go and StarCraft. In our competition,
- participants develop a system to obtain a diamond in Minecraft using only four days of training time. 
+In 2019, 2020, and 2021, we held a competition on sample-efficient reinforcement learning using human priors. 
+Standard methods require months to years of game time to attain human performance in complex games such as Go and StarCraft. In our competition, participants developed a system to obtain a diamond in Minecraft using only four days of training time. 
 <!-- <div style="text-align: center; margin: auto" width='100%'> -->
 <iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/4ohomnzr1LM?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
 </iframe>
 <!-- </div> -->
     
-The MineRL Diamond competition offers a set of Gym environments paired with human demonstrations to provide participants with
-the ability to tackle the difficult Minecraft sample efficiently. This year we have two tracks:
-
-1. *Research Track* - continues the challenge from last year where the 
-action and observation spaces are vectorized and obfuscated to prevent participants from using domain
-knowledge to solve the ObtainDiamond task.
-2. *Intro Track* - Removes the obfuscation and allows for any creative solution to solving the task, whether entirely scripted, entirely learned, or a hybrid approach.
+The MineRL Diamond challenge offers a set of Gym environments paired with human demonstrations.
+The goal of providing the demonstartions is to enable participants to tackle the problem in a sample-efficient manner.
+In previous years, we vectorized obfuscated the action and observaton spaces to promote the development of generalizable solutions.
+This year, the Diamond challenge will be folded into the BASALT competition as a more well-defined task.
+With this challenge, participants can use any creative solution and are not required to use the obfuscated action and observation spaces.
  
 
 <h5 style="text-align: center;"><b>Sample snippets of the dataset.</b></h5>
@@ -102,28 +100,9 @@ knowledge to solve the ObtainDiamond task.
 
 <br/>
 
-<h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
+<h3 style="width: 100%; text-align: center;"> Challenge Overview </h3>
 
-All submissions are through
- [AIcrowd](https://www.aicrowd.com/challenges/neurips-2021-minerl-competition). There you can find detailed rules and as
-  well as the leaderboard. You can find the baselines [on Github](https://github.com/minerllabs/baselines).
-
-<h4 style="width: 100%; text-align: left;"> Round 1 </h4>
-1. Participants train their agents to play Minecraft. During the round, they submit trained models for evaluation to determine leaderboard ranks.
-2. At the end of the round, participants submit source code. The models at the top of the leaderboard are re-trained (from scratch) for four days to compute the final score used for ranking.
-3. 20 participants move on to the second round, 15 from the main track and 5 from the data only track.
-
-<div>
-    <img class="marginauto" src="/assets/images/round1_procedure.png" alt="drawing" width="700"/>
-</div>
-
-<h4 style="width: 100%; text-align: left;"> Round 2 </h4>
-1. Participants may submit code up to four times. Each submission is trained for four days to compute score. Final ranking is based on best submission for each participant.
-2. The top participants will present their work at a workshop at NeurIPS 2021.
-
-<div>
-    <img class="marginauto" src="/assets/images/round2_procedure.png" alt="drawing" width="700"/>
-</div>
+You can find the baselines [on Github](https://github.com/minerllabs/baselines).
 
 <h3 style="width: 100%; text-align: center;"> The Task: Obtain Diamond in Minecraft </h3>
 
@@ -131,7 +110,8 @@ Minecraft is a 3D, first-person, open-world game centered around the gathering o
 
 The procedurally generated world is composed of discrete blocks that allow modification. Over the course of gameplay, players change their surroundings by gathering resources and constructing structures.
 
-In this competition, the goal is to obtain a diamond. The agent begins in a random starting location without any items, and receives rewards for obtaining items which are prerequisites for diamond.
+In this challenge, the goal is to obtain a diamond. 
+The agent begins in a random starting location without any items, and receives rewards for obtaining items which are prerequisites for diamond.
 
   <h5 style="text-align: center;"><b>The stages of obtaining a diamond.</b></h5>
 <table style="width:100%" align="center">
@@ -175,42 +155,6 @@ In this competition, the goal is to obtain a diamond. The agent begins in a rand
     <td style="text-align:center"><img src="/assets/videos/8_diamond.gif" class="video" width="100"></td>
   </tr>
 </table>
-
-
-<h3 style="width: 100%; text-align: center;"> Prizes </h3>
-
-Top-ranking teams in round 2 will receive rewards from our sponsors. Details will be announced as we finalize agreements.
-
-
-<h3 style="width: 100%; text-align: center;"> Team </h3>
-
-The organizing team consists of:
-
-* William H. Guss (OpenAI and Carnegie Mellon University)
-* Alara Dirik (Boğaziçi University)
-* Byron V. Galbraith (Talla)
-* Brandon Houghton (OpenAI)
-* Anssi Kanervisto (University of Eastern Finland)
-* Noboru Sean Kuno (Microsoft Research)
-* Stephanie Milani (Carnegie Mellon University)
-* Sharada Mohanty (AIcrowd)
-* Karolis Ramanauskas
-* Ruslan Salakhutdinov (Carnegie Mellon University)
-* Rohin Shah (UC Berkeley)
-* Nicholay Topin (Carnegie Mellon University)
-* Steven H. Wang (UC Berkeley)
-* Cody Wild (UC Berkeley)
-
-The advisory committee consists of:
-
-* Manuela Veloso (Carnegie Mellon University and JPMorgan Chase)
-* Oriol Vinyals (DeepMind)
-* More TBA
-
-<h3 style="width: 100%; text-align: center;"> Contact </h3>
-If you have any questions, please feel free to contact us: 
-
-competition@minerl.io
 
 
 <h3  style="width: 100%; text-align: center;"> Citation </h3>
