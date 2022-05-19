@@ -13,8 +13,10 @@ redirect_from:
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
 
-In 2019, 2020, and 2021, we held a competition on sample-efficient reinforcement learning using human priors. 
-Standard methods require months to years of game time to attain human performance in complex games such as Go and StarCraft. In our competition, participants developed a system to obtain a diamond in Minecraft using only four days of training time. 
+
+Standard reinforcement learning methods require months to years of game time to attain human performance in complex games such as Go and StarCraft. 
+In our competition (held at NeurIPS in 2019, 2020, and 2021), participants developed a system to obtain a diamond in Minecraft using only four days of training time. 
+This year, the Diamond challenge will be folded into the BASALT competition as a more well-defined task than the primary BASALT tasks.
 <!-- <div style="text-align: center; margin: auto" width='100%'> -->
 <iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/4ohomnzr1LM?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=560&amp;width=560" width="100%" height="395" allowtransparency="true" frameborder="0" style="margin:auto">
 </iframe>
@@ -23,8 +25,7 @@ Standard methods require months to years of game time to attain human performanc
 The MineRL Diamond challenge offers a set of Gym environments paired with human demonstrations.
 The goal of providing the demonstartions is to enable participants to tackle the problem in a sample-efficient manner.
 In previous years, we vectorized obfuscated the action and observaton spaces to promote the development of generalizable solutions.
-This year, the Diamond challenge will be folded into the BASALT competition as a more well-defined task.
-With this challenge, participants can use any creative solution and are not required to use the obfuscated action and observation spaces.
+This year, participants can use any creative solution and are not required to use the obfuscated action and observation spaces.
  
 
 <h5 style="text-align: center;"><b>Sample snippets of the dataset.</b></h5>
