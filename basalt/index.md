@@ -10,11 +10,11 @@ title: BASALT Competition 2022
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
 
-We are running a new iteration of the BASALT competition in 2022! Find the old page [here](/basalt/basalt_2021.html), and summary of the results [in this paper](https://arxiv.org/abs/2204.07123).
+We are running a new iteration of the BASALT competition in 2022! Find the old page [here](/basalt_2021), and summary of the results [in this paper](https://arxiv.org/abs/2204.07123).
 
 In the Benchmark for Agents that Solve Almost-Lifelike Task (BASALT) competition, your task is to solve tasks based on human judgement, instead pre-defined reward functions. The goal is to produce agents that are judged by real humans to be effective at solving a given task. This calls for training on *human-feedback*, wether it is training from demonstrations, training on [human preferences](https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/) or using human to correct agent's actions.
 
-Compared to the [previous year](/basalt/basalt_2021.md), we introduce a number of major changes:
+Compared to the [previous year](/basalt_2021), we introduce a number of major changes:
 
 1. We will provide a number of pretrained "foundational" models, trained on a wide range of Minecraft tasks, for you to use in your submission and/or to finetune. You are free to use any methods as part of your submission, but we believe these models will empower participants to better solve the given tasks.
 2. A new MineRL simulator, which replicates human observation and action space almost one-to-one. This means there are no more `craft` or `place` actions. Instead, you have to open the inventory UI and use mouse pointer to craft items. While this is a more challenging way of playing Minecraft, being closer to human's way of playing the game makes obtaining human demonstrations easier.
