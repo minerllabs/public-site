@@ -6,8 +6,6 @@ title: BASALT Competition 2022
 ## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2022-minerl-basalt-competition).
 ## [Join our Discord for updates](https://discord.com/invite/BT9uegr).
 
-If you are looking for the page for BASALT 2021 competition, you can find it [here](/basalt/basalt_2021.html).
-
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
@@ -29,8 +27,6 @@ Like the [Diamond competition](/diamond), BASALT provides a set of Gym environme
 
 
 <h3 style="width: 100%; text-align: center;"> The Tasks</h3>
-
-**Note: the videos included here do not represent the final MineRL version or the new dataset.**
 
 <h4 style="width: 100%; text-align: left;">FindCave</h4>
 The agent should search for a cave, and terminate the episode when it is inside one.
@@ -61,6 +57,8 @@ The agent should search for a cave, and terminate the episode when it is inside 
     <img  style="margin-right: auto" src="/assets/videos/caves_short_gifs/caves5_0:30.gif" class="video">
 
 </div>
+<span style="text-align: center;"><b>These videos do not represent the new MineRL environment or the new dataset.</b></span>
+
 
 <h4 style="width: 100%; text-align: left;">MakeWaterfall</h4>
 After spawning in a mountainous area, the agent should build a beautiful waterfall and then reposition itself to take a scenic picture of the same waterfall.
@@ -92,6 +90,8 @@ After spawning in a mountainous area, the agent should build a beautiful waterfa
     <img  style="margin-right: auto" src="/assets/videos/waterfall_short_gifs/waterfall7_3:00.gif" class="video">
 
 </div>
+<span style="text-align: center;"><b>These videos do not represent the new MineRL environment or the new dataset.</b></span>
+
 
 <h4 style="width: 100%; text-align: left;">CreateVillageAnimalPen</h4>
 After spawning in a village, the agent should build an animal pen containing two of the same kind of animal next to one of the houses in a village.
@@ -123,6 +123,8 @@ After spawning in a village, the agent should build an animal pen containing two
     <img  style="margin-right: auto" src="/assets/videos/animal_pen_village_short_gifs/animal_pen_village5_1:00.gif" class="video">
 
 </div>
+<span style="text-align: center;"><b>These videos do not represent the new MineRL environment or the new dataset.</b></span>
+
 
 <h4 style="width: 100%; text-align: left;">BuildVillageHouse</h4>
 Using items in its starting inventory, the agent should build a new house in the style of the village, in an appropriate location (e.g. next to the path through the village), without harming the village in the process.
@@ -153,6 +155,8 @@ Using items in its starting inventory, the agent should build a new house in the
     <img  style="margin-right: auto" src="/assets/videos/house_short_gifs/house_long_7:41.gif" class="video">
 
 </div>
+<span style="text-align: center;"><b>These videos do not represent the new MineRL environment or the new dataset.</b></span>
+
 
 <br/>
 
