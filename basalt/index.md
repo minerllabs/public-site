@@ -161,7 +161,8 @@ Using items in its starting inventory, the agent should build a new house in the
 - June-July: New MineRL, models and other material will be released.
 - 1st of July: Competition begins and we start accepting submissions.
 - October: Submissions close, evaluation begins.
-- December: Winners are announced at the NeurIPS 2022 Competition Track event.
+- November: Winners are announced (or contacted), and are invited to contribute to the presentation at the NeurIPS 2022 Competition workshop.
+- December 2nd-3rd: Presentation at NeurIPS 2022 Competition workshop.
 
 <h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
 
