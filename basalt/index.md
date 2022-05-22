@@ -4,23 +4,23 @@ title: BASALT Competition 2022
 ---
 
 ## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2022-minerl-basalt-competition).
-## [Join our Discord for updates](https://discord.com/invite/BT9uegr).
+## [Click here to join our Discord for updates](https://discord.com/invite/BT9uegr).
 
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
 
-We are running a new iteration of the BASALT competition in 2022! Find the old page [here](/basalt_2021), and summary of the results [in this paper](https://arxiv.org/abs/2204.07123).
+We are running a new iteration of the BASALT competition in 2022! Find the old page [here](/basalt_2021) and the summary of the results [in this paper](https://arxiv.org/abs/2204.07123).
 
-In the Benchmark for Agents that Solve Almost-Lifelike Task (BASALT) competition, your task is to solve tasks based on human judgement, instead pre-defined reward functions. The goal is to produce agents that are judged by real humans to be effective at solving a given task. This calls for training on *human-feedback*, wether it is training from demonstrations, training on [human preferences](https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/) or using human to correct agent's actions.
+In the Benchmark for Agents that Solve Almost-Lifelike Task (BASALT) competition, your task is to solve tasks based on human judgement, instead of pre-defined reward functions. The goal is to produce agents that are judged by real humans to be effective at solving a given task. This calls for training on *human-feedback*, whether it is training from demonstrations, training on [human preferences](https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/) or using humans to correct agents' actions.
 
 Compared to the [previous year](/basalt_2021), we introduce a number of major changes:
 
 1. We will provide a number of pretrained "foundational" models, trained on a wide range of Minecraft tasks, for you to use in your submission and/or to finetune. You are free to use any methods as part of your submission, but we believe these models will empower participants to better solve the given tasks.
-2. A new MineRL simulator, which replicates human observation and action space almost one-to-one. This means there are no more `craft` or `place` actions. Instead, you have to open the inventory UI and use mouse pointer to craft items. While this is a more challenging way of playing Minecraft, being closer to human's way of playing the game makes obtaining human demonstrations easier.
-3. New dataset for the BASALT tasks using the new MineRL environment.
-4. To encourage the use of methods utilizing human-feedback, we will be giving out specialization prizes for solutions even if they did not win in the main metric. For example, if your solution is based mainly on human demonstrations (e.g., behavioural cloning) and reached fourth place, you may be awarded the prize for the best solution using human demonstrations (**Note**: this was just an example, not a description of a prize!). More details will be provided on the AICrowd page.
-5. To ease your entry to the competition, we will have an `intro` track which uses an `ObtainX` environment, akin to the `ObtainDiamond` challenge in the [Diamond 2021 challenge](/diamond). This is designed to help you get familiar with the new environment, but we strongly encourage to participate in the BASALT tasks.
+2. A new MineRL simulator, which replicates human observation and action space almost one-to-one. This means there are no more `craft` or `place` actions. Instead, you have to open the inventory UI and use the mouse pointer to craft items. While this is a more challenging way of playing Minecraft, being closer to human's way of playing the game makes obtaining human demonstrations easier.
+3. A new dataset for the BASALT tasks using the new MineRL environment.
+4. To encourage the use of methods utilizing human-feedback, we will be giving out specialization prizes for solutions even if they did not win in the main metric. For example, if your solution is based mainly on human demonstrations (e.g., behavioural cloning) and reached the fourth place, you may be awarded the prize for the best solution using human demonstrations (**Note**: this was just an example, not a description of a prize!). More details will be provided on the AICrowd page.
+5. To ease your entry into the competition, we will have an `intro` track which uses an `ObtainX` environment, akin to the `ObtainDiamond` challenge in the [Diamond 2021 challenge](/diamond). This is designed to help you get familiar with the new environment, but we strongly encourage you to participate in the BASALT tasks.
 
     
 Like the [Diamond competition](/diamond), BASALT provides a set of Gym environments paired with human demonstrations, since methods based on imitation are an important building block for solving hard-to-specify tasks. 
@@ -161,22 +161,22 @@ Using items in its starting inventory, the agent should build a new house in the
 - June-July: New MineRL, models and other material will be released.
 - 1st of July: Competition begins and we start accepting submissions.
 - October: Submissions close, evaluation begins.
-- December: Winners announced at the NeurIPS 2022 Competition Track event.
+- December: Winners are announced at the NeurIPS 2022 Competition Track event.
 
 <h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
 
-All submissions are done through [AIcrowd](https://www.aicrowd.com/challenges/neurips-2022-minerl-basalt-competition). Please follow the AICrowd page for the most up-to-date information and instructions, which are **subject to change** prior to competition start.
+All submissions are done through [AIcrowd](https://www.aicrowd.com/challenges/neurips-2022-minerl-basalt-competition). Please follow the AICrowd page for the most up-to-date information and instructions, which are **subject to change** prior to the competition start.
 
 
 <h4 style="width: 100%; text-align: left;"> Submission: Submit Trained Agents </h4>
 - Participants train agents to solve BASALT tasks. Participants submit both the training code as well as already-trained models for evaluation.
 
 <h4 style="width: 100%; text-align: left;"> Online Leaderboard </h4>
-- During the competition, evaluation system will generate videos from already-trained models on new environment seeds.
-- We will use automatic metrics to provide immediate feedback and rough comparison of the solutions submitted so far. This ranking **does not** reflect the final ranking in any way, it is included only to provide immediate feedback on the competition.
+- During the competition, the evaluation system will generate videos from already-trained models on hidden environment seeds.
+- We will use automatic metrics to provide immediate feedback and a rough comparison of the solutions submitted so far. This ranking **does not** reflect the final ranking in any way, it is included only to provide immediate feedback on the competition.
 
 <h4 style="width: 100%; text-align: left;"> Evaluation Phase 1</h4>
-- After submission deadline, submissions will be shown to Mechanical Turk workers or contractors, and they are asked to rank which of the submissions were better at solving the task.
+- After the submission deadline, submissions will be shown to Mechanical Turk workers or contractors, and they are asked to rank which of the submissions were better at solving the task.
 - The top 20 submissions will proceed to the Phase 2 evaluation.
 
 <h4 style="width: 100%; text-align: left;"> Evaluation Phase 2</h4>
@@ -193,7 +193,7 @@ All submissions are done through [AIcrowd](https://www.aicrowd.com/challenges/ne
 <br/>
 <h3 style="width: 100%; text-align: center;"> Material and baselines</h3>
 
-Baselines will be shared prior or at the competition start (July 1st). Please check the AICrowd page and Discord for updates (links at the top).
+Baselines will be shared prior to or at the competition start (July 1st). Please check the AICrowd page and Discord for updates (links at the top).
 
 Meanwhile, you may find the following material useful for learning about training on human-feedback.
 
@@ -209,7 +209,7 @@ But fret not! We do not require (or expect) all of the participants to understan
 <h3 style="width: 100%; text-align: center;"> Prizes </h3>
 
 Thanks to the overwhelming generosity of sponsors, there will be **$20,000** worth of cash prizes with a conditional **$50,000 - $100,000 milestone prize**!
-In addition, the top three solutions will be invited to coauthor the competition report.
+In addition, the top three solutions will be invited to co-author the competition report.
 
 Note that as we expect to be unable to evaluate all submissions, prizes may be restricted to entries that reach the second evaluation phase, or the validation phase, at the organizers' discretion. Prize winners are expected to present their solutions at NeurIPS.
 

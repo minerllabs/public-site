@@ -23,8 +23,8 @@ This year, the Diamond challenge will be folded into the BASALT competition as a
 <!-- </div> -->
     
 The MineRL Diamond challenge offers a set of Gym environments paired with human demonstrations.
-The goal of providing the demonstartions is to enable participants to tackle the problem in a sample-efficient manner.
-In previous years, we vectorized obfuscated the action and observaton spaces to promote the development of generalizable solutions.
+The goal of providing the demonstrations is to enable participants to tackle the problem in a sample-efficient manner.
+In previous years, we vectorized obfuscated the action and observation spaces to promote the development of generalizable solutions.
 This year, participants can use any creative solution and are not required to use the obfuscated action and observation spaces.
  
 
@@ -107,12 +107,12 @@ You can find the baselines [on Github](https://github.com/minerllabs/baselines).
 
 <h3 style="width: 100%; text-align: center;"> The Task: Obtain Diamond in Minecraft </h3>
 
-Minecraft is a 3D, first-person, open-world game centered around the gathering of resources and creation of structures and items. These structures and items have prerequisite tools and materials required for their creation. As a result, many items require the completion of a series of natural subtasks.
+Minecraft is a 3D, first-person, open-world game centered around the gathering of resources and the creation of structures and items. These structures and items have prerequisite tools and materials required for their creation. As a result, many items require the completion of a series of natural subtasks.
 
 The procedurally generated world is composed of discrete blocks that allow modification. Over the course of gameplay, players change their surroundings by gathering resources and constructing structures.
 
 In this challenge, the goal is to obtain a diamond. 
-The agent begins in a random starting location without any items, and receives rewards for obtaining items which are prerequisites for diamond.
+The agent begins in a random starting location without any items and receives rewards for obtaining items which are prerequisites for diamond.
 
   <h5 style="text-align: center;"><b>The stages of obtaining a diamond.</b></h5>
 <table style="width:100%" align="center">
