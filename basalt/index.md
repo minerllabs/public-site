@@ -1,28 +1,41 @@
 ---
 layout: default
-title: BASALT Competition 2021
+title: BASALT Competition 2022
 ---
 
-## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2021-minerl-basalt-competition)
+## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2022-minerl-basalt-competition).
+## [Join our Discord for updates](https://discord.com/invite/BT9uegr).
 
+If you are looking for the page for BASALT 2021 competition, you can find it [here](/basalt/basalt_2021.html).
 
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
-This year, we are adding a new competition to the MineRL family: BASALT, a competition on solving human-judged tasks, with $11,000 in prizes. The tasks in this competition do not have a pre-defined reward function: the goal is to produce trajectories that are judged by real humans to be effective at solving a given task.
 
-We realize this is somewhat uncharted territory for the ML community, and that it will require a different set of norms and training procedures - perhaps integrating demonstrations with sources of live human ranking, rating, or comparison to guide agents in the right direction. Our hope is that this competition can provide an impetus for the research community to build these new procedures, which we expect will become increasingly relevant as we want artificially intelligent systems to integrate into more areas of our lives.
+We are running a new iteration of the BASALT competition in 2022! Find the old page [here](/basalt/basalt_2021.html), and summary of the results [in this paper](https://arxiv.org/abs/2204.07123).
+
+In the Benchmark for Agents that Solve Almost-Lifelike Task (BASALT) competition, your task is to solve tasks based on human judgement, instead pre-defined reward functions. The goal is to produce agents that are judged by real humans to be effective at solving a given task. This calls for training on *human-feedback*, wether it is training from demonstrations, training on [human preferences](https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/) or using human to correct agent's actions.
+
+Compared to the [previous year](/basalt/basalt_2021.md), we introduce a number of major changes:
+
+1. We will provide a number of pretrained "foundational" models, trained on a wide range of Minecraft tasks, for you to use in your submission and/or to finetune. You are free to use any methods as part of your submission, but we believe these models will empower participants to better solve the given tasks.
+2. A new MineRL simulator, which replicates human observation and action space almost one-to-one. This means there are no more `craft` or `place` actions. Instead, you have to open the inventory UI and use mouse pointer to craft items. While this is a more challenging way of playing Minecraft, being closer to human's way of playing the game makes obtaining human demonstrations easier.
+3. New dataset for the BASALT tasks using the new MineRL environment.
+4. To encourage the use of methods utilizing human-feedback, we will be giving out specialization prizes for solutions even if they did not win in the main metric. For example, if your solution is based mainly on human demonstrations (e.g., behavioural cloning) and reached fourth place, you may be awarded the prize for the best solution using human demonstrations (**Note**: this was just an example, not a description of a prize!). More details will be provided on the AICrowd page.
+5. To ease your entry to the competition, we will have an `intro` track which uses an `ObtainX` environment, akin to the `ObtainDiamond` challenge in the [Diamond 2021 challenge](/diamond). This is designed to help you get familiar with the new environment, but we strongly encourage to participate in the BASALT tasks.
+
     
-Like the [Diamond competition](/diamond), BASALT provides a set of Gym environments paired with human demonstrations, since methods based on imitation are an important building block for solving hard-to-specify tasks.
+Like the [Diamond competition](/diamond), BASALT provides a set of Gym environments paired with human demonstrations, since methods based on imitation are an important building block for solving hard-to-specify tasks. 
 
 
 <h3 style="width: 100%; text-align: center;"> The Tasks</h3>
+
+**Note: the videos included here do not represent the final MineRL version or the new dataset.**
 
 <h4 style="width: 100%; text-align: left;">FindCave</h4>
 The agent should search for a cave, and terminate the episode when it is inside one.
 
 <div class="video-player">
-
 
     <img  style="margin-left: auto" src="/assets/videos/caves_short_gifs/caves1_0:05.gif" class="video">
 
@@ -113,7 +126,6 @@ After spawning in a village, the agent should build an animal pen containing two
 
 <h4 style="width: 100%; text-align: left;">BuildVillageHouse</h4>
 Using items in its starting inventory, the agent should build a new house in the style of the village, in an appropriate location (e.g. next to the path through the village), without harming the village in the process.
-
 <div class="video-player">
 
 
@@ -144,117 +156,93 @@ Using items in its starting inventory, the agent should build a new house in the
 
 <br/>
 
+<h3 style="width: 100%; text-align: center;"> Schedule (preliminary) </h3>
+
+- June-July: New MineRL, models and other material will be released.
+- 1st of July: Competition begins and we start accepting submissions.
+- October: Submissions close, evaluation begins.
+- December: Winners announced at the NeurIPS 2022 Competition Track event.
+
 <h3 style="width: 100%; text-align: center;"> Competition Overview </h3>
 
-All submissions are through [AIcrowd](https://www.aicrowd.com/challenges/neurips-2021-minerl-basalt-competition). There you can find detailed rules as well as the leaderboard.
-
-<div>
-    <img class="marginauto" src="/assets/images/basalt_diagram.png" alt="drawing" width="700"/>
-</div>
+All submissions are done through [AIcrowd](https://www.aicrowd.com/challenges/neurips-2022-minerl-basalt-competition). Please follow the AICrowd page for the most up-to-date information and instructions, which are **subject to change** prior to competition start.
 
 
 <h4 style="width: 100%; text-align: left;"> Submission: Submit Trained Agents </h4>
 - Participants train agents to solve BASALT tasks. Participants submit both the training code as well as already-trained models for evaluation.
 
-<h4 style="width: 100%; text-align: left;"> Evaluation 1: Leaderboard </h4>
-- During the competition, leaderboard ranks will be determined by generating videos from already-trained models on new environment seeds, and having visitors to the competition site compare which of the videos they see is better.
-- 50 teams, chosen according to a combination of overall and per-task score, move on to the next evaluation round.
+<h4 style="width: 100%; text-align: left;"> Online Leaderboard </h4>
+- During the competition, evaluation system will generate videos from already-trained models on new environment seeds.
+- We will use automatic metrics to provide immediate feedback and rough comparison of the solutions submitted so far. This ranking **does not** reflect the final ranking in any way, it is included only to provide immediate feedback on the competition.
 
-<h4 style="width: 100%; text-align: left;"> Evaluation 2: Final Scores</h4>
-- Submissions will be shown to Mechanical Turk workers or contractors via the same leaderboard mechanism. The difference from the previous round is that these workers will spend more time understanding the tasks and providing good comparisons, and will <i>not</i> consist of other participants.
-- The top 10 teams will advance to Round 2.
+<h4 style="width: 100%; text-align: left;"> Evaluation Phase 1</h4>
+- After submission deadline, submissions will be shown to Mechanical Turk workers or contractors, and they are asked to rank which of the submissions were better at solving the task.
+- The top 20 submissions will proceed to the Phase 2 evaluation.
+
+<h4 style="width: 100%; text-align: left;"> Evaluation Phase 2</h4>
+- Same evaluation protocol as in Phase 1, but with more feedback per submission to convergence to the true ranking of the solutions.
+- The top 10 submissions will proceed to the validation phase.
 
 <h4 style="width: 100%; text-align: left;"> Validation</h4>
 - Competition organizers inspect the training code for remaining participants to ensure it follows competition rules.
 - Models will be retrained on our hardware, with paid contractors providing human feedback if required. If the resulting models are significantly worse than the initial agents submitted by the team, that team is disqualified.
-- Winners are chosen from the remaining teams, according to their scores from the second evaluation round.
-
+- Winners are chosen from the remaining teams, according to their scores from the evaluation phase 2.
+- Winners of specialization prizes are chosen from this pool of top 10 solutions.
 
 
 <br/>
-<h3 style="width: 100%; text-align: center;"> Baseline submission</h3>
+<h3 style="width: 100%; text-align: center;"> Material and baselines</h3>
 
-Our [baseline](https://github.com/minerllabs/basalt_competition_baseline_submissions) is a simple behavioral cloning algorithm trained for a couple of hours. We hope to see participants improve upon it significantly!
+Baselines will be shared prior or at the competition start (July 1st). Please check the AICrowd page and Discord for updates (links at the top).
 
-<div style="text-align: center; margin: auto" width='100%'>
-    <img style="text-align: center;" src="/assets/videos/basalt_bc.gif" class="video">
-</div>
+Meanwhile, you may find the following material useful for learning about training on human-feedback.
 
-<br/>
+But fret not! We do not require (or expect) all of the participants to understand all of these topics. A simple solution with outside-the-box thinking may prove to be the winning solution, and we wish to see curious people exploring their ideas, regardless of if they are based on academic works or not!
+
+- [BASALT 2021 competition results](https://arxiv.org/abs/2204.07123)
+- [Learning from human preferences by OpenAI](https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/)
+- [Reward-rational (implicit) choice: A unifying formalism for reward learning](https://arxiv.org/abs/2002.04833)
+- [Algorithms for inverse reinforcement learning](https://ai.stanford.edu/~ang/papers/icml00-irl.pdf)
+- [Deep reinforcement learning from human preferences](https://arxiv.org/abs/1706.03741)
+- [A survey of preference-based reinforcement learning methods](https://jmlr.org/papers/volume18/16-634/16-634.pdf)
 
 <h3 style="width: 100%; text-align: center;"> Prizes </h3>
 
-Thanks to the generosity of our sponsors, there will be $11,000 worth of cash prizes:
-
-* First place: $5,000
-* Second place: $3,000
-* Third place: $2,000
-* Most human-like: $500
-* Creativity of research: $500
-
-In addition, the top three teams will be invited to coauthor the competition report.
+Thanks to the overwhelming generosity of sponsors, there will be **$20,000** worth of cash prizes with a conditional **$50,000 - $100,000 milestone prize**!
+In addition, the top three solutions will be invited to coauthor the competition report.
 
 Note that as we expect to be unable to evaluate all submissions, prizes may be restricted to entries that reach the second evaluation phase, or the validation phase, at the organizers' discretion. Prize winners are expected to present their solutions at NeurIPS.
 
-We also have an additional $1,000 worth of prizes for participants who provide support for the competition:
+The milestone prize is awarded if a solution reaches a considerable (but reachable) milestone in this competition, such as reaching a certain level of performance. 
 
-* Community support: $500 (may be split across participants at the organizers' discretion)
-* Lottery for leaderboard ratings (above and beyond those used to “pay” for submissions): 5 prizes each worth $100
-
+Details of the different prizes will be provided later on the AICrowd page.
 
 <h3 style="width: 100%; text-align: center;"> Team </h3>
 
 The organizing team consists of:
 
-* Rohin Shah (UC Berkeley)
-* Cody Wild (UC Berkeley) 
-* Steven H. Wang (UC Berkeley) 
-* Neel Alex (UC Berkeley)
-* Brandon Houghton (OpenAI)
-* William Guss (OpenAI)
-* Sharada Mohanty (AIcrowd)
-* Anssi Kanervisto (University of Eastern Finland)
+* Anssi Kanervisto (Microsoft Research)
 * Stephanie Milani (Carnegie Mellon University)
-* Nicholay Topin (Carnegie Mellon University)
-* Pieter Abbeel (UC Berkeley)
-* Stuart Russell (UC Berkeley)
-* Anca Dragan (UC Berkeley)
+* Karolis Ramanauskas (Independent)
+* Byron V. Galbraith (Seva Inc.)
+* Steven H. Wang (ETH Zürich)
+* Sander Schulhoff (University of Maryland)
+* Brandon Houghton (OpenAI)
+* Sharada Mohanty (AIcrowd)
+* Rohin Shah (DeepMind)
 
 Advisors:
 
-* Sergio Guadarrama (Google Brain)
-* Katja Hofmann (Microsoft Research)
-* Andrew Critch (UC Berkeley)
+* Andrew Critch (Encultured.ai)
+* Kianté Brantley (Cornell University)
+* Sam Devlin (Microsoft Research)
+* Oriol Vinyals (DeepMind)
 
 Sponsors:
 
-* Open Philanthropy
+* FTX Future Grant Regrant Program
+* Encultured.ai
 * Microsoft
-* AI Journal
-* OpenAI
-* Google
 
 <h3 style="width: 100%; text-align: center;"> Contact </h3>
-If you have any questions, please feel free to contact us at rohinmshah AT berkeley DOT edu.
-
-<h3  style="width: 100%; text-align: center;"> Citation </h3>
-
-<div class="paper-section">
-    <div class="paper-section-container">
-    <div>
-        <a href="https://arxiv.org/abs/2107.01969">
-        <img class="paper-thumbnail" src="/assets/paper_thumbnail.jpg"/>
-        </a>
-    </div>
-    <div>
-        <h3><a href="https://arxiv.org/abs/2107.01969">The MineRL BASALT Competition on Learning from Human Feedback</a></h3>
-        <p>Rohin Shah, Cody Wild, Steven H. Wang, Neel Alex, Brandon Houghton, William Guss, Sharada Mohanty, Anssi Kanervisto, Stephanie Milani, Nicholay Topin, Pieter Abbeel, Stuart Russell, Anca Dragan</p>
-        <p>NeurIPS 2021 Competition Track</p>
-        <p> 2021 </p>
-        <p style="margin: 10px 20px">
-        <a href="/basalt/2021_bib.txt">[BibTex]</a>
-        <a href="/basalt">[Competition Details]</a>
-        </p>
-    </div>
-    </div>
-</div>
+If you have any questions, please feel free to contact us at `basalt (at) minerl.io` or on our [Discord](https://discord.com/invite/BT9uegr).

@@ -24,7 +24,7 @@ as well as real-world problems such as robotic manipulation and self driving car
 achieve Gold/Platinum MMR (~50% percentile human performance) using pretraining alone. We believe that leveraging human
 data will be an important piece of the puzzle as we tackle sample efficiency in more and more complex problems.
 
-The [Diamond competition](/diamond) is particularly focused on this challenge.
+The [Diamond competition](/diamond) was particularly focused on this challenge.
 
 ### Difficulty of specifying tasks
 
@@ -63,7 +63,7 @@ open-world multi-agent interactions, long-term planning, vision, control, naviga
 hierarchies. We also release a flexible framework to define new Minecraft tasks.
 
 
-Papers
+Original papers
 -----
 
 <div class="paper-section">

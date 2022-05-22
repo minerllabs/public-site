@@ -3,9 +3,7 @@ layout: default
 title: MineRL&#58; Towards AI in Minecraft
 ---
 
-### tl;dr: Build AI in Minecraft in the [Diamond](/diamond) and [BASALT](/basalt) competitions!
-### tl;dr: Use the [MineRL environments](/docs)!
-### tl;dr: Get the [MineRL dataset](/dataset)!
+## Update May 2022: Build AI in Minecraft in the [BASALT 2022](/basalt) competition to win cash prizes!
 
 Welcome to MineRL. We want to build agents that play [Minecraft](http://minecraft.net) using state-of-the-art Machine Learning! To do so, we have created one of the largest imitation learning datasets with **over 60 million frames** of recorded human player data. Our dataset includes a set of tasks which highlights many of the hardest problems with current techniques: environments with lots of hierarchy, tasks where rewards are sparse, and tasks where rewards are hard to define.
 
