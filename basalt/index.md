@@ -3,7 +3,7 @@ layout: default
 title: BASALT Competition 2022
 ---
 
-## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2022-minerl-basalt-competition)
+## [Click here to sign-up to participate on AIcrowd!](https://www.aicrowd.com/challenges/neurips-2022-minerl-basalt-competition)
 ## [Click here to join our Discord for updates.](https://discord.com/invite/BT9uegr)
 
 <div class="sidebarstatus">
@@ -237,6 +237,7 @@ The organizing team consists of:
 Advisors:
 
 * Andrew Critch (Encultured.ai)
+* Fei Fang (Carnegie Mellon University)
 * Kianté Brantley (Cornell University)
 * Sam Devlin (Microsoft Research)
 * Oriol Vinyals (DeepMind)
