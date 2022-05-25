@@ -14,19 +14,12 @@ We are running a new iteration of the BASALT competition in 2022! Find the old p
 
 In the Benchmark for Agents that Solve Almost-Lifelike Task (BASALT) competition, your task is to solve tasks based on human judgement, instead of pre-defined reward functions. The goal is to produce agents that are judged by real humans to be effective at solving a given task. This calls for training on *human-feedback*, whether it is training from demonstrations, training on [human preferences](https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/) or using humans to correct agents' actions.
 
-Compared to the [previous year](/basalt_2021), we introduce a number of major changes:
+Like the [Diamond competition](/diamond), BASALT provides a set of Gym environments paired with human demonstrations, since methods based on imitation are an important building block for solving hard-to-specify tasks. Along the demonstrations, we will provide a set of pretrained models, trained on various tasks in Minecraft, for you to use or finetune as you please. Combined with human-feedback training, we vision that this *finetuning from human-feedback* will be a succesful and prominent method in the competition, and which also is applicable outside Minecraft. 
 
-1. We will provide a number of pretrained "foundational" models, trained on a wide range of Minecraft tasks, for you to use in your submission and/or to finetune. You are free to use any methods as part of your submission, but we believe these models will empower participants to better solve the given tasks.
-2. A new MineRL simulator, which replicates human observation and action space almost one-to-one. This means there are no more `craft` or `place` actions. Instead, you have to open the inventory UI and use the mouse pointer to craft items. While this is a more challenging way of playing Minecraft, being closer to human's way of playing the game makes obtaining human demonstrations easier.
-3. A new dataset for the BASALT tasks using the new MineRL environment.
-4. To encourage the use of methods utilizing human-feedback, we will be giving out specialization prizes for solutions even if they did not win in the main metric. For example, if your solution is based mainly on human demonstrations (e.g., behavioural cloning) and reached the fourth place, you may be awarded the prize for the best solution using human demonstrations (**Note**: this was just an example, not a description of a prize!). More details will be provided on the AICrowd page.
-5. To ease your entry into the competition, we will have an `intro` track which uses an `ObtainX` environment, akin to the `ObtainDiamond` challenge in the [Diamond 2021 challenge](/diamond). This is designed to help you get familiar with the new environment, but we strongly encourage you to participate in the BASALT tasks.
-
-    
-Like the [Diamond competition](/diamond), BASALT provides a set of Gym environments paired with human demonstrations, since methods based on imitation are an important building block for solving hard-to-specify tasks. 
+Does all this sound too difficult or obscure to approach? Fret not! We will also have an `intro` track, which will have easier "obtain item X" tasks for you to solve. These will help you get familiar with the codebase and the tools we provide, and hopefully encourage you to partake in the main BASALT tasks!
 
 
-<h3 style="width: 100%; text-align: center;"> The Tasks</h3>
+<h3 style="width: 100%; text-align: center;"> The BASALT Tasks</h3>
 
 <h4 style="width: 100%; text-align: left;">FindCave</h4>
 The agent should search for a cave, and terminate the episode when it is inside one.
@@ -190,7 +183,6 @@ All submissions are done through [AIcrowd](https://www.aicrowd.com/challenges/ne
 - Winners are chosen from the remaining teams, according to their scores from the evaluation phase 2.
 - Winners of specialization prizes are chosen from this pool of top 10 solutions.
 
-
 <br/>
 <h3 style="width: 100%; text-align: center;"> Material and baselines</h3>
 
@@ -218,6 +210,16 @@ The milestone prize is awarded if a solution reaches a considerable (but reachab
 
 Details of the different prizes will be provided later on the AICrowd page.
 
+<h3 style="width: 100%; text-align: center;"> Changes from BASALT 2021 </h3>
+
+This all may sound familiar to you if you know the previous version of this copmetition, [BASALT 2021](/basalt_2021). We do have some notable differences this year:
+
+1. We will provide a number of pretrained "foundational" models, trained on a wide range of Minecraft tasks, for you to use in your submission and/or to finetune. You are free to use any methods as part of your submission, but we believe these models will empower participants to better solve the given tasks.
+2. A new MineRL simulator, which replicates human observation and action space almost one-to-one. This means there are no more `craft` or `place` actions. Instead, you have to open the inventory UI and use the mouse pointer to craft items. While this is a more challenging way of playing Minecraft, being closer to human's way of playing the game makes obtaining human demonstrations easier.
+3. A new dataset for the BASALT tasks using the new MineRL environment.
+4. To encourage the use of methods utilizing human-feedback, we will be giving out specialization prizes for solutions even if they did not win in the main metric. For example, if your solution is based mainly on human demonstrations (e.g., behavioural cloning) and reached the fourth place, you may be awarded the prize for the best solution using human demonstrations (**Note**: this was just an example, not a description of a prize!). More details will be provided on the AICrowd page.
+5. To ease your entry into the competition, we will have an `intro` track which uses an `ObtainX` environment, akin to the `ObtainDiamond` challenge in the [Diamond 2021 challenge](/diamond). This is designed to help you get familiar with the new environment, but we strongly encourage you to participate in the BASALT tasks.
+
 <h3 style="width: 100%; text-align: center;"> Team </h3>
 
 The organizing team consists of:
@@ -241,7 +243,7 @@ Advisors:
 
 Sponsors:
 
-* FTX Future Grant Regrant Program
+* FTX Future Fund Regranting Program
 * Encultured.ai
 * Microsoft
 
