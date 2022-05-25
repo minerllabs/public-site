@@ -3,20 +3,20 @@ layout: default
 title: BASALT Competition 2022
 ---
 
-## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2022-minerl-basalt-competition).
-## [Click here to join our Discord for updates](https://discord.com/invite/BT9uegr).
+## [Sign-up to participate on <u>[AIcrowd]</u>!](https://www.aicrowd.com/challenges/neurips-2022-minerl-basalt-competition)
+## [Click here to join our Discord for updates.](https://discord.com/invite/BT9uegr)
 
 <div class="sidebarstatus">
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
 
-We are running a new iteration of the BASALT competition in 2022! Find the old page [here](/basalt_2021) and the summary of the results [in this paper](https://arxiv.org/abs/2204.07123).
+We are running a new iteration of the BASALT competition in 2022! Find the old page [here](/basalt_2021) and the summary of the results [in this paper](https://arxiv.org/abs/2204.07123). You can a comparison to previous 
 
 In the Benchmark for Agents that Solve Almost-Lifelike Task (BASALT) competition, your task is to solve tasks based on human judgement, instead of pre-defined reward functions. The goal is to produce agents that are judged by real humans to be effective at solving a given task. This calls for training on *human-feedback*, whether it is training from demonstrations, training on [human preferences](https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/) or using humans to correct agents' actions.
 
 Like the [Diamond competition](/diamond), BASALT provides a set of Gym environments paired with human demonstrations, since methods based on imitation are an important building block for solving hard-to-specify tasks. Along the demonstrations, we will provide a set of pretrained models, trained on various tasks in Minecraft, for you to use or finetune as you please. Combined with human-feedback training, we vision that this *finetuning from human-feedback* will be a succesful and prominent method in the competition, and which also is applicable outside Minecraft. 
 
-Does all this sound too difficult or obscure to approach? Fret not! We will also have an `intro` track, which will have easier "obtain item X" tasks for you to solve. These will help you get familiar with the codebase and the tools we provide, and hopefully encourage you to partake in the main BASALT tasks!
+Does all this sound too difficult or obscure to approach? Fret not! We will also have an `intro` track, which will have easier "obtain item X" tasks for you to solve. These will help you get familiar with the codebase and the tools we provide, and hopefully encourage you to partake in the main BASALT tasks! We will also have cash prizes for the best solutions and the most scientifically interesting ones (see Prizes below).
 
 
 <h3 style="width: 100%; text-align: center;"> The BASALT Tasks</h3>
@@ -210,7 +210,7 @@ The milestone prize is awarded if a solution reaches a considerable (but reachab
 
 Details of the different prizes will be provided later on the AICrowd page.
 
-<h3 style="width: 100%; text-align: center;"> Changes from BASALT 2021 </h3>
+<h3 id="changes" style="width: 100%; text-align: center;"> Changes from BASALT 2021 </h3>
 
 This all may sound familiar to you if you know the previous version of this copmetition, [BASALT 2021](/basalt_2021). We do have some notable differences this year:
 
