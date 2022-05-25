@@ -16,7 +16,7 @@ In the Benchmark for Agents that Solve Almost-Lifelike Task (BASALT) competition
 
 Like the [Diamond competition](/diamond), BASALT provides a set of Gym environments paired with human demonstrations, since methods based on imitation are an important building block for solving hard-to-specify tasks. Along with the demonstrations, we will provide a set of pretrained models, trained on various tasks in Minecraft, for you to use or finetune as you please. Combined with human-feedback training, we vision that this *finetuning from human-feedback* will be a succesful method in the competition, with solutions applicable outside Minecraft.
 
-Does all this sound too difficult or obscure to approach? Fret not! We will also have an `intro` track, which will have easier "obtain item X" tasks for you to solve. These will help you get familiar with the codebase and the tools we provide, and hopefully encourage you to partake in the main BASALT tasks! We will also have cash prizes for the best solutions and the most scientifically interesting ones (see Prizes below).
+Does all this sound too difficult or obscure to approach? Fret not! We will also have an `intro` track, which will have easier "obtain item X" tasks for you to solve. These will help you get familiar with the codebase and the tools we provide, and hopefully encourage you to partake in the main BASALT tasks! We will also have cash prizes for the best solutions and the most scientifically interesting ones (see [Prizes](#prizes)).
 
 
 <h3 style="width: 100%; text-align: center;"> The BASALT Tasks</h3>
@@ -190,8 +190,6 @@ Baselines will be shared prior to or at the competition start (July 1st). Please
 
 Meanwhile, you may find the following material useful for learning about training on human-feedback.
 
-But fret not! We do not require (or expect) all of the participants to understand all of these topics. A simple solution with outside-the-box thinking may prove to be the winning solution, and we wish to see curious people exploring their ideas, regardless of if they are based on academic works or not!
-
 - [BASALT 2021 competition results](https://arxiv.org/abs/2204.07123)
 - [Learning from human preferences by OpenAI](https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/)
 - [Reward-rational (implicit) choice: A unifying formalism for reward learning](https://arxiv.org/abs/2002.04833)
@@ -199,7 +197,9 @@ But fret not! We do not require (or expect) all of the participants to understan
 - [Deep reinforcement learning from human preferences](https://arxiv.org/abs/1706.03741)
 - [A survey of preference-based reinforcement learning methods](https://jmlr.org/papers/volume18/16-634/16-634.pdf)
 
-<h3 style="width: 100%; text-align: center;"> Prizes </h3>
+We do not require (or expect) all of the participants to understand all of these topics. A simple solution with outside-the-box thinking may prove to be the winning solution, and we wish to see curious people exploring their ideas, regardless of if they are based on academic works or not!
+
+<h3 id="prizes" style="width: 100%; text-align: center;"> Prizes </h3>
 
 Thanks to the overwhelming generosity of sponsors, there will be **$20,000** worth of cash prizes with a conditional **$50,000 - $100,000 milestone prize**!
 In addition, the top three solutions will be invited to co-author the competition report.
@@ -212,7 +212,7 @@ Details of the different prizes will be provided later on the AICrowd page.
 
 <h3 id="changes" style="width: 100%; text-align: center;"> Changes from BASALT 2021 </h3>
 
-This all may sound familiar to you if you know the previous version of this copmetition, [BASALT 2021](/basalt_2021). We do have some notable differences this year:
+This all may sound familiar to you if you know the previous version of this competition, [BASALT 2021](/basalt_2021). We do have some notable differences this year:
 
 1. We will provide a number of pretrained "foundational" models, trained on a wide range of Minecraft tasks, for you to use in your submission and/or to finetune. You are free to use any methods as part of your submission, but we believe these models will empower participants to better solve the given tasks.
 2. A new MineRL simulator, which replicates human observation and action space almost one-to-one. This means there are no more `craft` or `place` actions. Instead, you have to open the inventory UI and use the mouse pointer to craft items. While this is a more challenging way of playing Minecraft, being closer to human's way of playing the game makes obtaining human demonstrations easier.
