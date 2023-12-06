@@ -3,7 +3,13 @@ layout: default
 title: MineRL&#58; Towards AI in Minecraft
 ---
 
-## Update May 2022: Build AI in Minecraft in the [BASALT 2022](/basalt) competition to win cash prizes!
+## Updates on Dec 2023:
+
+* We have turned the BASALT competition into a benchmark to let researchers tackle the challenges at their own pace! You can find the paper [here](https://arxiv.org/abs/2312.02405) (Presented at NeurIPS 2023 Datasets & Benchmarks track as oral acceptance).
+* MineRL BASALT 2022 competition has concluded. You can find the results [here](https://arxiv.org/abs/2303.13512).
+* There are no currently running MineRL competitions.
+
+-----
 
 Welcome to MineRL. We want to build agents that play [Minecraft](http://minecraft.net) using state-of-the-art Machine Learning! To do so, we have created one of the largest imitation learning datasets with **over 60 million frames** of recorded human player data. Our dataset includes a set of tasks which highlights many of the hardest problems with current techniques: environments with lots of hierarchy, tasks where rewards are sparse, and tasks where rewards are hard to define.
 
