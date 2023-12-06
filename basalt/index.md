@@ -10,7 +10,9 @@ title: BASALT Competition 2022
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
 
-*Note*: See the AICrowd page for the most up-to-date information! We will forget to update this page with a very high certainty.
+### Note: this competition is now over. You can find the retrospective of the competition [here](https://arxiv.org/abs/2303.13512). If you wish to tackle the BASALT tasks yourself, see our benchmark paper [here](https://arxiv.org/abs/2312.02405).
+
+----
 
 We are running a new iteration of the BASALT competition in 2022! Find the old page [here](/basalt_2021), the summary of the results [in this paper](https://arxiv.org/abs/2204.07123) and the list of changes this year [here](#changes).
 
