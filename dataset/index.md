@@ -6,6 +6,12 @@ title: MineRL Dataset
 
 <img src="/assets/videos/cropped_viewer.gif" width="100%"/>
 
+## Update Dec 2023
+
+Below is the original MineRL dataset at 64x64 resolution. For larger, new datasets related to MineRL, see the following links:
+
+* OpenAI shared a large set of human gameplay as part of their Video PreTraining work. You can find the data [here](https://github.com/openai/Video-Pre-Training/).
+* BASALT benchmark includes data in higher resolution format for four tasks. See details [here](https://github.com/minerllabs/basalt-benchmark).
 
 Get the data!
 ---------------
