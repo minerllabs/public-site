@@ -10,6 +10,8 @@ title: BASALT Competition 2022
     <iframe src="https://discordapp.com/widget?id=565639094860775436&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 </div>
 
+*Note*: See the AICrowd page for the most up-to-date information! We will forget to update this page with a very high certainty.
+
 We are running a new iteration of the BASALT competition in 2022! Find the old page [here](/basalt_2021), the summary of the results [in this paper](https://arxiv.org/abs/2204.07123) and the list of changes this year [here](#changes).
 
 In the Benchmark for Agents that Solve Almost-Lifelike Task (BASALT) competition, your task is to solve tasks based on human judgement, instead of pre-defined reward functions. The goal is to produce agents that are judged by real humans to be effective at solving a given task. This calls for training on *human-feedback*, whether it is training from demonstrations, training on [human preferences](https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/) or using humans to correct agents' actions.
